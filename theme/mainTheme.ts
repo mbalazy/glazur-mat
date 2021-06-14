@@ -1,28 +1,21 @@
 const mainTheme = {
   colors: {
-    primary: '#FFD717',
-    secondary: '#204AAB',
-    accent1: '#083358',
-    accent2: '#001F3F',
-    accent3: '#0F358C',
-    primaryText: '#222222',
-    lightText: '#FFFFFF',
+    primary: '#D6A81A',
+    secondary: '#DADAD8',
+    tertinary: '#303030',
+    primaryText: '#303030',
     white: '#FFFFFF',
-    grey100: 'hsl(0, 0%, 90%)',
-    grey002: 'hsl(0, 0%, 98%)',
-    grey005: 'hsl(0, 0%, 95%)',
-    grey850: 'hsl(0, 0%, 15%)',
-    black: 'hsl(0, 0%, 0%)',
+    background: '#FAFAFA',
+    black: '#0B0B0B',
   },
 
   fontSize: {
-    xs: '1.2rem',
     s: '1.5rem',
     m: '1.6rem',
     l: '1.8rem',
-    xl: '2.2rem',
+    xl: '2rem',
     '2xl': '2.4rem',
-    '3xl': '3rem',
+    '3xl': '3.4rem',
   },
 
   fontWeight: {
