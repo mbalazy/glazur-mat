@@ -18,24 +18,10 @@ const mainTheme = {
     '3xl': '3.4rem',
   },
 
-  fontWeight: {
-    light: 300,
-    regular: 400,
-    bold: 600,
-    extrabold: 900,
-  },
-
-  border: {
-    standard: '20px',
-    light: '15px',
-  },
-
   dimensions: {
     navbarHeight: '70px',
     mainContentWidth: '1100px',
     mainContentGap: '10rem',
-    equipmentMargin: '6rem',
-    equipmentGap: '4rem',
   },
 
   up: (breakpoint: string, vertical = false) =>
@@ -50,7 +36,7 @@ const mainTheme = {
   breakpoints: {
     l: '900px',
     m: '767px',
-    s: '450px',
+    s: '480px',
   },
 } as const
 
