@@ -1,12 +1,15 @@
+import Logo from '../../atoms/Logo'
+import MailInfo from '../../molecues/ContactInfo/MailInfo'
+import PhoneInfo from '../../molecues/ContactInfo/PhoneInfo'
 import { SuperNavInnerWrapper, SuperNavWrapper } from './SuperNav.style'
 
 const SuperNav = () => {
   return (
     <SuperNavWrapper>
       <SuperNavInnerWrapper>
-        <p>logo</p>
-        <p>tele</p>
-        <p>mail</p>
+        <Logo />
+        <PhoneInfo />
+        <MailInfo />
         <p>sociale</p>
       </SuperNavInnerWrapper>
     </SuperNavWrapper>
