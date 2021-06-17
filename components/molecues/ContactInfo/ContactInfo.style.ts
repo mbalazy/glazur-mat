@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const ContactInfoWrapper = styled.div`
   display: flex;
 `
-export const ContactIcon = styled.img`
+export const ContactInfoIcon = styled.img`
   margin-right: 2.5rem;
 `
-export const Label = styled.span`
+export const ContactInfoLabel = styled.span`
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.colors.primary};
 

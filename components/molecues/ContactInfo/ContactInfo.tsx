@@ -1,4 +1,4 @@
-import { ContactIcon, ContactInfoWrapper, Label } from './ContactInfo.style'
+import { ContactInfoIcon, ContactInfoWrapper, ContactInfoLabel } from './ContactInfo.style'
 
 type ContactInfoProps = {
   icon: string
@@ -9,9 +9,9 @@ type ContactInfoProps = {
 const ContactInfo = ({ icon, label, content }: ContactInfoProps) => {
   return (
     <ContactInfoWrapper>
-      <ContactIcon src={icon} alt="ikona kontaktu" />
+      <ContactInfoIcon src={icon} alt="ikona kontaktu" />
       <div>
-        <Label>{label}</Label>
+        <ContactInfoLabel>{label}</ContactInfoLabel>
         <p>{content}</p>
       </div>
     </ContactInfoWrapper>

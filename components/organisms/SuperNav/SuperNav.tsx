@@ -1,4 +1,4 @@
-import Logo from '../../atoms/Logo'
+import Logo from '../../atoms/Logo/Logo'
 import MailInfo from '../../molecues/ContactInfo/MailInfo'
 import PhoneInfo from '../../molecues/ContactInfo/PhoneInfo'
 import { SuperNavInnerWrapper, SuperNavWrapper } from './SuperNav.style'
