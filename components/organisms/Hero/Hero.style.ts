@@ -5,6 +5,13 @@ export const HeroWrapper = styled.div`
   height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeight});
   position: relative;
 `
+
+export const HeroImage = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`
+
 export const Heading = styled(H1)`
   margin-bottom: 2rem;
 `

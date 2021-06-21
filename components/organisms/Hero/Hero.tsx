@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import heroImg from '../../../public/hero3.jpg'
-import { HeroImage, NavStyles } from './HeroBackgroundImage.style'
-import { HeroWrapper, Heading, Copy, ContentBoxStyles } from './Hero.style'
+import { HeroWrapper, Heading, Copy, ContentBoxStyles, HeroImage } from './Hero.style'
+import Nav from '../../molecues/Nav/Nav'
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
         <Image src={heroImg} alt="kuchnia" layout="fill" objectFit="cover" />
       </HeroImage>
 
-      <NavStyles>a</NavStyles>
+      <Nav />
 
       <ContentBoxStyles>
         <Heading>Glazur-Mat</Heading>
