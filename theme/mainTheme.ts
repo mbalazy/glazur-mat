@@ -14,8 +14,8 @@ const mainTheme = {
     m: '1.6rem',
     l: '1.8rem',
     xl: '2rem',
-    '2xl': '2.4rem',
-    '3xl': '3.4rem',
+    xxl: '2.4rem',
+    mega: '3.4rem',
   },
 
   dimensions: {

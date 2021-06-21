@@ -5,18 +5,18 @@ export const HeroContentBoxWrapper = styled.div`
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-80%, -50%);
+  transform: translate(-100%, -50%);
 
-  width: 50%;
-  height: 30%;
+  width: 40vw;
 
+  padding: 8rem;
   background: rgba(0, 0, 0, 0.64);
   color: ${({ theme }) => theme.colors.background};
-  padding: 5rem;
 `
 export const Heading = styled(H1)`
   margin-bottom: 2rem;
+  ${({ theme }) => theme.fontSize.mega};
 `
 export const Copy = styled(P)`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme }) => theme.fontSize.xxl};
 `
