@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SuperNavWrapper = styled.div`
-  height: 12rem;
+  height: ${({ theme }) => theme.dimensions.superNavbarHeight};
   background-color: ${({ theme }) => theme.colors.background};
 `
 export const SuperNavInnerWrapper = styled.div`
