@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import { HeroWrapper, HeroImageOverlay } from './Hero.style'
 import Nav from '../../molecues/Nav/Nav'
