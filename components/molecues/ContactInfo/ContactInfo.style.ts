@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const ContactInfoWrapper = styled.div`
   display: flex;
+  align-items: center;
 `
 export const ContactInfoIcon = styled.img`
   margin-right: 2.5rem;
@@ -13,3 +14,4 @@ export const ContactInfoLabel = styled.span`
   display: inline-block;
   margin-bottom: 0.7rem;
 `
+export const MailInfoStyled = styled.div``

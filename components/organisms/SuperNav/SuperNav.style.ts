@@ -1,4 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import {
+  ContactInfoLabel as MailInfoLabel,
+  ContactInfoIcon as MailInfoIcon,
+  MailInfoStyled as MailInfo,
+} from '../../molecues/ContactInfo/ContactInfo.style'
+import { SocialMediaIconsWrapper as SocialMediaIcons } from '../../molecues/SocialMediaIcons/SocialMediaIcons.style'
 
 export const SuperNavWrapper = styled.div`
   height: ${({ theme }) => theme.dimensions.superNavbarHeight};
@@ -12,4 +18,37 @@ export const SuperNavInnerWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.xl)} {
+      padding: 0 3rem;
+    }
+  `}
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      ${SocialMediaIcons} {
+        display: none;
+      }
+    }
+  `}
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      ${MailInfo} {
+        display: none;
+      }
+    }
+  `}
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.s)} {
+      ${MailInfoLabel} {
+        display: none;
+      }
+      ${MailInfoIcon} {
+        margin-right: 1rem;
+      }
+    }
+  `}
 `

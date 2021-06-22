@@ -35,6 +35,7 @@ const mainTheme = {
     }: calc(${breakpointMin} + 1px))`,
 
   breakpoints: {
+    xl: '1200px',
     l: '900px',
     m: '767px',
     s: '480px',
