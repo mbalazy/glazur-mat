@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { H1, P } from '../../../theme/Typography'
 
 export const HeroContentBoxWrapper = styled.div`
@@ -12,6 +12,14 @@ export const HeroContentBoxWrapper = styled.div`
   padding: 8rem;
   background: rgba(0, 0, 0, 0.64);
   color: ${({ theme }) => theme.colors.background};
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      width: 80vw;
+      transform: translate(-50%, -50%);
+      padding: 4rem;
+    }
+  `}
 `
 export const Heading = styled(H1)`
   margin-bottom: 2rem;
