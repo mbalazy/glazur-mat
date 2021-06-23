@@ -8,12 +8,10 @@ import '@fontsource/montserrat'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ThemeProvider theme={mainTheme as DefaultTheme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={mainTheme as DefaultTheme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
   )
 }
 export default MyApp
