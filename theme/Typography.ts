@@ -5,10 +5,10 @@ type Props = {
 }
 
 export const H1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize['3xl']};
+  font-size: ${({ theme }) => theme.fontSize.mega};
 `
 export const H2 = styled.h2<Props>`
-  font-size: ${({ theme }) => theme.fontSize['2xl']};
+  font-size: ${({ theme }) => theme.fontSize.xxl};
   line-height: 1.4;
 `
 export const H3 = styled.h3<Props>`
