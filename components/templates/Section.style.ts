@@ -11,7 +11,7 @@ export const SectionWrapper = styled.section<SectionWrapperProps>`
   align-items: center;
   justify-content: center;
 
-  padding: 7rem;
+  padding: 10rem;
   background-color: ${({ theme }) => theme.colors.background};
 
   ${({ isGray }) =>
@@ -38,7 +38,7 @@ export const Subheading = styled.p`
 `
 
 export const ChildrenWrapper = styled.div`
-  margin-top: 4rem;
+  margin-top: 8rem;
   width: 80vw;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
 `

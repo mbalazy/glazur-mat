@@ -93,3 +93,21 @@ export const offerContet = [
     ],
   },
 ]
+
+export const testimonials = [
+  {
+    name: 'Hiacynta',
+    testimonial:
+      'Szefa Firmy, i co dla Nas było ważne porządek w trakcie oraz po zakończeniu robót. Mierząc się z wyzwaniem budowy domu, nawet się postarał.',
+  },
+  {
+    name: 'Stanislaw',
+    testimonial:
+      'Reasumując: solidność, kreatywność, empatia do inwestora,i co dla Nas było ważne porządek w trakcie oraz po zakończeniu robót. Mierząc się z wyzwaniem budowy domu, nawet się postarał.',
+  },
+  {
+    name: 'Jerzy',
+    testimonial:
+      'Firma p. Janusza budowała dom na sąsiedniej działce. Podobał nam się sposób jej prowadzania i postępy więc poprosiliśmy o ofertę na nasz dom. Oferta okazała się do przyjęcia więc podpisaliśmy.',
+  },
+]
