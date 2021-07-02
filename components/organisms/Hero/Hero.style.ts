@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeroWrapper = styled.div`
-  height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeight});
+  height: 65vh;
   position: relative;
 `
 
