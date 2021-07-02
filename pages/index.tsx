@@ -2,7 +2,7 @@ import SuperNav from '../components/organisms/SuperNav/SuperNav'
 import Hero from '../components/organisms/Hero/Hero'
 import SiteInProgress from '../components/molecues/SiteInProgress/SiteInProgress'
 import SimplyOffer from '../components/organisms/SimplyOffer/SimplyOffer'
-import Testimonials from '../components/organisms/Testimonals/Testimonials'
+import Testimonials from '../components/organisms/Testimonials/Testimonials'
 
 const Home = () => {
   return (
