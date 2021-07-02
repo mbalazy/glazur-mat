@@ -1,5 +1,4 @@
-import { H2 } from '../../theme/Typography'
-import { ChildrenWrapper, SectionWrapper, Subheading } from './Section.style'
+import { ChildrenWrapper, Heading, SectionWrapper, Subheading } from './Section.style'
 
 export type SectionProps = {
   heading?: string
@@ -11,7 +10,7 @@ export type SectionProps = {
 const Section = ({ heading, subheading, children, isGray }: SectionProps) => {
   return (
     <SectionWrapper isGray={isGray}>
-      {heading && <H2>{heading}</H2>}
+      {heading && <Heading>{heading}</Heading>}
       {subheading && <Subheading>{subheading}</Subheading>}
       <ChildrenWrapper>{children}</ChildrenWrapper>
     </SectionWrapper>
