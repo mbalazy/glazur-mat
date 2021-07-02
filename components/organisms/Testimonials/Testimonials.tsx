@@ -1,5 +1,8 @@
 import React from 'react'
+import { testimonials } from '../../../theme/businessInfo'
+import Testimonial from '../../molecues/Testimonial/Testimonial'
 import Section from '../../templates/Section'
+import { TestimonialsWrapper } from './Testimonials.style'
 
 const Testimonials = () => {
   return (
@@ -8,7 +11,11 @@ const Testimonials = () => {
       heading="Nasi zadowoleni klienci"
       subheading="W taki sposób opisali nasze działania w ich domach."
     >
-      <p>Testimonials</p>
+      <TestimonialsWrapper>
+        {testimonials.map((testimonial) => (
+          <Testimonial key={testimonial.name} {...testimonial} />
+        ))}
+      </TestimonialsWrapper>
     </Section>
   )
 }

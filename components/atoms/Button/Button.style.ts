@@ -4,6 +4,7 @@ export const ButtonBaseStyles = css`
   border: none;
   cursor: pointer;
   display: inline-block;
+  font-weight: 700;
 
   padding: 2.4rem 7rem;
   font-size: ${({ theme }) => theme.fontSize.l};
