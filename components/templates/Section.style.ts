@@ -41,4 +41,7 @@ export const ChildrenWrapper = styled.div`
   margin-top: 8rem;
   width: 80vw;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
+
+  display: grid;
+  gap: 8rem;
 `

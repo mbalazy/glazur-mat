@@ -10,7 +10,7 @@ export const OfferIconWrapper = styled.div`
   }
 `
 export const OfferIconName = styled(H3)`
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.m};
   text-transform: uppercase;
   font-weight: 500;
 `
