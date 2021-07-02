@@ -1,12 +1,15 @@
 import React from 'react'
 import { testimonials } from '../../../theme/businessInfo'
+import Stars from '../../atoms/Stars/Stars'
 import { TestimonialContent, TestimonialName, TestimonialWrapper } from './Testimonial.style'
+import { TestimonialWrapperStyledProps } from './Testimonial.style'
 
-type TestimonialProps = typeof testimonials[number]
+type TestimonialProps = typeof testimonials[number] & TestimonialWrapperStyledProps
 
-const Testimonial = ({ name, rating, testimonial }: TestimonialProps) => {
+const Testimonial = ({ name, rating, testimonial, position }: TestimonialProps) => {
   return (
-    <TestimonialWrapper>
+    <TestimonialWrapper position={position}>
+      <Stars rating={rating} />
       <TestimonialContent>{testimonial}</TestimonialContent>
       <TestimonialName>{name}</TestimonialName>
     </TestimonialWrapper>

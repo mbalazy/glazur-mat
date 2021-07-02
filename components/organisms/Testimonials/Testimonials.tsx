@@ -7,13 +7,13 @@ import { TestimonialsWrapper } from './Testimonials.style'
 const Testimonials = () => {
   return (
     <Section
-      isGray
+      isGray={true}
       heading="Nasi zadowoleni klienci"
       subheading="W taki sposób opisali nasze działania w ich domach."
     >
       <TestimonialsWrapper>
-        {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial.name} {...testimonial} />
+        {testimonials.map((testimonial, i) => (
+          <Testimonial position={i} key={testimonial.name} {...testimonial} />
         ))}
       </TestimonialsWrapper>
     </Section>
