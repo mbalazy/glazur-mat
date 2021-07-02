@@ -2,7 +2,7 @@ import facebookIcon from '../public/facebook.svg'
 import ingIcon from '../public/instagram.svg'
 import whatsappIcon from '../public/whatsapp.svg'
 
-import gips_sysIcon from '../public/sys_gips.svg'
+import gipsIcon from '../public/sys_gips.svg'
 import tilesIcon from '../public/tiles.svg'
 import plasteringIcon from '../public/plastering.svg'
 import paitingIcon from '../public/painting.svg'
@@ -35,10 +35,10 @@ export const socials = [
   },
 ]
 
-export const offer = [
+export const offerContet = [
   {
     name: 'Montaż Systemów Gipsowych',
-    icon: gips_sysIcon,
+    icon: gipsIcon,
     details: [
       'Podwieszanie sufitów',
       'Sufity wielopoziomowe z podświetleniem LED',

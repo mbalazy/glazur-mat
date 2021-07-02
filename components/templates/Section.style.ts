@@ -39,6 +39,6 @@ export const Subheading = styled.p`
 
 export const ChildrenWrapper = styled.div`
   margin-top: 4rem;
-  width: 90vw;
+  width: 80vw;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
 `

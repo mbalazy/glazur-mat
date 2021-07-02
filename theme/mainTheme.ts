@@ -21,8 +21,7 @@ const mainTheme = {
   dimensions: {
     navbarHeight: '8rem',
     superNavbarHeight: '12rem',
-    mainContentWidth: '110rem',
-    mainContentGap: '10rem',
+    mainContentWidth: '120rem',
   },
 
   up: (breakpoint: string, vertical = false) =>
