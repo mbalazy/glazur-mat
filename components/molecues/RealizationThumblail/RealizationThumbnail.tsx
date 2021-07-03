@@ -15,9 +15,7 @@ type RealizationThumbnailProps = {
 const RealizationThumbnail = ({ name, image }: RealizationThumbnailProps) => {
   return (
     <RealizationThumbnailWrapper>
-      <ImageWrapper>
-        <Image src={image} layout="fill" objectFit="cover" />
-      </ImageWrapper>
+      <ImageWrapper></ImageWrapper>
       <DecoratedLine />
       <RealizationName>{name}</RealizationName>
     </RealizationThumbnailWrapper>
