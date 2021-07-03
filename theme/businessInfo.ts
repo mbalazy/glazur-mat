@@ -114,3 +114,11 @@ export const testimonials = [
     rating: 5,
   },
 ]
+
+export const realizations = [
+  { name: 'Lazienka w Olkuszu', image: '/lazienka1.jpg' },
+  { name: 'Kuchnia w Olkuszu', image: '/kuchnia1.jpg' },
+  { name: 'Dom w Olkuszu', image: '/lazienka1.jpg' },
+  { name: 'Salon w Olkuszu', image: '/lazienka1.jpg' },
+  { name: 'Taras w Olkuszu', image: '/lazienka1.jpg' },
+]
