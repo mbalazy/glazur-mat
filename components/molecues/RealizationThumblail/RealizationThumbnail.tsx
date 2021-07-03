@@ -1,3 +1,12 @@
+import Image from 'next/image'
+import React from 'react'
+import {
+  DecoratedLine,
+  ImageWrapper,
+  RealizationName,
+  RealizationThumbnailWrapper,
+} from './RealizationThumbnail.style'
+
 type RealizationThumbnailProps = {
   name: string
   image: string
@@ -5,11 +14,13 @@ type RealizationThumbnailProps = {
 
 const RealizationThumbnail = ({ name, image }: RealizationThumbnailProps) => {
   return (
-    <div>
-      <p>img</p>
-      <p>line</p>
-      <p>{name}</p>
-    </div>
+    <RealizationThumbnailWrapper>
+      <ImageWrapper>
+        <Image src={image} layout="fill" objectFit="cover" />
+      </ImageWrapper>
+      <DecoratedLine />
+      <RealizationName>{name}</RealizationName>
+    </RealizationThumbnailWrapper>
   )
 }
 

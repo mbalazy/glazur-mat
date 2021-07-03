@@ -46,7 +46,7 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
   justify-items: center;
   gap: 3rem;
 
-  box-shadow: 0px 34px 53px -7px rgba(0, 0, 0, 0.11);
+  box-shadow: ${({ theme }) => theme.boxShadow};
 
   ${({ position }) => apllyPositionStyles(position)}
 `

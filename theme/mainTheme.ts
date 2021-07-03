@@ -39,6 +39,8 @@ const mainTheme = {
     m: '767px',
     s: '480px',
   },
+
+  boxShadow: '0px 34px 53px -7px rgba(0, 0, 0, 0.11)',
 } as const
 
 export type MainThemeType = typeof mainTheme
