@@ -4,29 +4,32 @@ export type TestimonialWrapperStyledProps = {
   position: number
 }
 
-const leftSide = css`
-  margin-right: -3rem;
+// additional position styles for testimonials
+const offset = '-3rem'
+
+const leftTestimonial = css`
+  margin-right: ${offset};
 `
-const centerSide = css`
+const centerTestimonial = css`
   background-color: ${({ theme }) => theme.colors.tertinary};
   color: ${({ theme }) => theme.colors.background};
   padding: 3rem 5rem;
 
   position: relative;
-  top: -3rem;
+  top: ${offset};
 `
-const rightSide = css`
-  margin-left: -3rem;
+const rightTestimonial = css`
+  margin-left: ${offset};
 `
 
-const addPositionStyles = (position: number) => {
+const apllyPositionStyles = (position: number) => {
   switch (position) {
     case 0:
-      return leftSide
+      return leftTestimonial
     case 1:
-      return centerSide
+      return centerTestimonial
     case 2:
-      return rightSide
+      return rightTestimonial
 
     default:
       break
@@ -34,18 +37,18 @@ const addPositionStyles = (position: number) => {
 }
 
 export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
+  flex: 1;
   padding: 3rem 5rem;
   background-color: ${({ theme }) => theme.colors.background};
+
   display: grid;
   align-content: space-between;
   justify-items: center;
   gap: 3rem;
 
-  flex: 1;
   box-shadow: 0px 34px 53px -7px rgba(0, 0, 0, 0.11);
 
-  // additional position styles
-  ${({ position }) => addPositionStyles(position)}
+  ${({ position }) => apllyPositionStyles(position)}
 `
 export const TestimonialContent = styled.span`
   text-align: center;
