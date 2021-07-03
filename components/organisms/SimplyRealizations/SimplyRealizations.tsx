@@ -1,5 +1,6 @@
 import React from 'react'
 import { realizations } from '../../../theme/businessInfo'
+import BaseLink from '../../atoms/Link/Link'
 import RealizationThumbnail from '../../molecues/RealizationThumblail/RealizationThumbnail'
 import Section from '../../templates/Section'
 import { SimplyRealizationsWrapper } from './SimplyRealizations.style'
@@ -15,6 +16,7 @@ const SimplyRealizations = () => {
           <RealizationThumbnail key={realization.name} {...realization} />
         ))}
       </SimplyRealizationsWrapper>
+      <BaseLink href="/realizacje">Zobacz wszystkie</BaseLink>
     </Section>
   )
 }
