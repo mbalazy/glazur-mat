@@ -13,6 +13,7 @@ export const RealizationThumbnailWrapper = styled.div`
 export const ImageWrapper = styled.div`
   height: 27rem;
   width: 100%;
+  position: relative;
 `
 export const DecoratedLine = styled.div`
   width: 12rem;
