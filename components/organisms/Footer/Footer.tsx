@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { FooterContent, FooterImageOverlay, FooterWrapper } from './Footer.style'
 import FooterContact from '../../molecues/FooterStuff/FooterContact'
+import FooterServices from '../../molecues/FooterStuff/FooterServices'
+import FooterSocialMedia from '../../molecues/FooterStuff/FooterSocialMedia'
 
 const Footer = () => {
   return (
@@ -11,8 +13,8 @@ const Footer = () => {
       </FooterImageOverlay>
       <FooterContent>
         <FooterContact />
-        <p>Footer services</p>
-        <p>Footer social media</p>
+        <FooterServices />
+        <FooterSocialMedia />
       </FooterContent>
     </FooterWrapper>
   )

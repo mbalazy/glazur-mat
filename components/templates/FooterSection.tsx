@@ -4,7 +4,7 @@ import { FooterHeading, FooterSectionWrapper, FooterSubheading } from './FooterS
 type FooterSectionProps = {
   heading: string
   subheading: string
-  icon?: any
+  icon?: string
   children: JSX.Element | JSX.Element[]
 }
 
