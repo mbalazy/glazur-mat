@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.footer`
   color: ${({ theme }) => theme.colors.background};
   position: relative;
-  min-height: 52rem;
+  height: 55rem;
 `
 
 export const FooterImageOverlay = styled.div`
@@ -13,8 +13,13 @@ export const FooterImageOverlay = styled.div`
 `
 
 export const FooterContent = styled.div`
-  padding: 10rem;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `

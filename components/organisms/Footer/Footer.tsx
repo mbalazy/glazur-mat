@@ -9,29 +9,9 @@ const Footer = () => {
         <Image src="/footer.jpg" alt="marmur" layout="fill" objectFit="cover" />
       </FooterImageOverlay>
       <FooterContent>
-        <div>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-        </div>
+        <p>Footer contact</p>
+        <p>Footer services</p>
+        <p>Footer social media</p>
       </FooterContent>
     </FooterWrapper>
   )
