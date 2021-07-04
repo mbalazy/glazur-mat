@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { HandWritten } from '../../../theme/Typography'
 
 //TODO change to Link
 export const RealizationThumbnailWrapper = styled.div`
@@ -21,10 +22,6 @@ export const DecoratedLine = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
 `
 export const RealizationName = styled.span`
-  font-size: ${({ theme }) => theme.fontSize.l};
-  font-family: IM FELL Great Primer;
-  font-style: italic;
-
-  color: ${({ theme }) => theme.colors.primary};
+  ${HandWritten}
   margin-bottom: 5rem;
 `

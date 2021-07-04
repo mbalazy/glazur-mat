@@ -43,4 +43,6 @@ export const P = styled.p`
 export const HandWritten = css`
   font-family: 'IM FELL Great Primer';
   font-style: italic;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  color: ${({ theme }) => theme.colors.primary};
 `

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { FooterContent, FooterImageOverlay, FooterWrapper } from './Footer.style'
+import FooterContact from '../../molecues/FooterStuff/FooterContact'
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <Image src="/footer.jpg" alt="marmur" layout="fill" objectFit="cover" />
       </FooterImageOverlay>
       <FooterContent>
-        <p>Footer contact</p>
+        <FooterContact />
         <p>Footer services</p>
         <p>Footer social media</p>
       </FooterContent>
