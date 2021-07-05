@@ -11,6 +11,10 @@ export const LinkStyles = styled.a<LinkStylesProps>`
     simpler &&
     css`
       background-color: transparent;
-      padding: 0.8rem 3rem;
+      padding: 0.6rem 3rem;
+      margin: 0.1rem;
+      &:hover {
+        border: 1px solid #fff;
+      }
     `}
 `

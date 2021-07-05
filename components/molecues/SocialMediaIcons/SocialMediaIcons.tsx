@@ -2,9 +2,13 @@ import { socials } from '../../../theme/businessInfo'
 import SocialMediaIcon from '../../atoms/SocialMediaIcon/SocialMediaIcon'
 import { SocialMediaIconsWrapper } from './SocialMediaIcons.style'
 
-const SocialMediaIcons = () => {
+export type SocialMediaIconsProp = {
+  isBrighter?: boolean
+}
+
+const SocialMediaIcons = (props: SocialMediaIconsProp) => {
   return (
-    <SocialMediaIconsWrapper>
+    <SocialMediaIconsWrapper {...props}>
       {socials.map((social) => (
         <SocialMediaIcon key={social.name} {...social} />
       ))}
