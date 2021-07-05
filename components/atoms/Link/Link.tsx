@@ -5,12 +5,13 @@ import { LinkStyles } from './Link.style'
 type LinkProps = {
   href: string
   children: string
+  simpler?: boolean
 }
 
-const BaseLink = ({ href, children, ...props }: LinkProps) => {
+const BaseLink = ({ href, children, simpler, ...props }: LinkProps) => {
   return (
     <Link href={href} {...props}>
-      <LinkStyles>{children}</LinkStyles>
+      <LinkStyles simpler={simpler}>{children}</LinkStyles>
     </Link>
   )
 }

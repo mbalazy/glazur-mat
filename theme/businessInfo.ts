@@ -122,3 +122,11 @@ export const realizations = [
   { name: 'Salon w Olkuszu', image: '/lazienka1.jpg' },
   { name: 'Taras w Olkuszu', image: '/lazienka1.jpg' },
 ]
+
+export const menuItems = [
+  { label: 'Strona główna', link: '/' },
+  { label: 'Oferta', link: '/oferta' },
+  { label: 'Dlaczego My', link: '/dlaczego-my' },
+  { label: 'Realizacje', link: '/realizacje' },
+  { label: 'Kontakt', link: '/kontakt' },
+]
