@@ -17,3 +17,11 @@ export const FooterHeading = styled(H4)`
   font-size: ${({ theme }) => theme.fontSize.l};
   text-transform: uppercase;
 `
+export const FooterSectionContent = styled.div`
+  display: grid;
+  gap: 2rem;
+
+  font-weight: 700;
+  text-align: center;
+  line-height: 170%;
+`

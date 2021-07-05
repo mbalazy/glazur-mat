@@ -1,5 +1,10 @@
 import React from 'react'
-import { FooterHeading, FooterSectionWrapper, FooterSubheading } from './FooterSection.style'
+import {
+  FooterHeading,
+  FooterSectionContent,
+  FooterSectionWrapper,
+  FooterSubheading,
+} from './FooterSection.style'
 
 type FooterSectionProps = {
   heading: string
@@ -14,7 +19,7 @@ const FooterSection = ({ heading, subheading, icon, children }: FooterSectionPro
       <FooterSubheading>{subheading}</FooterSubheading>
       <FooterHeading>{heading}</FooterHeading>
       <img src={icon} alt="" width="32" />
-      <div>{children}</div>
+      <FooterSectionContent>{children}</FooterSectionContent>
     </FooterSectionWrapper>
   )
 }
