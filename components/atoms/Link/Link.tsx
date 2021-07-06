@@ -7,10 +7,10 @@ type LinkProps = {
   children: string
 } & LinkStylesProp
 
-const BaseLink = ({ href, children, variant, ...props }: LinkProps) => {
+const BaseLink = ({ href, children, ...rest }: LinkProps) => {
   return (
-    <Link href={href} {...props}>
-      <LinkStyles variant={variant}>{children}</LinkStyles>
+    <Link href={href}>
+      <LinkStyles {...rest}>{children}</LinkStyles>
     </Link>
   )
 }

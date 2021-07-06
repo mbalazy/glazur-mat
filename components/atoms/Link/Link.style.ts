@@ -4,6 +4,7 @@ type LinkVariants = 'simpler' | 'outline'
 
 export type LinkStylesProp = {
   variant?: LinkVariants
+  activeRoute?: boolean
 }
 
 export const LinkStyles = styled.a<LinkStylesProp>`
@@ -43,8 +44,15 @@ export const LinkStyles = styled.a<LinkStylesProp>`
         return css`
           background-color: transparent;
           padding: 1.2rem 4rem;
+          margin: 0 0.8rem;
+
+          ${({ activeRoute }) =>
+            activeRoute &&
+            css`
+              background-color: ${({ theme }) => theme.colors.primary};
+            `}
+
           &:hover {
-            color: ${({ theme }) => theme.colors.white};
             background-color: ${({ theme }) => theme.colors.primary};
           }
         `
