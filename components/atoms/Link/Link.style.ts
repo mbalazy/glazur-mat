@@ -7,19 +7,18 @@ export type LinkStylesProp = {
 }
 
 export const LinkStyles = styled.a<LinkStylesProp>`
-  cursor: pointer;
   display: inline-block;
-  font-weight: 700;
-
+  cursor: pointer;
   padding: 2.4rem 7rem;
+  font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize.l};
+  justify-self: center;
 
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primary};
-  justify-self: center;
+  box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
 
   transition: all 0.12s;
-  box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: scale(1.02) translateY(-4px);
