@@ -1,6 +1,8 @@
 import React from 'react'
+import OfferThumbnail from '../../components/molecues/OfferThumbnail/OfferThumbnail'
 import MainTemplate from '../../components/templates/MainTemplate'
-import { offerSubheading } from '../../theme/businessInfo'
+import { offerContet, offerSubheading } from '../../theme/businessInfo'
+import { OfferWrapperStyles } from './Offer.style'
 
 const Offer = () => {
   return (
@@ -11,9 +13,11 @@ const Offer = () => {
       subheading={offerSubheading}
       imageSrc="/hero4.jpg"
     >
-      <p>Offer</p>
-      <p>Offer</p>
-      <p>Offer</p>
+      <OfferWrapperStyles>
+        {offerContet.map((offer) => (
+          <OfferThumbnail key={offer.name} {...offer} />
+        ))}
+      </OfferWrapperStyles>
     </MainTemplate>
   )
 }
