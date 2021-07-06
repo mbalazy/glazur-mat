@@ -3,7 +3,7 @@ import { HeroWrapper, HeroImageOverlay, HeroWrapperProps } from './Hero.style'
 import Nav from '../../molecues/Nav/Nav'
 import HeroContentBox, { HeroContentBoxProps } from '../../molecues/HeroContentBox/HeroContentBox'
 
-type HeroProps = {
+export type HeroProps = {
   imageSrc?: string
   alt?: string
 } & HeroContentBoxProps &
