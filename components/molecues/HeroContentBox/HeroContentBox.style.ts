@@ -1,13 +1,28 @@
 import styled, { css } from 'styled-components'
 import { H1, P } from '../../../theme/Typography'
 
-export const HeroContentBoxWrapper = styled.div`
+export type HeroContentBoxWrapperProps = {
+  isFullWidth?: boolean
+}
+
+export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-100%, -50%);
 
   width: 40vw;
+  ${({ isFullWidth }) =>
+    isFullWidth &&
+    css`
+      width: 80vw;
+      transform: translate(-50%, -40%);
+      padding: 4rem;
+
+      p {
+        font-size: ${({ theme }) => theme.fontSize.l};
+      }
+    `}
 
   padding: 8rem;
   background: ${({ theme }) => theme.colors.overlay};

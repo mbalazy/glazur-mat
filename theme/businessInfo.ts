@@ -34,6 +34,8 @@ export const socials = [
     link: 'https://www.whatsapp.com',
   },
 ]
+export const offerSubheading =
+  'Oferujemy Państwu usługi wykończeniowe i remontowo-budowlane na najwyższym poziomie. Przeprowadzamy zlecenia kompleksowo. Podejmujemy się trudnych zadań, angażujemy się w każdą usługę remontową, a swoją pracę wykonujemy terminowo i solidnie. Specjalizujemy się w nowoczesnych technologiach oraz w kreowaniu estetycznej przestrzeni, w której każdy szczegół ma znaczenie. '
 
 export const offerContet = [
   {
