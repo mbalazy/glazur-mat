@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const OfferThumbnailWrapper = styled.div`
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
+  grid-template-rows: 3rem 4rem 1fr;
   justify-items: stretch;
   text-align: center;
-  align-items: start;
 
-  padding: 4rem;
+  padding: 5rem;
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.white};
 
@@ -18,6 +18,5 @@ export const OfferThumbnailWrapper = styled.div`
   }
   p {
     text-align: left;
-    align-self: end;
   }
 `

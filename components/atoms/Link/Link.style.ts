@@ -53,6 +53,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
           ${activeRoute &&
           css`
             background-color: ${({ theme }) => theme.colors.primary};
+            transform: scale(1.02) translateY(-2px);
           `}
         `
 

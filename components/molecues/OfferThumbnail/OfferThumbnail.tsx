@@ -1,6 +1,7 @@
 import React from 'react'
 import { offerContet } from '../../../theme/businessInfo'
 import { H3 } from '../../../theme/Typography'
+import OfferDetail from '../../atoms/OfferDetail/OfferDetail'
 import { OfferThumbnailWrapper } from './OfferThumbnail.style'
 type OfferThumbnailProps = typeof offerContet[number]
 
@@ -11,7 +12,7 @@ const OfferThumbnail = ({ name, icon, details }: OfferThumbnailProps) => {
       <H3>{name}</H3>
       <div>
         {details.map((detail) => (
-          <p key={detail}>{detail}</p>
+          <OfferDetail key={detail} detail={detail} />
         ))}
       </div>
     </OfferThumbnailWrapper>
