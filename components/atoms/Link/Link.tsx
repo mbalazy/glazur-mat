@@ -1,17 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import { LinkStyles } from './Link.style'
+import { LinkStyles, LinkStylesProp } from './Link.style'
 
 type LinkProps = {
   href: string
   children: string
-  simpler?: boolean
-}
+} & LinkStylesProp
 
-const BaseLink = ({ href, children, simpler, ...props }: LinkProps) => {
+const BaseLink = ({ href, children, variant, ...props }: LinkProps) => {
   return (
     <Link href={href} {...props}>
-      <LinkStyles simpler={simpler}>{children}</LinkStyles>
+      <LinkStyles variant={variant}>{children}</LinkStyles>
     </Link>
   )
 }

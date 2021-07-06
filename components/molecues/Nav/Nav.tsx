@@ -1,16 +1,11 @@
 import React from 'react'
-import { menuItems } from '../../../theme/businessInfo'
-import BaseLink from '../../atoms/Link/Link'
+import MenuItems from '../MenuItems/MenuItems'
 import { NavWrapper } from './Nav.style'
 
 const Nav = () => {
   return (
     <NavWrapper>
-      {menuItems.map(({ label, link }) => (
-        <BaseLink key={label} href={link}>
-          {label}
-        </BaseLink>
-      ))}
+      <MenuItems />
     </NavWrapper>
   )
 }

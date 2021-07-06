@@ -6,7 +6,7 @@ type MenuItemProps = typeof menuItems[number]
 
 const MenuItem = ({ label, link }: MenuItemProps) => {
   return (
-    <BaseLink simpler href={link}>
+    <BaseLink variant="simpler" href={link}>
       {label}
     </BaseLink>
   )
