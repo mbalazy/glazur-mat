@@ -22,7 +22,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
   transition: all 0.12s;
 
   &:hover {
-    transform: scale(1.02) translateY(-4px);
+    transform: scale(1.02) translateY(-2px);
     box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.14);
   }
   &:active {
@@ -30,7 +30,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
     box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
   }
 
-  ${({ variant }) => {
+  ${({ variant, activeRoute }) => {
     switch (variant) {
       case 'simpler':
         return css`
@@ -46,15 +46,14 @@ export const LinkStyles = styled.a<LinkStylesProp>`
           padding: 1.2rem 4rem;
           margin: 0 0.8rem;
 
-          ${({ activeRoute }) =>
-            activeRoute &&
-            css`
-              background-color: ${({ theme }) => theme.colors.primary};
-            `}
-
           &:hover {
             background-color: ${({ theme }) => theme.colors.primary};
           }
+
+          ${activeRoute &&
+          css`
+            background-color: ${({ theme }) => theme.colors.primary};
+          `}
         `
 
       default:
