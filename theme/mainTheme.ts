@@ -7,6 +7,7 @@ const mainTheme = {
     white: '#FFFFFF',
     background: '#FAFAFA',
     black: '#0B0B0B',
+    overlay: 'rgba(48, 48, 48, 0.9)',
   },
 
   fontSize: {

@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const NavWrapper = styled.nav`
   height: 8rem;
-  border: 1px solid red;
+  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.overlay};
 
   position: absolute;
   top: 0;

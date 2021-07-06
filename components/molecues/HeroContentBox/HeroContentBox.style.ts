@@ -3,14 +3,14 @@ import { H1, P } from '../../../theme/Typography'
 
 export const HeroContentBoxWrapper = styled.div`
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-100%, -50%);
 
   width: 40vw;
 
   padding: 8rem;
-  background: rgba(0, 0, 0, 0.64);
+  background: ${({ theme }) => theme.colors.overlay};
   color: ${({ theme }) => theme.colors.background};
 
   ${({ theme: { down, breakpoints } }) => css`

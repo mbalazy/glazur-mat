@@ -9,7 +9,7 @@ const Hero = () => {
       <HeroImageOverlay>
         <Image src={'/hero3.jpg'} alt="kuchnia" layout="fill" objectFit="cover" />
       </HeroImageOverlay>
-      {/* <Nav /> */}
+      <Nav />
       <HeroContentBox />
     </HeroWrapper>
   )
