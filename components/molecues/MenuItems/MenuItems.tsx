@@ -2,11 +2,15 @@ import { menuItems } from '../../../theme/businessInfo'
 import MenuItem from '../../atoms/MenuItem/MenuItem'
 import { MenuItemsWrapper } from './MenuItems.style'
 
-const MenuItems = () => {
+export type MenuItemsProps = {
+  onFooter?: boolean
+}
+
+const MenuItems = ({ onFooter }: MenuItemsProps) => {
   return (
-    <MenuItemsWrapper>
+    <MenuItemsWrapper onFooter={onFooter}>
       {menuItems.map((menuItem) => (
-        <MenuItem key={menuItem.label} {...menuItem} />
+        <MenuItem onFooter={onFooter} key={menuItem.label} {...menuItem} />
       ))}
     </MenuItemsWrapper>
   )

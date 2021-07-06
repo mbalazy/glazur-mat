@@ -5,7 +5,7 @@ import MenuItems from '../MenuItems/MenuItems'
 const FooterServices = () => {
   return (
     <FooterSection subheading="Współpracuj z nami!" heading="nasze usługi" icon="/renov.svg">
-      <MenuItems />
+      <MenuItems onFooter={true} />
     </FooterSection>
   )
 }
