@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-export const HeroWrapper = styled.div`
-  height: 65vh;
+export type HeroWrapperProps = {
+  height?: number
+}
+
+export const HeroWrapper = styled.div<HeroWrapperProps>`
+  height: ${({ height }) => height + 'vh'};
   position: relative;
 `
 

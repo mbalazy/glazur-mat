@@ -1,11 +1,19 @@
 import React from 'react'
 import { Copy, Heading, HeroContentBoxWrapper } from './HeroContentBox.style'
 
-const HeroContentBox = () => {
+export type HeroContentBoxProps = {
+  heading?: string
+  subheading?: string
+}
+
+const HeroContentBox = ({
+  heading = 'Glazur-Mat',
+  subheading = 'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych.',
+}: HeroContentBoxProps) => {
   return (
     <HeroContentBoxWrapper>
-      <Heading>Glazur-Mat</Heading>
-      <Copy>Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych.</Copy>
+      <Heading>{heading}</Heading>
+      <Copy>{subheading}</Copy>
     </HeroContentBoxWrapper>
   )
 }

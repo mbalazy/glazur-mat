@@ -1,16 +1,22 @@
 import Image from 'next/image'
-import { HeroWrapper, HeroImageOverlay } from './Hero.style'
+import { HeroWrapper, HeroImageOverlay, HeroWrapperProps } from './Hero.style'
 import Nav from '../../molecues/Nav/Nav'
-import HeroContentBox from '../../molecues/HeroContentBox/HeroContentBox'
+import HeroContentBox, { HeroContentBoxProps } from '../../molecues/HeroContentBox/HeroContentBox'
 
-const Hero = () => {
+type HeroProps = {
+  imageSrc?: string
+  alt?: string
+} & HeroContentBoxProps &
+  HeroWrapperProps
+
+const Hero = ({ imageSrc = '/hero3.jpg', alt = 'kuchnia', height = 65, ...rest }: HeroProps) => {
   return (
-    <HeroWrapper>
+    <HeroWrapper height={height}>
       <HeroImageOverlay>
-        <Image src={'/hero3.jpg'} alt="kuchnia" layout="fill" objectFit="cover" />
+        <Image src={imageSrc} alt={alt} layout="fill" objectFit="cover" />
       </HeroImageOverlay>
       <Nav />
-      <HeroContentBox />
+      <HeroContentBox {...rest} />
     </HeroWrapper>
   )
 }
