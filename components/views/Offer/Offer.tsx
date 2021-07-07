@@ -14,7 +14,7 @@ const Offer = () => {
       subheading={offerSubheading}
       imageSrc="/hero4.jpg"
     >
-      <Section heading="Takie usługi świadczymy:">
+      <Section>
         <GridWrapper>
           {offerContet.map((offer) => (
             <OfferThumbnail key={offer.name} {...offer} />

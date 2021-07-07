@@ -8,11 +8,10 @@ export const OfferDetailStyles = styled.p`
     content: '';
     position: absolute;
     top: 8px;
-    background-color: #000000;
+    background-color: ${({ theme }) => theme.colors.black};
     display: block;
     width: 3px;
-    height: 3px;
-    z-index: 1;
-    left: -8px;
+    height: 4px;
+    left: -10px;
   }
 `
