@@ -1,27 +1,5 @@
-import React from 'react'
-import OfferThumbnail from '../../components/molecues/OfferThumbnail/OfferThumbnail'
-import MainTemplate from '../../components/templates/MainTemplate'
-import { offerContet, offerSubheading } from '../../theme/businessInfo'
-import { OfferOuterWrapper, OfferWrapperStyles } from './Offer.style'
+import Offer from '../../components/views/Offer/Offer'
 
-const Offer = () => {
-  return (
-    <MainTemplate
-      isFullWidth={true}
-      height={52}
-      heading="Oferta Glazur-Mat"
-      subheading={offerSubheading}
-      imageSrc="/hero4.jpg"
-    >
-      <OfferOuterWrapper>
-        <OfferWrapperStyles>
-          {offerContet.map((offer) => (
-            <OfferThumbnail key={offer.name} {...offer} />
-          ))}
-        </OfferWrapperStyles>
-      </OfferOuterWrapper>
-    </MainTemplate>
-  )
-}
+const OfferPage = () => <Offer />
 
-export default Offer
+export default OfferPage

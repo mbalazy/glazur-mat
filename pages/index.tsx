@@ -1,16 +1,5 @@
-import SimplyOffer from '../components/organisms/SimplyOffer/SimplyOffer'
-import SimplyRealizations from '../components/organisms/SimplyRealizations/SimplyRealizations'
-import Testimonials from '../components/organisms/Testimonials/Testimonials'
-import MainTemplate from '../components/templates/MainTemplate'
+import Home from '../components/views/Home/Home'
 
-const Home = () => {
-  return (
-    <MainTemplate>
-      <SimplyOffer />
-      <Testimonials />
-      <SimplyRealizations />
-    </MainTemplate>
-  )
-}
+const HomePage = () => <Home />
 
-export default Home
+export default HomePage
