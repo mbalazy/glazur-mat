@@ -1,5 +1,4 @@
 import React from 'react'
-import { GridWrapper } from '../../templates/GridWrapper.style'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
 
@@ -13,9 +12,7 @@ const WhyUs = () => {
       imageSrc="/hero4.jpg"
     >
       <Section heading="">
-        <GridWrapper>
-          <p>dlaczego my</p>
-        </GridWrapper>
+        <p>dlaczego my</p>
       </Section>
     </MainTemplate>
   )

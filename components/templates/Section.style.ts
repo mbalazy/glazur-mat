@@ -5,6 +5,9 @@ import type { SectionProps } from './Section'
 type SectionWrapperProps = {
   isGray: SectionProps['isGray']
 }
+type ChildrenWrapperProps = {
+  isEmptyHeading: boolean
+}
 
 export const SectionWrapper = styled.section<SectionWrapperProps>`
   display: grid;
@@ -37,11 +40,16 @@ export const Subheading = styled.p`
   `}
 `
 
-export const ChildrenWrapper = styled.div`
-  margin-top: 8rem;
+export const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   width: 80vw;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
 
   display: grid;
   gap: 8rem;
+
+  ${({ isEmptyHeading }) =>
+    !isEmptyHeading &&
+    css`
+      margin-top: 8rem;
+    `}
 `

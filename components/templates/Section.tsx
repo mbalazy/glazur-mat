@@ -12,7 +12,7 @@ const Section = ({ heading, subheading, children, isGray }: SectionProps) => {
     <SectionWrapper isGray={isGray}>
       {heading && <Heading>{heading}</Heading>}
       {subheading && <Subheading>{subheading}</Subheading>}
-      <ChildrenWrapper>{children}</ChildrenWrapper>
+      <ChildrenWrapper isEmptyHeading={!heading && !subheading}>{children}</ChildrenWrapper>
     </SectionWrapper>
   )
 }
