@@ -22,6 +22,9 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
       p {
         font-size: ${({ theme }) => theme.fontSize.l};
       }
+      h1 {
+        font-size: ${({ theme }) => theme.fontSize.xxl};
+      }
     `}
 
   padding: 8rem;
