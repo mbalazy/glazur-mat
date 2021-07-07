@@ -1,8 +1,9 @@
 import React from 'react'
-import OfferThumbnail from '../../molecues/OfferThumbnail/OfferThumbnail'
-import MainTemplate from '../../templates/MainTemplate'
 import { offerContet, offerSubheading } from '../../../theme/businessInfo'
-import { OfferOuterWrapper, OfferWrapperStyles } from './Offer.style'
+import OfferThumbnail from '../../molecues/OfferThumbnail/OfferThumbnail'
+import { GridWrapper } from '../../templates/GridWrapper.style'
+import MainTemplate from '../../templates/MainTemplate'
+import Section from '../../templates/Section'
 
 const Offer = () => {
   return (
@@ -13,13 +14,13 @@ const Offer = () => {
       subheading={offerSubheading}
       imageSrc="/hero4.jpg"
     >
-      <OfferOuterWrapper>
-        <OfferWrapperStyles>
+      <Section heading="Takie usługi świadczymy:">
+        <GridWrapper>
           {offerContet.map((offer) => (
             <OfferThumbnail key={offer.name} {...offer} />
           ))}
-        </OfferWrapperStyles>
-      </OfferOuterWrapper>
+        </GridWrapper>
+      </Section>
     </MainTemplate>
   )
 }

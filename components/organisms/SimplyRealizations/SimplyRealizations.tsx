@@ -1,9 +1,8 @@
-import React from 'react'
 import { realizations } from '../../../theme/businessInfo'
 import BaseLink from '../../atoms/Link/Link'
 import RealizationThumbnail from '../../molecues/RealizationThumblail/RealizationThumbnail'
+import { GridWrapper } from '../../templates/GridWrapper.style'
 import Section from '../../templates/Section'
-import { SimplyRealizationsWrapper } from './SimplyRealizations.style'
 
 const SimplyRealizations = () => {
   return (
@@ -11,11 +10,11 @@ const SimplyRealizations = () => {
       heading="Nasze Realizacje"
       subheading=" Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów."
     >
-      <SimplyRealizationsWrapper>
+      <GridWrapper>
         {realizations.slice(0, 3).map((realization) => (
           <RealizationThumbnail key={realization.name} {...realization} />
         ))}
-      </SimplyRealizationsWrapper>
+      </GridWrapper>
       <BaseLink href="/realizacje">Zobacz wszystkie</BaseLink>
     </Section>
   )

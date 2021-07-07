@@ -1,14 +1,14 @@
 import { offerContet } from '../../../theme/businessInfo'
 import OfferIcon from '../../atoms/OfferIcon/OfferIcon'
-import { OfferIconsWrapper } from './OfferIcons.style'
+import { GridWrapper } from '../../templates/GridWrapper.style'
 
 const OfferIcons = () => {
   return (
-    <OfferIconsWrapper>
+    <GridWrapper>
       {offerContet.map((offer) => (
         <OfferIcon key={offer.name} {...offer} />
       ))}
-    </OfferIconsWrapper>
+    </GridWrapper>
   )
 }
 
