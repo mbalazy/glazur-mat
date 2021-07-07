@@ -117,13 +117,16 @@ export const testimonials = [
   },
 ]
 
-export const realizations = [
+export const realizationsContent = [
   { name: 'Lazienka w Olkuszu', image: '/lazienka1.jpg' },
   { name: 'Kuchnia w Olkuszu', image: '/kuchnia1.jpg' },
   { name: 'Dom w Olkuszu', image: '/lazienka1.jpg' },
   { name: 'Salon w Olkuszu', image: '/lazienka1.jpg' },
   { name: 'Taras w Olkuszu', image: '/lazienka1.jpg' },
 ]
+
+export const realizationsSubheading =
+  'Przedstawiamy wybrane realizacje, które mieliśmy przyjemność wykonać dla naszych klientów. Remonty to dla nas coś co wykonujemy na co dzień, dlatego pragniemy podzielić się naszą pracą. Zapraszamy do obejrzenia galerii wykonanych przez nas prac remontowych.'
 
 export const menuItems = [
   { label: 'Strona główna', link: '/' },

@@ -1,4 +1,4 @@
-import { realizations } from '../../../theme/businessInfo'
+import { realizationsContent } from '../../../theme/businessInfo'
 import BaseLink from '../../atoms/Link/Link'
 import RealizationThumbnail from '../../molecues/RealizationThumblail/RealizationThumbnail'
 import { GridWrapper } from '../../templates/GridWrapper.style'
@@ -11,7 +11,7 @@ const SimplyRealizations = () => {
       subheading=" Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów."
     >
       <GridWrapper>
-        {realizations.slice(0, 3).map((realization) => (
+        {realizationsContent.slice(0, 3).map((realization) => (
           <RealizationThumbnail key={realization.name} {...realization} />
         ))}
       </GridWrapper>
