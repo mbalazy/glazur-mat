@@ -5,7 +5,8 @@ import { GridWrapper } from '../../../templates/GridWrapper.style'
 import MainTemplate from '../../../templates/MainTemplate'
 import Section from '../../../templates/Section'
 
-const Realizations = () => {
+const Realizations = ({ realizations }) => {
+  console.log(realizations)
   return (
     <MainTemplate
       isFullWidth={true}
