@@ -18,23 +18,23 @@ export type Scalars = {
   DateTime: any
 }
 
-export type Block = {
+export type IBlock = {
   __typename?: 'Block'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
-  children?: Maybe<Array<Maybe<Span>>>
+  children?: Maybe<Array<Maybe<ISpan>>>
   style?: Maybe<Scalars['String']>
   list?: Maybe<Scalars['String']>
 }
 
-export type BooleanFilter = {
+export type IBooleanFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['Boolean']>
   /** Checks if the value is not equal to the given input. */
   neq?: Maybe<Scalars['Boolean']>
 }
 
-export type DateFilter = {
+export type IDateFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['Date']>
   /** Checks if the value is not equal to the given input. */
@@ -49,7 +49,7 @@ export type DateFilter = {
   lte?: Maybe<Scalars['Date']>
 }
 
-export type DatetimeFilter = {
+export type IDatetimeFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['DateTime']>
   /** Checks if the value is not equal to the given input. */
@@ -65,7 +65,7 @@ export type DatetimeFilter = {
 }
 
 /** A Sanity document */
-export type Document = {
+export type IDocument = {
   /** Document ID */
   _id?: Maybe<Scalars['ID']>
   /** Document type */
@@ -78,43 +78,43 @@ export type Document = {
   _rev?: Maybe<Scalars['String']>
 }
 
-export type DocumentFilter = {
+export type IDocumentFilter = {
   /** Apply filters on document level */
-  _?: Maybe<Sanity_DocumentFilter>
-  _id?: Maybe<IdFilter>
-  _type?: Maybe<StringFilter>
-  _createdAt?: Maybe<DatetimeFilter>
-  _updatedAt?: Maybe<DatetimeFilter>
-  _rev?: Maybe<StringFilter>
+  _?: Maybe<ISanity_DocumentFilter>
+  _id?: Maybe<IIdFilter>
+  _type?: Maybe<IStringFilter>
+  _createdAt?: Maybe<IDatetimeFilter>
+  _updatedAt?: Maybe<IDatetimeFilter>
+  _rev?: Maybe<IStringFilter>
 }
 
-export type DocumentSorting = {
-  _id?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  _createdAt?: Maybe<SortOrder>
-  _updatedAt?: Maybe<SortOrder>
-  _rev?: Maybe<SortOrder>
+export type IDocumentSorting = {
+  _id?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  _createdAt?: Maybe<ISortOrder>
+  _updatedAt?: Maybe<ISortOrder>
+  _rev?: Maybe<ISortOrder>
 }
 
-export type File = {
+export type IFile = {
   __typename?: 'File'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
-  asset?: Maybe<SanityFileAsset>
+  asset?: Maybe<ISanityFileAsset>
 }
 
-export type FileFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  asset?: Maybe<SanityFileAssetFilter>
+export type IFileFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  asset?: Maybe<ISanityFileAssetFilter>
 }
 
-export type FileSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
+export type IFileSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
 }
 
-export type FloatFilter = {
+export type IFloatFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['Float']>
   /** Checks if the value is not equal to the given input. */
@@ -129,7 +129,7 @@ export type FloatFilter = {
   lte?: Maybe<Scalars['Float']>
 }
 
-export type Geopoint = {
+export type IGeopoint = {
   __typename?: 'Geopoint'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -138,23 +138,23 @@ export type Geopoint = {
   alt?: Maybe<Scalars['Float']>
 }
 
-export type GeopointFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  lat?: Maybe<FloatFilter>
-  lng?: Maybe<FloatFilter>
-  alt?: Maybe<FloatFilter>
+export type IGeopointFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  lat?: Maybe<IFloatFilter>
+  lng?: Maybe<IFloatFilter>
+  alt?: Maybe<IFloatFilter>
 }
 
-export type GeopointSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  lat?: Maybe<SortOrder>
-  lng?: Maybe<SortOrder>
-  alt?: Maybe<SortOrder>
+export type IGeopointSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  lat?: Maybe<ISortOrder>
+  lng?: Maybe<ISortOrder>
+  alt?: Maybe<ISortOrder>
 }
 
-export type IdFilter = {
+export type IIdFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['ID']>
   /** Checks if the value is not equal to the given input. */
@@ -165,31 +165,31 @@ export type IdFilter = {
   nin?: Maybe<Array<Scalars['ID']>>
 }
 
-export type Image = {
+export type IImage = {
   __typename?: 'Image'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
-  asset?: Maybe<SanityImageAsset>
-  hotspot?: Maybe<SanityImageHotspot>
-  crop?: Maybe<SanityImageCrop>
+  asset?: Maybe<ISanityImageAsset>
+  hotspot?: Maybe<ISanityImageHotspot>
+  crop?: Maybe<ISanityImageCrop>
 }
 
-export type ImageFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  asset?: Maybe<SanityImageAssetFilter>
-  hotspot?: Maybe<SanityImageHotspotFilter>
-  crop?: Maybe<SanityImageCropFilter>
+export type IImageFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  asset?: Maybe<ISanityImageAssetFilter>
+  hotspot?: Maybe<ISanityImageHotspotFilter>
+  crop?: Maybe<ISanityImageCropFilter>
 }
 
-export type ImageSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  hotspot?: Maybe<SanityImageHotspotSorting>
-  crop?: Maybe<SanityImageCropSorting>
+export type IImageSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  hotspot?: Maybe<ISanityImageHotspotSorting>
+  crop?: Maybe<ISanityImageCropSorting>
 }
 
-export type IntFilter = {
+export type IIntFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['Int']>
   /** Checks if the value is not equal to the given input. */
@@ -204,7 +204,7 @@ export type IntFilter = {
   lte?: Maybe<Scalars['Int']>
 }
 
-export type Realizations = Document & {
+export type IRealizations = IDocument & {
   __typename?: 'Realizations'
   /** Document ID */
   _id?: Maybe<Scalars['ID']>
@@ -218,95 +218,95 @@ export type Realizations = Document & {
   _rev?: Maybe<Scalars['String']>
   _key?: Maybe<Scalars['String']>
   name?: Maybe<Scalars['String']>
-  slug?: Maybe<Slug>
-  images?: Maybe<Array<Maybe<Image>>>
+  slug?: Maybe<ISlug>
+  images?: Maybe<Array<Maybe<IImage>>>
   /** Znajdzie się na stronie realizacji */
   description?: Maybe<Scalars['String']>
 }
 
-export type RealizationsFilter = {
+export type IRealizationsFilter = {
   /** Apply filters on document level */
-  _?: Maybe<Sanity_DocumentFilter>
-  _id?: Maybe<IdFilter>
-  _type?: Maybe<StringFilter>
-  _createdAt?: Maybe<DatetimeFilter>
-  _updatedAt?: Maybe<DatetimeFilter>
-  _rev?: Maybe<StringFilter>
-  _key?: Maybe<StringFilter>
-  name?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
-  description?: Maybe<StringFilter>
+  _?: Maybe<ISanity_DocumentFilter>
+  _id?: Maybe<IIdFilter>
+  _type?: Maybe<IStringFilter>
+  _createdAt?: Maybe<IDatetimeFilter>
+  _updatedAt?: Maybe<IDatetimeFilter>
+  _rev?: Maybe<IStringFilter>
+  _key?: Maybe<IStringFilter>
+  name?: Maybe<IStringFilter>
+  slug?: Maybe<ISlugFilter>
+  description?: Maybe<IStringFilter>
 }
 
-export type RealizationsSorting = {
-  _id?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  _createdAt?: Maybe<SortOrder>
-  _updatedAt?: Maybe<SortOrder>
-  _rev?: Maybe<SortOrder>
-  _key?: Maybe<SortOrder>
-  name?: Maybe<SortOrder>
-  slug?: Maybe<SlugSorting>
-  description?: Maybe<SortOrder>
+export type IRealizationsSorting = {
+  _id?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  _createdAt?: Maybe<ISortOrder>
+  _updatedAt?: Maybe<ISortOrder>
+  _rev?: Maybe<ISortOrder>
+  _key?: Maybe<ISortOrder>
+  name?: Maybe<ISortOrder>
+  slug?: Maybe<ISlugSorting>
+  description?: Maybe<ISortOrder>
 }
 
-export type RootQuery = {
+export type IRootQuery = {
   __typename?: 'RootQuery'
-  Realizations?: Maybe<Realizations>
-  SanityImageAsset?: Maybe<SanityImageAsset>
-  SanityFileAsset?: Maybe<SanityFileAsset>
-  Document?: Maybe<Document>
-  allRealizations: Array<Realizations>
-  allSanityImageAsset: Array<SanityImageAsset>
-  allSanityFileAsset: Array<SanityFileAsset>
-  allDocument: Array<Document>
+  Realizations?: Maybe<IRealizations>
+  SanityImageAsset?: Maybe<ISanityImageAsset>
+  SanityFileAsset?: Maybe<ISanityFileAsset>
+  Document?: Maybe<IDocument>
+  allRealizations: Array<IRealizations>
+  allSanityImageAsset: Array<ISanityImageAsset>
+  allSanityFileAsset: Array<ISanityFileAsset>
+  allDocument: Array<IDocument>
 }
 
-export type RootQueryRealizationsArgs = {
+export type IRootQueryRealizationsArgs = {
   id: Scalars['ID']
 }
 
-export type RootQuerySanityImageAssetArgs = {
+export type IRootQuerySanityImageAssetArgs = {
   id: Scalars['ID']
 }
 
-export type RootQuerySanityFileAssetArgs = {
+export type IRootQuerySanityFileAssetArgs = {
   id: Scalars['ID']
 }
 
-export type RootQueryDocumentArgs = {
+export type IRootQueryDocumentArgs = {
   id: Scalars['ID']
 }
 
-export type RootQueryAllRealizationsArgs = {
-  where?: Maybe<RealizationsFilter>
-  sort?: Maybe<Array<RealizationsSorting>>
+export type IRootQueryAllRealizationsArgs = {
+  where?: Maybe<IRealizationsFilter>
+  sort?: Maybe<Array<IRealizationsSorting>>
   limit?: Maybe<Scalars['Int']>
   offset?: Maybe<Scalars['Int']>
 }
 
-export type RootQueryAllSanityImageAssetArgs = {
-  where?: Maybe<SanityImageAssetFilter>
-  sort?: Maybe<Array<SanityImageAssetSorting>>
+export type IRootQueryAllSanityImageAssetArgs = {
+  where?: Maybe<ISanityImageAssetFilter>
+  sort?: Maybe<Array<ISanityImageAssetSorting>>
   limit?: Maybe<Scalars['Int']>
   offset?: Maybe<Scalars['Int']>
 }
 
-export type RootQueryAllSanityFileAssetArgs = {
-  where?: Maybe<SanityFileAssetFilter>
-  sort?: Maybe<Array<SanityFileAssetSorting>>
+export type IRootQueryAllSanityFileAssetArgs = {
+  where?: Maybe<ISanityFileAssetFilter>
+  sort?: Maybe<Array<ISanityFileAssetSorting>>
   limit?: Maybe<Scalars['Int']>
   offset?: Maybe<Scalars['Int']>
 }
 
-export type RootQueryAllDocumentArgs = {
-  where?: Maybe<DocumentFilter>
-  sort?: Maybe<Array<DocumentSorting>>
+export type IRootQueryAllDocumentArgs = {
+  where?: Maybe<IDocumentFilter>
+  sort?: Maybe<Array<IDocumentSorting>>
   limit?: Maybe<Scalars['Int']>
   offset?: Maybe<Scalars['Int']>
 }
 
-export type SanityAssetSourceData = {
+export type ISanityAssetSourceData = {
   __typename?: 'SanityAssetSourceData'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -318,23 +318,23 @@ export type SanityAssetSourceData = {
   url?: Maybe<Scalars['String']>
 }
 
-export type SanityAssetSourceDataFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  name?: Maybe<StringFilter>
-  id?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
+export type ISanityAssetSourceDataFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  name?: Maybe<IStringFilter>
+  id?: Maybe<IStringFilter>
+  url?: Maybe<IStringFilter>
 }
 
-export type SanityAssetSourceDataSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  name?: Maybe<SortOrder>
-  id?: Maybe<SortOrder>
-  url?: Maybe<SortOrder>
+export type ISanityAssetSourceDataSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  name?: Maybe<ISortOrder>
+  id?: Maybe<ISortOrder>
+  url?: Maybe<ISortOrder>
 }
 
-export type SanityFileAsset = Document & {
+export type ISanityFileAsset = IDocument & {
   __typename?: 'SanityFileAsset'
   /** Document ID */
   _id?: Maybe<Scalars['ID']>
@@ -359,56 +359,56 @@ export type SanityFileAsset = Document & {
   assetId?: Maybe<Scalars['String']>
   path?: Maybe<Scalars['String']>
   url?: Maybe<Scalars['String']>
-  source?: Maybe<SanityAssetSourceData>
+  source?: Maybe<ISanityAssetSourceData>
 }
 
-export type SanityFileAssetFilter = {
+export type ISanityFileAssetFilter = {
   /** Apply filters on document level */
-  _?: Maybe<Sanity_DocumentFilter>
-  _id?: Maybe<IdFilter>
-  _type?: Maybe<StringFilter>
-  _createdAt?: Maybe<DatetimeFilter>
-  _updatedAt?: Maybe<DatetimeFilter>
-  _rev?: Maybe<StringFilter>
-  _key?: Maybe<StringFilter>
-  originalFilename?: Maybe<StringFilter>
-  label?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  description?: Maybe<StringFilter>
-  altText?: Maybe<StringFilter>
-  sha1hash?: Maybe<StringFilter>
-  extension?: Maybe<StringFilter>
-  mimeType?: Maybe<StringFilter>
-  size?: Maybe<FloatFilter>
-  assetId?: Maybe<StringFilter>
-  path?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  source?: Maybe<SanityAssetSourceDataFilter>
+  _?: Maybe<ISanity_DocumentFilter>
+  _id?: Maybe<IIdFilter>
+  _type?: Maybe<IStringFilter>
+  _createdAt?: Maybe<IDatetimeFilter>
+  _updatedAt?: Maybe<IDatetimeFilter>
+  _rev?: Maybe<IStringFilter>
+  _key?: Maybe<IStringFilter>
+  originalFilename?: Maybe<IStringFilter>
+  label?: Maybe<IStringFilter>
+  title?: Maybe<IStringFilter>
+  description?: Maybe<IStringFilter>
+  altText?: Maybe<IStringFilter>
+  sha1hash?: Maybe<IStringFilter>
+  extension?: Maybe<IStringFilter>
+  mimeType?: Maybe<IStringFilter>
+  size?: Maybe<IFloatFilter>
+  assetId?: Maybe<IStringFilter>
+  path?: Maybe<IStringFilter>
+  url?: Maybe<IStringFilter>
+  source?: Maybe<ISanityAssetSourceDataFilter>
 }
 
-export type SanityFileAssetSorting = {
-  _id?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  _createdAt?: Maybe<SortOrder>
-  _updatedAt?: Maybe<SortOrder>
-  _rev?: Maybe<SortOrder>
-  _key?: Maybe<SortOrder>
-  originalFilename?: Maybe<SortOrder>
-  label?: Maybe<SortOrder>
-  title?: Maybe<SortOrder>
-  description?: Maybe<SortOrder>
-  altText?: Maybe<SortOrder>
-  sha1hash?: Maybe<SortOrder>
-  extension?: Maybe<SortOrder>
-  mimeType?: Maybe<SortOrder>
-  size?: Maybe<SortOrder>
-  assetId?: Maybe<SortOrder>
-  path?: Maybe<SortOrder>
-  url?: Maybe<SortOrder>
-  source?: Maybe<SanityAssetSourceDataSorting>
+export type ISanityFileAssetSorting = {
+  _id?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  _createdAt?: Maybe<ISortOrder>
+  _updatedAt?: Maybe<ISortOrder>
+  _rev?: Maybe<ISortOrder>
+  _key?: Maybe<ISortOrder>
+  originalFilename?: Maybe<ISortOrder>
+  label?: Maybe<ISortOrder>
+  title?: Maybe<ISortOrder>
+  description?: Maybe<ISortOrder>
+  altText?: Maybe<ISortOrder>
+  sha1hash?: Maybe<ISortOrder>
+  extension?: Maybe<ISortOrder>
+  mimeType?: Maybe<ISortOrder>
+  size?: Maybe<ISortOrder>
+  assetId?: Maybe<ISortOrder>
+  path?: Maybe<ISortOrder>
+  url?: Maybe<ISortOrder>
+  source?: Maybe<ISanityAssetSourceDataSorting>
 }
 
-export type SanityImageAsset = Document & {
+export type ISanityImageAsset = IDocument & {
   __typename?: 'SanityImageAsset'
   /** Document ID */
   _id?: Maybe<Scalars['ID']>
@@ -433,59 +433,59 @@ export type SanityImageAsset = Document & {
   assetId?: Maybe<Scalars['String']>
   path?: Maybe<Scalars['String']>
   url?: Maybe<Scalars['String']>
-  metadata?: Maybe<SanityImageMetadata>
-  source?: Maybe<SanityAssetSourceData>
+  metadata?: Maybe<ISanityImageMetadata>
+  source?: Maybe<ISanityAssetSourceData>
 }
 
-export type SanityImageAssetFilter = {
+export type ISanityImageAssetFilter = {
   /** Apply filters on document level */
-  _?: Maybe<Sanity_DocumentFilter>
-  _id?: Maybe<IdFilter>
-  _type?: Maybe<StringFilter>
-  _createdAt?: Maybe<DatetimeFilter>
-  _updatedAt?: Maybe<DatetimeFilter>
-  _rev?: Maybe<StringFilter>
-  _key?: Maybe<StringFilter>
-  originalFilename?: Maybe<StringFilter>
-  label?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  description?: Maybe<StringFilter>
-  altText?: Maybe<StringFilter>
-  sha1hash?: Maybe<StringFilter>
-  extension?: Maybe<StringFilter>
-  mimeType?: Maybe<StringFilter>
-  size?: Maybe<FloatFilter>
-  assetId?: Maybe<StringFilter>
-  path?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  metadata?: Maybe<SanityImageMetadataFilter>
-  source?: Maybe<SanityAssetSourceDataFilter>
+  _?: Maybe<ISanity_DocumentFilter>
+  _id?: Maybe<IIdFilter>
+  _type?: Maybe<IStringFilter>
+  _createdAt?: Maybe<IDatetimeFilter>
+  _updatedAt?: Maybe<IDatetimeFilter>
+  _rev?: Maybe<IStringFilter>
+  _key?: Maybe<IStringFilter>
+  originalFilename?: Maybe<IStringFilter>
+  label?: Maybe<IStringFilter>
+  title?: Maybe<IStringFilter>
+  description?: Maybe<IStringFilter>
+  altText?: Maybe<IStringFilter>
+  sha1hash?: Maybe<IStringFilter>
+  extension?: Maybe<IStringFilter>
+  mimeType?: Maybe<IStringFilter>
+  size?: Maybe<IFloatFilter>
+  assetId?: Maybe<IStringFilter>
+  path?: Maybe<IStringFilter>
+  url?: Maybe<IStringFilter>
+  metadata?: Maybe<ISanityImageMetadataFilter>
+  source?: Maybe<ISanityAssetSourceDataFilter>
 }
 
-export type SanityImageAssetSorting = {
-  _id?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  _createdAt?: Maybe<SortOrder>
-  _updatedAt?: Maybe<SortOrder>
-  _rev?: Maybe<SortOrder>
-  _key?: Maybe<SortOrder>
-  originalFilename?: Maybe<SortOrder>
-  label?: Maybe<SortOrder>
-  title?: Maybe<SortOrder>
-  description?: Maybe<SortOrder>
-  altText?: Maybe<SortOrder>
-  sha1hash?: Maybe<SortOrder>
-  extension?: Maybe<SortOrder>
-  mimeType?: Maybe<SortOrder>
-  size?: Maybe<SortOrder>
-  assetId?: Maybe<SortOrder>
-  path?: Maybe<SortOrder>
-  url?: Maybe<SortOrder>
-  metadata?: Maybe<SanityImageMetadataSorting>
-  source?: Maybe<SanityAssetSourceDataSorting>
+export type ISanityImageAssetSorting = {
+  _id?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  _createdAt?: Maybe<ISortOrder>
+  _updatedAt?: Maybe<ISortOrder>
+  _rev?: Maybe<ISortOrder>
+  _key?: Maybe<ISortOrder>
+  originalFilename?: Maybe<ISortOrder>
+  label?: Maybe<ISortOrder>
+  title?: Maybe<ISortOrder>
+  description?: Maybe<ISortOrder>
+  altText?: Maybe<ISortOrder>
+  sha1hash?: Maybe<ISortOrder>
+  extension?: Maybe<ISortOrder>
+  mimeType?: Maybe<ISortOrder>
+  size?: Maybe<ISortOrder>
+  assetId?: Maybe<ISortOrder>
+  path?: Maybe<ISortOrder>
+  url?: Maybe<ISortOrder>
+  metadata?: Maybe<ISanityImageMetadataSorting>
+  source?: Maybe<ISanityAssetSourceDataSorting>
 }
 
-export type SanityImageCrop = {
+export type ISanityImageCrop = {
   __typename?: 'SanityImageCrop'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -495,25 +495,25 @@ export type SanityImageCrop = {
   right?: Maybe<Scalars['Float']>
 }
 
-export type SanityImageCropFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  top?: Maybe<FloatFilter>
-  bottom?: Maybe<FloatFilter>
-  left?: Maybe<FloatFilter>
-  right?: Maybe<FloatFilter>
+export type ISanityImageCropFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  top?: Maybe<IFloatFilter>
+  bottom?: Maybe<IFloatFilter>
+  left?: Maybe<IFloatFilter>
+  right?: Maybe<IFloatFilter>
 }
 
-export type SanityImageCropSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  top?: Maybe<SortOrder>
-  bottom?: Maybe<SortOrder>
-  left?: Maybe<SortOrder>
-  right?: Maybe<SortOrder>
+export type ISanityImageCropSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  top?: Maybe<ISortOrder>
+  bottom?: Maybe<ISortOrder>
+  left?: Maybe<ISortOrder>
+  right?: Maybe<ISortOrder>
 }
 
-export type SanityImageDimensions = {
+export type ISanityImageDimensions = {
   __typename?: 'SanityImageDimensions'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -522,23 +522,23 @@ export type SanityImageDimensions = {
   aspectRatio?: Maybe<Scalars['Float']>
 }
 
-export type SanityImageDimensionsFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  height?: Maybe<FloatFilter>
-  width?: Maybe<FloatFilter>
-  aspectRatio?: Maybe<FloatFilter>
+export type ISanityImageDimensionsFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  height?: Maybe<IFloatFilter>
+  width?: Maybe<IFloatFilter>
+  aspectRatio?: Maybe<IFloatFilter>
 }
 
-export type SanityImageDimensionsSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  height?: Maybe<SortOrder>
-  width?: Maybe<SortOrder>
-  aspectRatio?: Maybe<SortOrder>
+export type ISanityImageDimensionsSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  height?: Maybe<ISortOrder>
+  width?: Maybe<ISortOrder>
+  aspectRatio?: Maybe<ISortOrder>
 }
 
-export type SanityImageHotspot = {
+export type ISanityImageHotspot = {
   __typename?: 'SanityImageHotspot'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -548,96 +548,96 @@ export type SanityImageHotspot = {
   width?: Maybe<Scalars['Float']>
 }
 
-export type SanityImageHotspotFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  x?: Maybe<FloatFilter>
-  y?: Maybe<FloatFilter>
-  height?: Maybe<FloatFilter>
-  width?: Maybe<FloatFilter>
+export type ISanityImageHotspotFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  x?: Maybe<IFloatFilter>
+  y?: Maybe<IFloatFilter>
+  height?: Maybe<IFloatFilter>
+  width?: Maybe<IFloatFilter>
 }
 
-export type SanityImageHotspotSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  x?: Maybe<SortOrder>
-  y?: Maybe<SortOrder>
-  height?: Maybe<SortOrder>
-  width?: Maybe<SortOrder>
+export type ISanityImageHotspotSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  x?: Maybe<ISortOrder>
+  y?: Maybe<ISortOrder>
+  height?: Maybe<ISortOrder>
+  width?: Maybe<ISortOrder>
 }
 
-export type SanityImageMetadata = {
+export type ISanityImageMetadata = {
   __typename?: 'SanityImageMetadata'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
-  location?: Maybe<Geopoint>
-  dimensions?: Maybe<SanityImageDimensions>
-  palette?: Maybe<SanityImagePalette>
+  location?: Maybe<IGeopoint>
+  dimensions?: Maybe<ISanityImageDimensions>
+  palette?: Maybe<ISanityImagePalette>
   lqip?: Maybe<Scalars['String']>
   hasAlpha?: Maybe<Scalars['Boolean']>
   isOpaque?: Maybe<Scalars['Boolean']>
 }
 
-export type SanityImageMetadataFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  location?: Maybe<GeopointFilter>
-  dimensions?: Maybe<SanityImageDimensionsFilter>
-  palette?: Maybe<SanityImagePaletteFilter>
-  lqip?: Maybe<StringFilter>
-  hasAlpha?: Maybe<BooleanFilter>
-  isOpaque?: Maybe<BooleanFilter>
+export type ISanityImageMetadataFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  location?: Maybe<IGeopointFilter>
+  dimensions?: Maybe<ISanityImageDimensionsFilter>
+  palette?: Maybe<ISanityImagePaletteFilter>
+  lqip?: Maybe<IStringFilter>
+  hasAlpha?: Maybe<IBooleanFilter>
+  isOpaque?: Maybe<IBooleanFilter>
 }
 
-export type SanityImageMetadataSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  location?: Maybe<GeopointSorting>
-  dimensions?: Maybe<SanityImageDimensionsSorting>
-  palette?: Maybe<SanityImagePaletteSorting>
-  lqip?: Maybe<SortOrder>
-  hasAlpha?: Maybe<SortOrder>
-  isOpaque?: Maybe<SortOrder>
+export type ISanityImageMetadataSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  location?: Maybe<IGeopointSorting>
+  dimensions?: Maybe<ISanityImageDimensionsSorting>
+  palette?: Maybe<ISanityImagePaletteSorting>
+  lqip?: Maybe<ISortOrder>
+  hasAlpha?: Maybe<ISortOrder>
+  isOpaque?: Maybe<ISortOrder>
 }
 
-export type SanityImagePalette = {
+export type ISanityImagePalette = {
   __typename?: 'SanityImagePalette'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
-  darkMuted?: Maybe<SanityImagePaletteSwatch>
-  lightVibrant?: Maybe<SanityImagePaletteSwatch>
-  darkVibrant?: Maybe<SanityImagePaletteSwatch>
-  vibrant?: Maybe<SanityImagePaletteSwatch>
-  dominant?: Maybe<SanityImagePaletteSwatch>
-  lightMuted?: Maybe<SanityImagePaletteSwatch>
-  muted?: Maybe<SanityImagePaletteSwatch>
+  darkMuted?: Maybe<ISanityImagePaletteSwatch>
+  lightVibrant?: Maybe<ISanityImagePaletteSwatch>
+  darkVibrant?: Maybe<ISanityImagePaletteSwatch>
+  vibrant?: Maybe<ISanityImagePaletteSwatch>
+  dominant?: Maybe<ISanityImagePaletteSwatch>
+  lightMuted?: Maybe<ISanityImagePaletteSwatch>
+  muted?: Maybe<ISanityImagePaletteSwatch>
 }
 
-export type SanityImagePaletteFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  darkMuted?: Maybe<SanityImagePaletteSwatchFilter>
-  lightVibrant?: Maybe<SanityImagePaletteSwatchFilter>
-  darkVibrant?: Maybe<SanityImagePaletteSwatchFilter>
-  vibrant?: Maybe<SanityImagePaletteSwatchFilter>
-  dominant?: Maybe<SanityImagePaletteSwatchFilter>
-  lightMuted?: Maybe<SanityImagePaletteSwatchFilter>
-  muted?: Maybe<SanityImagePaletteSwatchFilter>
+export type ISanityImagePaletteFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  darkMuted?: Maybe<ISanityImagePaletteSwatchFilter>
+  lightVibrant?: Maybe<ISanityImagePaletteSwatchFilter>
+  darkVibrant?: Maybe<ISanityImagePaletteSwatchFilter>
+  vibrant?: Maybe<ISanityImagePaletteSwatchFilter>
+  dominant?: Maybe<ISanityImagePaletteSwatchFilter>
+  lightMuted?: Maybe<ISanityImagePaletteSwatchFilter>
+  muted?: Maybe<ISanityImagePaletteSwatchFilter>
 }
 
-export type SanityImagePaletteSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  darkMuted?: Maybe<SanityImagePaletteSwatchSorting>
-  lightVibrant?: Maybe<SanityImagePaletteSwatchSorting>
-  darkVibrant?: Maybe<SanityImagePaletteSwatchSorting>
-  vibrant?: Maybe<SanityImagePaletteSwatchSorting>
-  dominant?: Maybe<SanityImagePaletteSwatchSorting>
-  lightMuted?: Maybe<SanityImagePaletteSwatchSorting>
-  muted?: Maybe<SanityImagePaletteSwatchSorting>
+export type ISanityImagePaletteSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  darkMuted?: Maybe<ISanityImagePaletteSwatchSorting>
+  lightVibrant?: Maybe<ISanityImagePaletteSwatchSorting>
+  darkVibrant?: Maybe<ISanityImagePaletteSwatchSorting>
+  vibrant?: Maybe<ISanityImagePaletteSwatchSorting>
+  dominant?: Maybe<ISanityImagePaletteSwatchSorting>
+  lightMuted?: Maybe<ISanityImagePaletteSwatchSorting>
+  muted?: Maybe<ISanityImagePaletteSwatchSorting>
 }
 
-export type SanityImagePaletteSwatch = {
+export type ISanityImagePaletteSwatch = {
   __typename?: 'SanityImagePaletteSwatch'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -647,58 +647,58 @@ export type SanityImagePaletteSwatch = {
   title?: Maybe<Scalars['String']>
 }
 
-export type SanityImagePaletteSwatchFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  background?: Maybe<StringFilter>
-  foreground?: Maybe<StringFilter>
-  population?: Maybe<FloatFilter>
-  title?: Maybe<StringFilter>
+export type ISanityImagePaletteSwatchFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  background?: Maybe<IStringFilter>
+  foreground?: Maybe<IStringFilter>
+  population?: Maybe<IFloatFilter>
+  title?: Maybe<IStringFilter>
 }
 
-export type SanityImagePaletteSwatchSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  background?: Maybe<SortOrder>
-  foreground?: Maybe<SortOrder>
-  population?: Maybe<SortOrder>
-  title?: Maybe<SortOrder>
+export type ISanityImagePaletteSwatchSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  background?: Maybe<ISortOrder>
+  foreground?: Maybe<ISortOrder>
+  population?: Maybe<ISortOrder>
+  title?: Maybe<ISortOrder>
 }
 
-export type Sanity_DocumentFilter = {
+export type ISanity_DocumentFilter = {
   /** All documents referencing the given document ID. */
   references?: Maybe<Scalars['ID']>
   /** All documents that are drafts. */
   is_draft?: Maybe<Scalars['Boolean']>
 }
 
-export type Slug = {
+export type ISlug = {
   __typename?: 'Slug'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
   current?: Maybe<Scalars['String']>
 }
 
-export type SlugFilter = {
-  _key?: Maybe<StringFilter>
-  _type?: Maybe<StringFilter>
-  current?: Maybe<StringFilter>
+export type ISlugFilter = {
+  _key?: Maybe<IStringFilter>
+  _type?: Maybe<IStringFilter>
+  current?: Maybe<IStringFilter>
 }
 
-export type SlugSorting = {
-  _key?: Maybe<SortOrder>
-  _type?: Maybe<SortOrder>
-  current?: Maybe<SortOrder>
+export type ISlugSorting = {
+  _key?: Maybe<ISortOrder>
+  _type?: Maybe<ISortOrder>
+  current?: Maybe<ISortOrder>
 }
 
-export enum SortOrder {
+export enum ISortOrder {
   /** Sorts on the value in ascending order. */
   Asc = 'ASC',
   /** Sorts on the value in descending order. */
   Desc = 'DESC',
 }
 
-export type Span = {
+export type ISpan = {
   __typename?: 'Span'
   _key?: Maybe<Scalars['String']>
   _type?: Maybe<Scalars['String']>
@@ -706,7 +706,7 @@ export type Span = {
   text?: Maybe<Scalars['String']>
 }
 
-export type StringFilter = {
+export type IStringFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: Maybe<Scalars['String']>
   /** Checks if the value is not equal to the given input. */
@@ -717,17 +717,22 @@ export type StringFilter = {
   nin?: Maybe<Array<Scalars['String']>>
 }
 
-export type AllRealizationsQueryVariables = Exact<{ [key: string]: never }>
+export type IAllRealizationsQueryVariables = Exact<{ [key: string]: never }>
 
-export type AllRealizationsQuery = { __typename?: 'RootQuery' } & {
+export type IAllRealizationsQuery = { __typename?: 'RootQuery' } & {
   allRealizations: Array<
-    { __typename?: 'Realizations' } & Pick<Realizations, '_id' | 'name' | 'description'> & {
-        slug?: Maybe<{ __typename?: 'Slug' } & Pick<Slug, 'current'>>
+    { __typename?: 'Realizations' } & Pick<IRealizations, '_id' | 'name' | 'description'> & {
+        slug?: Maybe<{ __typename?: 'Slug' } & Pick<ISlug, 'current'>>
         images?: Maybe<
           Array<
             Maybe<
               { __typename?: 'Image' } & {
-                asset?: Maybe<{ __typename?: 'SanityImageAsset' } & Pick<SanityImageAsset, 'url'>>
+                asset?: Maybe<
+                  { __typename?: 'SanityImageAsset' } & Pick<
+                    ISanityImageAsset,
+                    'assetId' | 'originalFilename' | 'url'
+                  >
+                >
               }
             >
           >
@@ -747,6 +752,8 @@ export const AllRealizationsDocument = gql`
       }
       images {
         asset {
+          assetId
+          originalFilename
           url
         }
       }
@@ -764,12 +771,12 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName) => action()
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
     AllRealizations(
-      variables?: AllRealizationsQueryVariables,
+      variables?: IAllRealizationsQueryVariables,
       requestHeaders?: Dom.RequestInit['headers']
-    ): Promise<AllRealizationsQuery> {
+    ): Promise<IAllRealizationsQuery> {
       return withWrapper(
         (wrappedRequestHeaders) =>
-          client.request<AllRealizationsQuery>(AllRealizationsDocument, variables, {
+          client.request<IAllRealizationsQuery>(AllRealizationsDocument, variables, {
             ...requestHeaders,
             ...wrappedRequestHeaders,
           }),

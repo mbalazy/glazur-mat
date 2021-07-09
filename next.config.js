@@ -8,4 +8,7 @@ module.exports = withImages({
   env: {
     SANITY_ID: process.env.SANITY_ID,
   },
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
 })

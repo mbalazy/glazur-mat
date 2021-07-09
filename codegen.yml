@@ -10,6 +10,8 @@ generates:
   ./graphql.schema.json:
     plugins:
       - 'introspection'
+config:
+  typesPrefix: I
 hooks:
   afterAllFileWrite:
     - eslint --fix

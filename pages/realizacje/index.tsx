@@ -1,18 +1,16 @@
-import Realizations from '../../components/views/Offer/Realizations/Realizations'
-import { Realizations as RealizationType } from '../../generated/graphql'
+import Realizations from '../../components/views/Realizations/Realizations'
+import { IRealizations } from '../../generated/graphql'
 import { useAllRealizations } from '../../graphql/hooks/useAllRealizations'
 
 export type RealizationsProps = {
-  allRealizations: RealizationType[]
+  allRealizations: IRealizations[]
 }
 
-const RealizationsPage = (props: RealizationsProps) => {
-  return <Realizations {...props} />
-}
+const RealizationsPage = (props: RealizationsProps) => <Realizations {...props} />
 export default RealizationsPage
 
 export async function getStaticProps() {
-  const { allRealizations } = await useAllRealizations()
+  const allRealizations = await useAllRealizations()
   return {
     props: {
       allRealizations,

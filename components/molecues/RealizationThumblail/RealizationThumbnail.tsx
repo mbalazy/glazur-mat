@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { IRealizations } from '../../../generated/graphql'
 import {
   DecoratedLine,
   ImageWrapper,
@@ -7,16 +8,17 @@ import {
   RealizationThumbnailWrapper,
 } from './RealizationThumbnail.style'
 
-type RealizationThumbnailProps = {
-  name: string
-  image: string
-}
+const RealizationThumbnail = ({ name, images }: IRealizations) => {
+  if (!images) {
+    return <p>no img</p>
+  }
+  const firstImgSrc = () => images[0]?.asset?.url || '/lazienka1.jpg'
 
-const RealizationThumbnail = ({ name, image }: RealizationThumbnailProps) => {
+  console.log(firstImgSrc())
   return (
     <RealizationThumbnailWrapper>
       <ImageWrapper>
-        <Image src={image} layout="fill" objectFit="cover" alt="realizacja" />
+        <Image src={firstImgSrc()} layout="fill" objectFit="cover" alt="realizacja" />
       </ImageWrapper>
       <DecoratedLine />
       <RealizationName>{name}</RealizationName>
