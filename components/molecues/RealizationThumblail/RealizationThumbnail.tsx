@@ -10,15 +10,14 @@ import {
 
 const RealizationThumbnail = ({ name, images }: IRealizations) => {
   if (!images) {
-    return <p>no img</p>
+    return <p>Brakuje zdjec</p>
   }
-  const firstImgSrc = () => images[0]?.asset?.url || '/lazienka1.jpg'
+  const firstImageSrc = () => images[0]?.asset?.url || '/lazienka1.jpg'
 
-  console.log(firstImgSrc())
   return (
     <RealizationThumbnailWrapper>
       <ImageWrapper>
-        <Image src={firstImgSrc()} layout="fill" objectFit="cover" alt="realizacja" />
+        <Image src={firstImageSrc()} layout="fill" objectFit="cover" alt="realizacja" />
       </ImageWrapper>
       <DecoratedLine />
       <RealizationName>{name}</RealizationName>

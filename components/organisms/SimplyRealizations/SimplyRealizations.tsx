@@ -5,13 +5,14 @@ import { GridWrapper } from '../../templates/GridWrapper.style'
 import Section from '../../templates/Section'
 
 const SimplyRealizations = ({ allRealizations }: RealizationsProps) => {
+  const firstThreeRealizations = allRealizations.slice(0, 3)
   return (
     <Section
       heading="Nasze Realizacje"
       subheading=" Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów."
     >
       <GridWrapper>
-        {allRealizations.slice(0, 3).map((realization) => (
+        {firstThreeRealizations.slice(0, 3).map((realization) => (
           <RealizationThumbnail key={realization._id} {...realization} />
         ))}
       </GridWrapper>
