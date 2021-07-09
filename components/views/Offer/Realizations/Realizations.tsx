@@ -1,11 +1,13 @@
 import React from 'react'
+import { RealizationsProps } from '../../../../pages/realizacje'
 import { realizationsContent, realizationsSubheading } from '../../../../theme/businessInfo'
 import RealizationThumbnail from '../../../molecues/RealizationThumblail/RealizationThumbnail'
 import { GridWrapper } from '../../../templates/GridWrapper.style'
 import MainTemplate from '../../../templates/MainTemplate'
 import Section from '../../../templates/Section'
 
-const Realizations = ({ realizations }) => {
+const Realizations = ({ allRealizations }: RealizationsProps) => {
+  console.log(allRealizations)
   return (
     <MainTemplate
       isFullWidth={true}
