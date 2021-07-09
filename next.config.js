@@ -5,4 +5,7 @@ module.exports = withImages({
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  env: {
+    SANITY_ID: process.env.SANITY_ID,
+  },
 })

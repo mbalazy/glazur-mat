@@ -6,7 +6,6 @@ import MainTemplate from '../../../templates/MainTemplate'
 import Section from '../../../templates/Section'
 
 const Realizations = ({ realizations }) => {
-  console.log(realizations)
   return (
     <MainTemplate
       isFullWidth={true}
