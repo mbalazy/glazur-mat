@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 const mainTheme = {
   colors: {
     primary: '#D6A81A',
@@ -46,3 +48,17 @@ const mainTheme = {
 
 export type MainThemeType = typeof mainTheme
 export default mainTheme
+
+export const hoverEffect = css`
+  transition: all 0.12s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.14);
+  }
+  &:active {
+    transform: scale(1) translateY(0px);
+    box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
+  }
+`

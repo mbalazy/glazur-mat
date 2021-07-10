@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { hoverEffect } from '../../../theme/mainTheme'
 
 type LinkVariants = 'simpler' | 'outline'
 
@@ -9,7 +10,6 @@ export type LinkStylesProp = {
 
 export const LinkStyles = styled.a<LinkStylesProp>`
   display: inline-block;
-  cursor: pointer;
   padding: 2.4rem 7rem;
   font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize.l};
@@ -19,16 +19,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
 
-  transition: all 0.12s;
-
-  &:hover {
-    transform: scale(1.02) translateY(-2px);
-    box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.14);
-  }
-  &:active {
-    transform: scale(1) translateY(0px);
-    box-shadow: 0px 36px 56px -8px rgba(0, 0, 0, 0.1);
-  }
+  ${hoverEffect}
 
   ${({ variant, activeRoute }) => {
     switch (variant) {
