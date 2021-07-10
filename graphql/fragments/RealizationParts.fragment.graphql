@@ -1,0 +1,15 @@
+fragment RealizationParts on Realizations  {
+    _id
+    name
+    description
+    slug {
+      current
+    }
+    images {
+      asset {
+        assetId
+        originalFilename
+        url
+      }
+    }
+}

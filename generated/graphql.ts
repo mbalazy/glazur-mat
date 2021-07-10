@@ -717,48 +717,57 @@ export type IStringFilter = {
   nin?: Maybe<Array<Scalars['String']>>
 }
 
+export type IRealizationPartsFragment = { __typename?: 'Realizations' } & Pick<
+  IRealizations,
+  '_id' | 'name' | 'description'
+> & {
+    slug?: Maybe<{ __typename?: 'Slug' } & Pick<ISlug, 'current'>>
+    images?: Maybe<
+      Array<
+        Maybe<
+          { __typename?: 'Image' } & {
+            asset?: Maybe<
+              { __typename?: 'SanityImageAsset' } & Pick<
+                ISanityImageAsset,
+                'assetId' | 'originalFilename' | 'url'
+              >
+            >
+          }
+        >
+      >
+    >
+  }
+
 export type IAllRealizationsQueryVariables = Exact<{ [key: string]: never }>
 
 export type IAllRealizationsQuery = { __typename?: 'RootQuery' } & {
-  allRealizations: Array<
-    { __typename?: 'Realizations' } & Pick<IRealizations, '_id' | 'name' | 'description'> & {
-        slug?: Maybe<{ __typename?: 'Slug' } & Pick<ISlug, 'current'>>
-        images?: Maybe<
-          Array<
-            Maybe<
-              { __typename?: 'Image' } & {
-                asset?: Maybe<
-                  { __typename?: 'SanityImageAsset' } & Pick<
-                    ISanityImageAsset,
-                    'assetId' | 'originalFilename' | 'url'
-                  >
-                >
-              }
-            >
-          >
-        >
-      }
-  >
+  allRealizations: Array<{ __typename?: 'Realizations' } & IRealizationPartsFragment>
 }
 
-export const AllRealizationsDocument = gql`
-  query AllRealizations {
-    allRealizations {
-      _id
-      name
-      description
-      slug {
-        current
-      }
-      images {
-        asset {
-          assetId
-          originalFilename
-          url
-        }
+export const RealizationPartsFragmentDoc = gql`
+  fragment RealizationParts on Realizations {
+    _id
+    name
+    description
+    slug {
+      current
+    }
+    images {
+      asset {
+        assetId
+        originalFilename
+        url
       }
     }
   }
+`
+export const AllRealizationsDocument = gql`
+  query AllRealizations {
+    allRealizations {
+      ...RealizationParts
+    }
+  }
+  ${RealizationPartsFragmentDoc}
 `
 
 export type SdkFunctionWrapper = <T>(

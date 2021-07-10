@@ -1,17 +1,5 @@
 query AllRealizations {
   allRealizations {
-    _id
-    name
-    description
-    slug {
-      current
-    }
-    images {
-      asset {
-        assetId
-        originalFilename
-        url
-      }
-    }
+    ...RealizationParts 
   }
 }
