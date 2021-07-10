@@ -744,6 +744,26 @@ export type IAllRealizationsQuery = { __typename?: 'RootQuery' } & {
   allRealizations: Array<{ __typename?: 'Realizations' } & IRealizationPartsFragment>
 }
 
+export type IRealizationBySlugQueryVariables = Exact<{
+  slug: Scalars['String']
+}>
+
+export type IRealizationBySlugQuery = { __typename?: 'RootQuery' } & {
+  realizationBySlug: Array<
+    { __typename?: 'Realizations' } & Pick<IRealizations, 'name'> & {
+        images?: Maybe<
+          Array<
+            Maybe<
+              { __typename?: 'Image' } & {
+                asset?: Maybe<{ __typename?: 'SanityImageAsset' } & Pick<ISanityImageAsset, 'url'>>
+              }
+            >
+          >
+        >
+      }
+  >
+}
+
 export const RealizationPartsFragmentDoc = gql`
   fragment RealizationParts on Realizations {
     _id
@@ -769,6 +789,18 @@ export const AllRealizationsDocument = gql`
   }
   ${RealizationPartsFragmentDoc}
 `
+export const RealizationBySlugDocument = gql`
+  query RealizationBySlug($slug: String!) {
+    realizationBySlug: allRealizations(where: { slug: { current: { eq: $slug } } }) {
+      name
+      images {
+        asset {
+          url
+        }
+      }
+    }
+  }
+`
 
 export type SdkFunctionWrapper = <T>(
   action: (requestHeaders?: Record<string, string>) => Promise<T>,
@@ -790,6 +822,19 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
             ...wrappedRequestHeaders,
           }),
         'AllRealizations'
+      )
+    },
+    RealizationBySlug(
+      variables: IRealizationBySlugQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers']
+    ): Promise<IRealizationBySlugQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<IRealizationBySlugQuery>(RealizationBySlugDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'RealizationBySlug'
       )
     },
   }

@@ -1,0 +1,12 @@
+query RealizationBySlug($slug: String!) {
+  realizationBySlug: allRealizations(
+    where: { slug: { current: { eq: $slug } } }
+  ) {
+    name
+    images {
+      asset {
+        url
+      }
+    }
+  }
+}
