@@ -7,7 +7,7 @@ type SocialMediaIconProps = {
 const SocialMediaIcon = ({ name, link, icon }: SocialMediaIconProps) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <img src={icon} alt={name} />
+      <img width="32px" height="32px" src={icon} alt={name} />
     </a>
   )
 }
