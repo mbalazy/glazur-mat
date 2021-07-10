@@ -749,19 +749,7 @@ export type IRealizationBySlugQueryVariables = Exact<{
 }>
 
 export type IRealizationBySlugQuery = { __typename?: 'RootQuery' } & {
-  realizationBySlug: Array<
-    { __typename?: 'Realizations' } & Pick<IRealizations, 'name'> & {
-        images?: Maybe<
-          Array<
-            Maybe<
-              { __typename?: 'Image' } & {
-                asset?: Maybe<{ __typename?: 'SanityImageAsset' } & Pick<ISanityImageAsset, 'url'>>
-              }
-            >
-          >
-        >
-      }
-  >
+  realizationBySlug: Array<{ __typename?: 'Realizations' } & IRealizationPartsFragment>
 }
 
 export const RealizationPartsFragmentDoc = gql`
@@ -792,14 +780,10 @@ export const AllRealizationsDocument = gql`
 export const RealizationBySlugDocument = gql`
   query RealizationBySlug($slug: String!) {
     realizationBySlug: allRealizations(where: { slug: { current: { eq: $slug } } }) {
-      name
-      images {
-        asset {
-          url
-        }
-      }
+      ...RealizationParts
     }
   }
+  ${RealizationPartsFragmentDoc}
 `
 
 export type SdkFunctionWrapper = <T>(

@@ -1,8 +1,12 @@
 import { getSdk } from '../../generated/graphql'
 import client from '../../lib/graphql-request'
 
-export const useRealizationBySlug = async (slug: string) => {
+export type RealizationBySlugProps = {
+  slug: string
+}
+
+export const useRealizationBySlug = async (props: RealizationBySlugProps) => {
   const sdk = getSdk(client)
-  const { realizationBySlug } = await sdk.RealizationBySlug({ slug })
-  return realizationBySlug
+  const { realizationBySlug } = await sdk.RealizationBySlug(props)
+  return realizationBySlug[0]
 }
