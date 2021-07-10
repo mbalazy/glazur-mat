@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { IRealizations } from '../../../generated/graphql'
+import validateRealizationImage from '../../../lib/validateRealizationImage'
 import {
   DecoratedLine,
   ImageWrapper,
@@ -9,11 +10,7 @@ import {
 } from './RealizationThumbnail.style'
 
 const RealizationThumbnail = ({ name, images }: IRealizations) => {
-  if (!images) {
-    return <p>Brakuje zdjec</p>
-  }
-  const firstImageSrc = () => images[0]?.asset?.url || '/lazienka1.jpg'
-
+  const firstImageSrc = () => validateRealizationImage(images)
   return (
     <RealizationThumbnailWrapper>
       <ImageWrapper>

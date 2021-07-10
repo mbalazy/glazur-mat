@@ -12,7 +12,7 @@ const SimplyRealizations = ({ allRealizations }: RealizationsProps) => {
       subheading=" Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów."
     >
       <GridWrapper>
-        {firstThreeRealizations.slice(0, 3).map((realization) => (
+        {firstThreeRealizations.map((realization) => (
           <RealizationThumbnail key={realization._id} {...realization} />
         ))}
       </GridWrapper>
