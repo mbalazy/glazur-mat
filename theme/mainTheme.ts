@@ -52,6 +52,7 @@ export default mainTheme
 export const hoverEffect = css`
   transition: all 0.12s;
   cursor: pointer;
+  backface-visibility: hidden;
 
   &:hover {
     transform: scale(1.02) translateY(-2px);
