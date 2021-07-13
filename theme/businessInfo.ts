@@ -128,6 +128,9 @@ export const realizationsContent = [
 export const realizationsSubheading =
   'Przedstawiamy wybrane realizacje, które mieliśmy przyjemność wykonać dla naszych klientów. Remonty to dla nas coś co wykonujemy na co dzień, dlatego pragniemy podzielić się naszą pracą. Zapraszamy do obejrzenia galerii wykonanych przez nas prac remontowych.'
 
+export const contactSubheading =
+  'Osoby zainteresowane ofertą na remonty, wykończenia wnętrz lub inne prace budowlane prosimy o kontakt.'
+
 export const menuItems = [
   { label: 'Strona główna', link: '/' },
   { label: 'Oferta', link: '/oferta' },

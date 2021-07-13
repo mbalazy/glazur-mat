@@ -1,3 +1,5 @@
+import { contactSubheading } from '../../../theme/businessInfo'
+import ContactContent from '../../atoms/ContactContent/ContactContent'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
 
@@ -7,11 +9,11 @@ const Contact = () => {
       isFullWidth={true}
       height={52}
       heading="Skontaktuj się z nami"
-      subheading=""
+      subheading={contactSubheading}
       imageSrc="/hero4.jpg"
     >
       <Section>
-        <p>kontakt</p>
+        <ContactContent />
       </Section>
     </MainTemplate>
   )
