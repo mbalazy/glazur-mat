@@ -6,6 +6,12 @@ import { SocialMediaIconsWrapper as SocialMediaIcons } from '../../molecues/Soci
 export const SuperNavWrapper = styled.div`
   height: ${({ theme }) => theme.dimensions.superNavbarHeight};
   background-color: ${({ theme }) => theme.colors.background};
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.s)} {
+      height: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
+    }
+  `}
 `
 export const SuperNavInnerWrapper = styled.div`
   height: 100%;
@@ -18,7 +24,7 @@ export const SuperNavInnerWrapper = styled.div`
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.xl)} {
-      padding: 0 3rem;
+      padding: 0 6%;
     }
   `}
 
@@ -30,14 +36,10 @@ export const SuperNavInnerWrapper = styled.div`
       ${MailInfoWrapper} {
         display: none;
       }
-    }
-  `}
-
-  ${({ theme: { down, breakpoints } }) => css`
-    ${down(breakpoints.s)} {
       ${PhoneInfoWrapper} {
         display: none;
       }
+    }
     }
   `}
 `
