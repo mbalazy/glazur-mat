@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { H4, HandWritten } from '../../theme/Typography'
 
 export const FooterSectionWrapper = styled.div`
@@ -8,6 +8,12 @@ export const FooterSectionWrapper = styled.div`
   gap: 1.8rem;
   flex-direction: column;
   justify-items: center;
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      flex: 0;
+    }
+  `}
 `
 export const FooterSubheading = styled.p`
   ${HandWritten}
