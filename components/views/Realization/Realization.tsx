@@ -1,7 +1,7 @@
 import React from 'react'
 import { IRealizations } from '../../../generated/graphql'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
-import { GridWrapper } from '../../templates/GridWrapper.style'
+import ImagesGallery from '../../organisms/ImagesGallery/ImagesGallery'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
 
@@ -15,8 +15,8 @@ const Realization = (props: IRealizations) => {
       subheading={description}
       imageSrc={firstImageSrc}
     >
-      <Section>
-        <GridWrapper>{name}</GridWrapper>
+      <Section heading="Galeria Zdjęć">
+        <ImagesGallery images={images} />
       </Section>
     </MainTemplate>
   )
