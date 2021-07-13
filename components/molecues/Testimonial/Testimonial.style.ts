@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import useWindowDimensions from '../../../lib/useWindowDimensions'
 
 export type TestimonialWrapperStyledProps = {
   position: number
@@ -48,7 +49,17 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
 
   box-shadow: ${({ theme }) => theme.boxShadow};
 
-  ${({ position }) => apllyPositionStyles(position)}
+  // apply additional testimonial styles on +900px window width
+  ${({ position }) => {
+    const { width } = useWindowDimensions()
+    if (width !== undefined && width > 900) {
+      return apllyPositionStyles(position)
+    } else {
+      return css`
+        margin-bottom: 2rem;
+      `
+    }
+  }}
 `
 export const TestimonialContent = styled.span`
   text-align: center;
