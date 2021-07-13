@@ -14,4 +14,5 @@ export const ContactInfoLabel = styled.span`
   display: inline-block;
   margin-bottom: 0.7rem;
 `
-export const MailInfoStyled = styled.div``
+export const MailInfoWrapper = styled.div``
+export const PhoneInfoWrapper = styled.div``

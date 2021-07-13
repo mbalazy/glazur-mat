@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components'
 import Logo from '../../atoms/Logo/Logo'
-import {
-  ContactInfoLabel as MailInfoLabel,
-  ContactInfoIcon as MailInfoIcon,
-  MailInfoStyled as MailInfo,
-} from '../../molecues/ContactInfo/ContactInfo.style'
+import { MailInfoWrapper, PhoneInfoWrapper } from '../../molecues/ContactInfo/ContactInfo.style'
 import { SocialMediaIconsWrapper as SocialMediaIcons } from '../../molecues/SocialMediaIcons/SocialMediaIcons.style'
 
 export const SuperNavWrapper = styled.div`
@@ -31,7 +27,7 @@ export const SuperNavInnerWrapper = styled.div`
       ${SocialMediaIcons} {
         display: none;
       }
-      ${MailInfo} {
+      ${MailInfoWrapper} {
         display: none;
       }
     }
@@ -39,11 +35,8 @@ export const SuperNavInnerWrapper = styled.div`
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.s)} {
-      ${MailInfoLabel} {
+      ${PhoneInfoWrapper} {
         display: none;
-      }
-      ${MailInfoIcon} {
-        margin-right: 1rem;
       }
     }
   `}

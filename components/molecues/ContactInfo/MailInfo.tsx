@@ -1,14 +1,14 @@
 import ContactInfo from './ContactInfo'
 import mailIcon from '../../../public/email.svg'
 import businessInfo from '../../../theme/businessInfo'
-import { MailInfoStyled } from './ContactInfo.style'
+import { MailInfoWrapper } from './ContactInfo.style'
 
 const MailInfo = () => {
   const [firstEmail] = businessInfo.emails
   return (
-    <MailInfoStyled>
+    <MailInfoWrapper>
       <ContactInfo label="Napisz do nas:" content={firstEmail} icon={mailIcon} />
-    </MailInfoStyled>
+    </MailInfoWrapper>
   )
 }
 
