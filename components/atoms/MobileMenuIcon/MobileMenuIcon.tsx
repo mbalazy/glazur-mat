@@ -1,8 +1,12 @@
 import React from 'react'
-import { MobileMenuIconStyles } from './MobileMenuIcon.style'
+import { MobileMenuIconLines, MobileMenuIconWrapper } from './MobileMenuIcon.style'
 
 const MobileMenuIcon = () => {
-  return <MobileMenuIconStyles />
+  return (
+    <MobileMenuIconWrapper>
+      <MobileMenuIconLines />
+    </MobileMenuIconWrapper>
+  )
 }
 
 export default MobileMenuIcon

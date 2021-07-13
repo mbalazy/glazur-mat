@@ -24,7 +24,7 @@ export const SuperNavInnerWrapper = styled.div`
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.xl)} {
-      padding: 0 6%;
+      padding: 0 5%;
     }
   `}
 
@@ -48,6 +48,11 @@ export const LogoStyles = styled(Logo)`
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.s)} {
       height: 50px;
+    }
+  `}
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      margin-left: 2rem;
     }
   `}
 `
