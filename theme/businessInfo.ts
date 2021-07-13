@@ -136,5 +136,4 @@ export const menuItems = [
   { label: 'Oferta', link: '/oferta' },
   { label: 'Dlaczego My', link: '/dlaczego-my' },
   { label: 'Realizacje', link: '/realizacje' },
-  { label: 'Kontakt', link: '/kontakt' },
 ]
