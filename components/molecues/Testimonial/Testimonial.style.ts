@@ -50,13 +50,16 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
   box-shadow: ${({ theme }) => theme.boxShadow};
 
   // apply additional testimonial styles on +900px window width
+  // or add gap on -900px window width
   ${({ position }) => {
     const { width } = useWindowDimensions()
     if (width !== undefined && width > 900) {
       return apllyPositionStyles(position)
     } else {
       return css`
-        margin-bottom: 2rem;
+        & :not(:last-child) {
+          margin-bottom: 4rem;
+        }
       `
     }
   }}
