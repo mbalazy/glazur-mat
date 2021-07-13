@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Logo from '../../atoms/Logo/Logo'
 import {
   ContactInfoLabel as MailInfoLabel,
   ContactInfoIcon as MailInfoIcon,
@@ -30,11 +31,6 @@ export const SuperNavInnerWrapper = styled.div`
       ${SocialMediaIcons} {
         display: none;
       }
-    }
-  `}
-
-  ${({ theme: { down, breakpoints } }) => css`
-    ${down(breakpoints.l)} {
       ${MailInfo} {
         display: none;
       }
@@ -49,6 +45,14 @@ export const SuperNavInnerWrapper = styled.div`
       ${MailInfoIcon} {
         margin-right: 1rem;
       }
+    }
+  `}
+`
+
+export const LogoStyles = styled(Logo)`
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.s)} {
+      height: 50px;
     }
   `}
 `
