@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const NavWrapper = styled.nav`
   height: 8rem;
@@ -13,4 +13,10 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      display: none;
+    }
+  `}
 `
