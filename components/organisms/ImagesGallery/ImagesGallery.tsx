@@ -15,7 +15,7 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
       <GridWrapper>
         {images?.map(({ id, src }) => (
           <ImageWrapper key={id}>
-            <Image src={src as string} layout="fill" />
+            <Image src={src as string} layout="fill" objectFit="cover" />
           </ImageWrapper>
         ))}
       </GridWrapper>
