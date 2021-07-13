@@ -1,5 +1,5 @@
 import React from 'react'
-import MobileMenuIcon from '../../../atoms/MobileMenuIcon/MobileMenuIcon'
+import MobileMenuIcon from '../../atoms/MobileMenuIcon/MobileMenuIcon'
 
 const MobileMenu = () => {
   return (
