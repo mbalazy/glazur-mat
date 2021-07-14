@@ -8,6 +8,9 @@ export const SuperNavWrapper = styled.div`
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
       height: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
+      position: fixed;
+      z-index: 2;
+      width: 100%;
     }
   `}
 `
@@ -19,9 +22,8 @@ export const DesktopSection = styled.div`
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
-        & {
+      & {
         display: none;
-        }
       }
     }
   `}

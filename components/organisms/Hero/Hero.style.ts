@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export type HeroWrapperProps = {
   height?: number
@@ -7,6 +7,12 @@ export type HeroWrapperProps = {
 export const HeroWrapper = styled.div<HeroWrapperProps>`
   height: ${({ height }) => height + 'vh'};
   position: relative;
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      top: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
+    }
+  `}
 `
 
 export const HeroImageOverlay = styled.div`
