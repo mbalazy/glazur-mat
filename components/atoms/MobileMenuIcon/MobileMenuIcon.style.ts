@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { MobileMenuContext } from '../../../lib/mobileMenuContext'
 
-type MobileMenuIconLinesProps = {
+export type MobileMenuIconLinesProps = {
   isMobileMenuOpen: MobileMenuContext['isMobileMenuOpen']
 }
 

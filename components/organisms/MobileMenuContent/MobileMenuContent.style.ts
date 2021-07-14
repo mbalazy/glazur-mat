@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { MobileMenuContentProps } from './MobileMenuContent'
+import { MobileMenuIconLinesProps } from '../../atoms/MobileMenuIcon/MobileMenuIcon.style'
 
-export const MobileMenuContentWrapper = styled.div<MobileMenuContentProps>`
+export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
   ${({ isMobileMenuOpen }) =>
     !isMobileMenuOpen &&
     css`

@@ -6,7 +6,6 @@ import { MobileMenuContentWrapper } from './MobileMenuContent.style'
 const MobileMenuContent = (props: MobileMenuContext) => {
   return (
     <MobileMenuContentWrapper isMobileMenuOpen={props.isMobileMenuOpen}>
-      <p>MobileMenuContent</p>
       <MobileMenuIcon {...props} />
     </MobileMenuContentWrapper>
   )
