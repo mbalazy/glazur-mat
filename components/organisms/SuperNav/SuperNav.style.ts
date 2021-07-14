@@ -14,6 +14,7 @@ export const SuperNavWrapper = styled.div`
   `}
 `
 export const SuperNavInnerWrapper = styled.div`
+  position: relative;
   height: 100%;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
