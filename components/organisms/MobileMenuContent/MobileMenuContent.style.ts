@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { MobileMenuIconLinesProps } from '../../atoms/MobileMenuIcon/MobileMenuIcon.style'
 
 export const MobileMenuTransition = css`
-  transition: transform 0.12s ease-in-out;
+  transition: transform 0.16s ease-in-out;
 `
 
 export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
@@ -15,9 +15,7 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
 
   height: 100vh;
   width: 100%;
-  padding: 2.5rem 5%;
-
-  transform: translateX(100vw);
+  padding: 0 10%;
 
   background-color: ${({ theme }) => theme.colors.background};
 
@@ -26,6 +24,7 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
   gap: 1rem;
 
   ${MobileMenuTransition}
+  transform: translateX(100vw);
 
   ${({ isMobileMenuOpen }) =>
     isMobileMenuOpen &&

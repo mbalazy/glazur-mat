@@ -24,7 +24,7 @@ const mainTheme = {
   dimensions: {
     navbarHeight: '8rem',
     superNavbarHeight: '12rem',
-    superNavbarHeightOnMobile: '9rem',
+    superNavbarHeightOnMobile: '8rem',
     mainContentWidth: '120rem',
   },
 

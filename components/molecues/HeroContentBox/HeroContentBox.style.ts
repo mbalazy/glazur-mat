@@ -18,13 +18,6 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
       width: 80vw;
       transform: translate(-50%, -40%);
       padding: 4rem;
-
-      p {
-        font-size: ${({ theme }) => theme.fontSize.l};
-      }
-      h1 {
-        font-size: ${({ theme }) => theme.fontSize.xxl};
-      }
     `}
 
   padding: 8rem;
@@ -39,16 +32,22 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
     }
   `}
 `
-export const Heading = styled(H1)`
+export const Heading = styled(H1)<HeroContentBoxWrapperProps>`
   margin-bottom: 2rem;
   font-size: ${({ theme }) => theme.fontSize.mega};
+
+  ${({ isFullWidth }) =>
+    isFullWidth &&
+    css`
+      font-size: ${({ theme }) => theme.fontSize.xxl};
+    `}
 `
-export const Copy = styled(P)`
+export const Copy = styled(P)<HeroContentBoxWrapperProps>`
   font-size: ${({ theme }) => theme.fontSize.xxl};
 
-  ${({ theme: { down, breakpoints } }) => css`
+  ${({ theme: { down, breakpoints }, isFullWidth }) => css`
     ${down(breakpoints.l)} {
-      font-size: ${({ theme }) => theme.fontSize.xl};
+      font-size: ${({ theme }) => (isFullWidth ? theme.fontSize.m : theme.fontSize.l)};
     }
   `}
 `
