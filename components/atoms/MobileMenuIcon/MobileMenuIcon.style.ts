@@ -11,6 +11,7 @@ export const MobileMenuIconWrapper = styled.button`
   cursor: pointer;
   display: inline-block;
   background-color: transparent;
+  margin-left: auto;
 `
 
 export const MobileMenuIconLines = styled.div<MobileMenuIconLinesProps>`

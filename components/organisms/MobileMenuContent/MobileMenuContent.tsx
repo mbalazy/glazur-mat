@@ -1,12 +1,14 @@
 import React from 'react'
 import { MobileMenuContext } from '../../../lib/mobileMenuContext'
-import MobileMenuIcon from '../../atoms/MobileMenuIcon/MobileMenuIcon'
+import MenuItems from '../../molecues/MenuItems/MenuItems'
+import SocialMediaIcons from '../../molecues/SocialMediaIcons/SocialMediaIcons'
 import { MobileMenuContentWrapper } from './MobileMenuContent.style'
 
 const MobileMenuContent = (props: MobileMenuContext) => {
   return (
     <MobileMenuContentWrapper isMobileMenuOpen={props.isMobileMenuOpen}>
-      <MobileMenuIcon {...props} />
+      <MenuItems onMobileMenu={true} />
+      <SocialMediaIcons />
     </MobileMenuContentWrapper>
   )
 }

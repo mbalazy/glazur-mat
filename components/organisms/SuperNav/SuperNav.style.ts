@@ -1,15 +1,28 @@
 import styled, { css } from 'styled-components'
 import Logo from '../../atoms/Logo/Logo'
-import { MailInfoWrapper, PhoneInfoWrapper } from '../../molecues/ContactInfo/ContactInfo.style'
-import { SocialMediaIconsWrapper as SocialMediaIcons } from '../../molecues/SocialMediaIcons/SocialMediaIcons.style'
 
 export const SuperNavWrapper = styled.div`
   height: ${({ theme }) => theme.dimensions.superNavbarHeight};
   background-color: ${({ theme }) => theme.colors.background};
 
   ${({ theme: { down, breakpoints } }) => css`
-    ${down(breakpoints.s)} {
+    ${down(breakpoints.l)} {
       height: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
+    }
+  `}
+`
+export const DesktopSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+        & {
+        display: none;
+        }
+      }
     }
   `}
 `
@@ -20,40 +33,27 @@ export const SuperNavInnerWrapper = styled.div`
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.xl)} {
       padding: 0 5%;
     }
   `}
-
-  ${({ theme: { down, breakpoints } }) => css`
-    ${down(breakpoints.l)} {
-      ${SocialMediaIcons} {
-        display: none;
-      }
-      ${MailInfoWrapper} {
-        display: none;
-      }
-      ${PhoneInfoWrapper} {
-        display: none;
-      }
-    }
-    }
-  `}
 `
 
 export const LogoStyles = styled(Logo)`
+  margin-right: 10%;
   ${({ theme: { down, breakpoints } }) => css`
-    ${down(breakpoints.s)} {
-      height: 50px;
+    ${down(breakpoints.xl)} {
+      margin-right: 5%;
     }
   `}
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
       margin-left: 2rem;
+      height: 50px;
     }
   `}
 `
