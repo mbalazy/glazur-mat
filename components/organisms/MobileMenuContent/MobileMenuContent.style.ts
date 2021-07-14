@@ -18,7 +18,7 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
 
   display: grid;
   align-items: start;
-  justify-items: center;
+  gap: 1rem;
 
   ${({ isMobileMenuOpen }) =>
     !isMobileMenuOpen &&
