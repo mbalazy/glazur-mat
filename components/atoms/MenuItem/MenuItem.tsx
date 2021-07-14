@@ -7,12 +7,23 @@ import BaseLink from '../Link/Link'
 
 type MenuItemProps = typeof menuItems[number] & MenuItemsProps
 
-const MenuItem = ({ label, link, onFooter }: MenuItemProps) => {
+const MenuItem = ({ label, link, onFooter, onMobileMenu }: MenuItemProps) => {
+  //TODO move to own component
+  const validateLinkVariant = (onFooter?: boolean, onMobileMenu?: boolean) => {
+    if (onFooter) {
+      return 'simpler'
+    } else if (onMobileMenu) {
+      return 'mobile'
+    } else {
+      return 'outline'
+    }
+  }
+
   const { pathname } = useRouter()
   return (
     <BaseLink
       activeRoute={getActiveRoute(link, pathname)}
-      variant={onFooter ? 'simpler' : 'outline'}
+      variant={validateLinkVariant(onFooter, onMobileMenu)}
       href={link}
     >
       {label}

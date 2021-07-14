@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { hoverEffect } from '../../../theme/mainTheme'
 
-type LinkVariants = 'simpler' | 'outline'
+type LinkVariants = 'simpler' | 'outline' | 'mobile'
 
 export type LinkStylesProp = {
   variant?: LinkVariants
@@ -46,6 +46,16 @@ export const LinkStyles = styled.a<LinkStylesProp>`
             background-color: ${({ theme }) => theme.colors.primary};
             transform: scale(1.02) translateY(-2px);
           `}
+        `
+      case 'mobile':
+        return css`
+          text-align: center;
+          color: ${({ theme }) => theme.colors.black};
+          text-transform: uppercase;
+          background-color: transparent;
+          padding: 2rem 3rem;
+          font-weight: 500;
+          border: 2px solid ${({ theme }) => theme.colors.primary};
         `
 
       default:

@@ -4,13 +4,19 @@ import { MenuItemsWrapper } from './MenuItems.style'
 
 export type MenuItemsProps = {
   onFooter?: boolean
+  onMobileMenu?: boolean
 }
 
-const MenuItems = ({ onFooter }: MenuItemsProps) => {
+const MenuItems = ({ onFooter, onMobileMenu }: MenuItemsProps) => {
   return (
-    <MenuItemsWrapper onFooter={onFooter}>
+    <MenuItemsWrapper onFooter={onFooter} onMobileMenu={onMobileMenu}>
       {menuItems.map((menuItem) => (
-        <MenuItem onFooter={onFooter} key={menuItem.label} {...menuItem} />
+        <MenuItem
+          onMobileMenu={onMobileMenu}
+          onFooter={onFooter}
+          key={menuItem.label}
+          {...menuItem}
+        />
       ))}
     </MenuItemsWrapper>
   )
