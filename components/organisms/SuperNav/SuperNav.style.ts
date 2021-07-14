@@ -42,6 +42,9 @@ export const SuperNavInnerWrapper = styled.div`
     ${down(breakpoints.xl)} {
       padding: 0 5%;
     }
+    ${down(breakpoints.l)} {
+      border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+    }
   `}
 `
 

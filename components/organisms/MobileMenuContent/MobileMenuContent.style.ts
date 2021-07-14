@@ -19,7 +19,6 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
 
   transform: translateX(100vw);
 
-  border: 2px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.background};
 
   display: grid;
