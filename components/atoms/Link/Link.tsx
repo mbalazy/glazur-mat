@@ -5,6 +5,7 @@ import { LinkStyles, LinkStylesProp } from './Link.style'
 type LinkProps = {
   href: string
   children: string
+  onClick?: () => void
 } & LinkStylesProp
 
 const BaseLink = ({ href, children, ...rest }: LinkProps) => {
