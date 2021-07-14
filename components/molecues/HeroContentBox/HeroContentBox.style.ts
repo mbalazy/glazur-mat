@@ -41,8 +41,14 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
 `
 export const Heading = styled(H1)`
   margin-bottom: 2rem;
-  ${({ theme }) => theme.fontSize.mega};
+  font-size: ${({ theme }) => theme.fontSize.mega};
 `
 export const Copy = styled(P)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
+
+  ${({ theme: { down, breakpoints } }) => css`
+    ${down(breakpoints.l)} {
+      font-size: ${({ theme }) => theme.fontSize.xl};
+    }
+  `}
 `

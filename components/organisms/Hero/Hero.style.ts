@@ -11,6 +11,7 @@ export const HeroWrapper = styled.div<HeroWrapperProps>`
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
       top: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
+      height: 80vh;
     }
   `}
 `
