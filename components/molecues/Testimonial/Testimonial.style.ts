@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import useWindowDimensions from '../../../lib/useWindowDimensions'
+import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
 export type TestimonialWrapperStyledProps = {
   position: number
