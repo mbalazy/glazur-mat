@@ -1,4 +1,9 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { MobileMenuContext } from '../../../lib/mobileMenuContext'
+
+type MobileMenuIconLinesProps = {
+  isMobileMenuOpen: MobileMenuContext['isMobileMenuOpen']
+}
 
 export const MobileMenuIconWrapper = styled.button`
   padding: 3rem 2rem;
@@ -7,11 +12,18 @@ export const MobileMenuIconWrapper = styled.button`
   display: inline-block;
   background-color: transparent;
 `
-export const MobileMenuIconLines = styled.div`
+
+export const MobileMenuIconLines = styled.div<MobileMenuIconLinesProps>`
   width: 5rem;
   height: 0.4rem;
   background-color: ${({ theme }) => theme.colors.black};
   position: relative;
+
+  ${({ isMobileMenuOpen }) =>
+    isMobileMenuOpen &&
+    css`
+      background-color: transparent;
+    `}
 
   &:before,
   &:after {
@@ -24,8 +36,18 @@ export const MobileMenuIconLines = styled.div`
 
   &:before {
     transform: translate(-50%, -1.2rem);
+    ${({ isMobileMenuOpen }) =>
+      isMobileMenuOpen &&
+      css`
+        transform: translateX(-50%) rotate(45deg);
+      `}
   }
   &:after {
     transform: translate(-50%, 1.2rem);
+    ${({ isMobileMenuOpen }) =>
+      isMobileMenuOpen &&
+      css`
+        transform: translateX(-50%) rotate(-45deg);
+      `}
   }
 `

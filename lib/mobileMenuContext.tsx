@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 
-type MobileMenuContext = {
+export type MobileMenuContext = {
   isMobileMenuOpen: boolean
   setOpenMobileMenu: (arg0: boolean) => void
 }

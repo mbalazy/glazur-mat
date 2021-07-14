@@ -1,4 +1,5 @@
 import React from 'react'
+import { useMobileMenu } from '../../../hooks/useMobileMenu'
 import MobileMenuIcon from '../../atoms/MobileMenuIcon/MobileMenuIcon'
 import MobileMenuContent from '../MobileMenuContent/MobileMenuContent'
 import { MobileMenuWrapper } from './MobileMenu.style'
@@ -6,8 +7,8 @@ import { MobileMenuWrapper } from './MobileMenu.style'
 const MobileMenu = () => {
   return (
     <MobileMenuWrapper>
-      <MobileMenuIcon />
-      <MobileMenuContent />
+      <MobileMenuIcon {...useMobileMenu()} />
+      <MobileMenuContent {...useMobileMenu()} />
     </MobileMenuWrapper>
   )
 }

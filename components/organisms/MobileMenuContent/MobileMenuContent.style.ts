@@ -1,6 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { MobileMenuContentProps } from './MobileMenuContent'
 
-export const MobileMenuContentWrapper = styled.div`
+export const MobileMenuContentWrapper = styled.div<MobileMenuContentProps>`
+  ${({ isMobileMenuOpen }) =>
+    !isMobileMenuOpen &&
+    css`
+      display: none;
+    `}
+
   position: absolute;
   top: 0;
   left: 0;
