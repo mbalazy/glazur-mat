@@ -4,9 +4,9 @@ import MenuItems from '../../molecues/MenuItems/MenuItems'
 import SocialMediaIcons from '../../molecues/SocialMediaIcons/SocialMediaIcons'
 import { MobileMenuContentWrapper } from './MobileMenuContent.style'
 
-const MobileMenuContent = (props: MobileMenuContext) => {
+const MobileMenuContent = ({ isMobileMenuOpen }: MobileMenuContext) => {
   return (
-    <MobileMenuContentWrapper isMobileMenuOpen={props.isMobileMenuOpen}>
+    <MobileMenuContentWrapper isMobileMenuOpen={isMobileMenuOpen}>
       <MenuItems onMobileMenu={true} />
       <SocialMediaIcons />
     </MobileMenuContentWrapper>

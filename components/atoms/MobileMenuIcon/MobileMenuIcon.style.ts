@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { MobileMenuContext } from '../../../lib/mobileMenuContext'
+import { MobileMenuTransition } from '../../organisms/MobileMenuContent/MobileMenuContent.style'
 
 export type MobileMenuIconLinesProps = {
   isMobileMenuOpen: MobileMenuContext['isMobileMenuOpen']
@@ -19,6 +20,7 @@ export const MobileMenuIconLines = styled.div<MobileMenuIconLinesProps>`
   height: 0.4rem;
   background-color: ${({ theme }) => theme.colors.black};
   position: relative;
+  ${MobileMenuTransition}
 
   ${({ isMobileMenuOpen }) =>
     isMobileMenuOpen &&
