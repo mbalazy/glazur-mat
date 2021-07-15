@@ -14,12 +14,14 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
   z-index: 1;
 
   width: 100%;
+  height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile});
   padding: 1.2rem 10% 0;
 
   background-color: ${({ theme }) => theme.colors.background};
 
   display: grid;
   align-items: center;
+  align-content: stretch;
 
   ${MobileMenuTransition}
   transform: translateX(100vw);
