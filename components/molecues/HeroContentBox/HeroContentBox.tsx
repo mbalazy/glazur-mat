@@ -16,7 +16,6 @@ const HeroContentBox = ({
   subheading = 'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych.',
   isFullWidth,
 }: HeroContentBoxProps) => {
-  console.log(isFullWidth)
   return (
     <HeroContentBoxWrapper isFullWidth={isFullWidth}>
       <Heading isFullWidth={isFullWidth}>{heading}</Heading>
