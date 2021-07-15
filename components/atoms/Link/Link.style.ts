@@ -10,7 +10,8 @@ export type LinkStylesProp = {
 
 export const LinkStyles = styled.a<LinkStylesProp>`
   display: inline-block;
-  padding: 2.4rem 7rem;
+  padding: 2.4rem 5rem;
+  margin: 0 -1rem;
   font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize.l};
   justify-self: center;
@@ -53,7 +54,8 @@ export const LinkStyles = styled.a<LinkStylesProp>`
           color: ${({ theme }) => theme.colors.black};
           text-transform: uppercase;
           background-color: transparent;
-          padding: 2rem 3rem;
+          padding: 1.8rem 0;
+          margin: 0.2rem 0;
           font-weight: 500;
           border: 2px solid ${({ theme }) => theme.colors.primary};
         `
