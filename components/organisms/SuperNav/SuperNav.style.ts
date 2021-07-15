@@ -19,6 +19,7 @@ export const DesktopSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 8%;
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {

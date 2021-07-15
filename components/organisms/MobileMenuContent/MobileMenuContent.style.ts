@@ -13,15 +13,13 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
   right: 0;
   z-index: 1;
 
-  height: 100vh;
   width: 100%;
-  padding: 0 10%;
+  padding: 1.2rem 10% 0;
 
   background-color: ${({ theme }) => theme.colors.background};
 
   display: grid;
-  align-items: start;
-  gap: 1rem;
+  align-items: center;
 
   ${MobileMenuTransition}
   transform: translateX(100vw);
