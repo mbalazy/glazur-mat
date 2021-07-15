@@ -35,7 +35,7 @@ export const socials = [
   },
 ]
 export const offerSubheading =
-  'Oferujemy Państwu usługi wykończeniowe i remontowo-budowlane na najwyższym poziomie. Przeprowadzamy zlecenia kompleksowo. Podejmujemy się trudnych zadań, angażujemy się w każdą usługę remontową, a swoją pracę wykonujemy terminowo i solidnie. Specjalizujemy się w nowoczesnych technologiach oraz w kreowaniu estetycznej przestrzeni, w której każdy szczegół ma znaczenie. '
+  'Oferujemy Państwu usługi wykończeniowe i remontowo-budowlane na najwyższym poziomie. Podejmujemy się trudnych zadań, angażujemy się w każdą usługę remontową, a swoją pracę wykonujemy terminowo i solidnie. Specjalizujemy się w nowoczesnych technologiach oraz w kreowaniu estetycznej przestrzeni, w której każdy szczegół ma znaczenie. '
 
 export const offerContet = [
   {
@@ -133,7 +133,7 @@ export const contactSubheading =
 
 export const menuItems = [
   { label: 'Strona główna', link: '/' },
+  { label: 'Realizacje', link: '/realizacje' },
   { label: 'Oferta', link: '/oferta' },
   { label: 'Dlaczego My', link: '/dlaczego-my' },
-  { label: 'Realizacje', link: '/realizacje' },
 ]
