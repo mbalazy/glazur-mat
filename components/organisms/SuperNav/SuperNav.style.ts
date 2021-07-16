@@ -3,7 +3,8 @@ import Logo from '../../atoms/Logo/Logo'
 
 export const SuperNavWrapper = styled.div`
   height: ${({ theme }) => theme.dimensions.superNavbarHeight};
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px);
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
