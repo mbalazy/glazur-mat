@@ -2,16 +2,17 @@ import styled, { css } from 'styled-components'
 
 export type HeroWrapperProps = {
   height?: number
+  isOnHome?: boolean
 }
 
 export const HeroWrapper = styled.div<HeroWrapperProps>`
   height: ${({ height }) => height + 'vh'};
   position: relative;
 
-  ${({ theme: { down, breakpoints } }) => css`
+  ${({ theme: { down, breakpoints }, isOnHome }) => css`
     ${down(breakpoints.l)} {
       top: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};
-      height: 80vh;
+      height: ${() => (isOnHome ? '60vh' : '80vh')};
     }
   `}
 `

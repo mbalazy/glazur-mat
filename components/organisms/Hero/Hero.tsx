@@ -9,9 +9,15 @@ export type HeroProps = {
 } & HeroContentBoxProps &
   HeroWrapperProps
 
-const Hero = ({ imageSrc = '/hero3.jpg', alt = 'kuchnia', height = 65, ...rest }: HeroProps) => {
+const Hero = ({
+  imageSrc = '/hero3.jpg',
+  alt = 'kuchnia',
+  height = 65,
+  isOnHome = false,
+  ...rest
+}: HeroProps) => {
   return (
-    <HeroWrapper height={height}>
+    <HeroWrapper height={height} isOnHome={isOnHome}>
       <HeroImageOverlay>
         <Image src={imageSrc} alt={alt} layout="fill" objectFit="cover" />
       </HeroImageOverlay>
