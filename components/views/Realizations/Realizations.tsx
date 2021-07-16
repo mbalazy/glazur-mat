@@ -13,7 +13,7 @@ const Realizations = ({ allRealizations }: RealizationsProps) => {
       height={52}
       heading="Sprawdź nasz realizacje"
       subheading={realizationsSubheading}
-      imageSrc="/hero4.jpg"
+      imageSrc="/pages_hero.jpg"
     >
       <Section heading="Przykładowe ostatnie realizacje wykonane przez nas:">
         <GridWrapper>

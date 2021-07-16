@@ -9,7 +9,7 @@ const WhyUs = () => {
       height={52}
       heading="Dlaczego warto nam zaufać"
       subheading="W tym miejscu chcielibyśmy wyszczególnić swoje zalety – doświadczenie, fachowe narzędzia i wiele innych faktów potwierdzających naszą solidność. Ale co Ty będziesz z tego miał?"
-      imageSrc="/hero4.jpg"
+      imageSrc="/pages_hero.jpg"
     >
       <Section heading="">
         <p>dlaczego my</p>

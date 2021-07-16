@@ -12,7 +12,7 @@ const Offer = () => {
       height={52}
       heading="Oferta Glazur-Mat"
       subheading={offerSubheading}
-      imageSrc="/hero4.jpg"
+      imageSrc="/pages_hero.jpg"
     >
       <Section>
         <GridWrapper>
