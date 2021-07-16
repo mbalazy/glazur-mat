@@ -6,7 +6,7 @@ import MainTemplate from '../../templates/MainTemplate'
 
 const Home = (props: RealizationsProps) => {
   return (
-    <MainTemplate>
+    <MainTemplate isOnHome={true}>
       <SimplyOffer />
       <Testimonials />
       <SimplyRealizations {...props} />
