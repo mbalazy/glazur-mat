@@ -9,7 +9,14 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterImageOverlay>
-        <Image src="/footer.jpg" alt="marmur" layout="fill" objectFit="cover" />
+        <Image
+          src="/footer.jpg"
+          quality={90}
+          priority
+          alt="marmur"
+          layout="fill"
+          objectFit="cover"
+        />
       </FooterImageOverlay>
       <FooterContent>
         <FooterContact />
