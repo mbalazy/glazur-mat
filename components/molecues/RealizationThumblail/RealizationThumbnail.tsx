@@ -13,7 +13,7 @@ import {
 const RealizationThumbnail = ({ name, images, slug }: IRealizations) => {
   const firstImageSrc = () => validateRealizationImage(images)
   return (
-    <Link href={`/realizacje/${slug?.current}`}>
+    <Link href={`/realizacje/${slug?.current}`} passHref>
       <RealizationThumbnailWrapper>
         <ImageWrapper>
           <Image src={firstImageSrc()} layout="fill" objectFit="cover" alt="realizacja" />
