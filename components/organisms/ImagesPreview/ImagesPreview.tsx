@@ -2,8 +2,12 @@ import React from 'react'
 import ReactModal from 'react-modal'
 import Image from 'next/image'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
-import { ImagesPreviewWrapper, MainImage, RestImages } from './ImagesPreview.style'
-import { ImageWrapper } from '../../molecues/RealizationThumblail/RealizationThumbnail.style'
+import {
+  ImagesPreviewWrapper,
+  MainImage,
+  AllImagesImagesWrapper,
+  SmallImageWrapper,
+} from './ImagesPreview.style'
 
 type ImagesPreviewProps = {
   mainImageSrc: string | null
@@ -21,21 +25,25 @@ const ImagesPreview = ({
   isPreviewOpen,
 }: ImagesPreviewProps) => {
   return (
-    <ReactModal isOpen={isPreviewOpen}>
+    <ReactModal
+      contentLabel="podgląd zdjeć"
+      isOpen={isPreviewOpen}
+      onRequestClose={() => handleClosePreview()}
+    >
       <ImagesPreviewWrapper>
         <button onClick={() => handleClosePreview()}>ZAMKNIJ</button>
 
         <MainImage>
-          <Image src={mainImageSrc as string} layout="fill" objectFit="cover" />
+          <Image src={mainImageSrc as string} layout="fill" objectFit="contain" />
         </MainImage>
 
-        <RestImages>
+        <AllImagesImagesWrapper>
           {allImages?.map(({ src, id }) => (
-            <ImageWrapper key={id} onClick={() => setMainImageSrc(src as string)}>
-              <Image src={src as string} layout="fill" objectFit="cover" />
-            </ImageWrapper>
+            <SmallImageWrapper key={id} onClick={() => setMainImageSrc(src as string)}>
+              <Image src={src as string} layout="fill" objectFit="contain" />
+            </SmallImageWrapper>
           ))}
-        </RestImages>
+        </AllImagesImagesWrapper>
       </ImagesPreviewWrapper>
     </ReactModal>
   )

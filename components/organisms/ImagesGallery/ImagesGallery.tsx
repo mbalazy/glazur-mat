@@ -22,7 +22,7 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
     <>
       <GridWrapper>
         {images?.map(({ id, src }) => (
-          <ImageWrapper key={id} onClick={() => handleOpenPreview(src as string)}>
+          <ImageWrapper as="button" key={id} onClick={() => handleOpenPreview(src as string)}>
             <Image src={src as string} layout="fill" objectFit="cover" />
           </ImageWrapper>
         ))}

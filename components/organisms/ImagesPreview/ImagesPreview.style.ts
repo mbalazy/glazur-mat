@@ -1,22 +1,23 @@
 import styled from 'styled-components'
 
 export const ImagesPreviewWrapper = styled.div`
-  position: fixed;
-  top: 10%;
-  left: 10%;
-  width: 80vw;
-  height: 80vh;
-  background-color: ${({ theme }) => theme.colors.overlay};
+  width: 90vw;
+  height: 92%;
   display: flex;
   flex-direction: column;
 `
-
 export const MainImage = styled.div`
   position: relative;
-  height: 80%;
+  height: 100%;
 `
-export const RestImages = styled.div`
+export const AllImagesImagesWrapper = styled.div`
   position: relative;
-  height: 10%;
+  height: 7rem;
   display: flex;
+`
+export const SmallImageWrapper = styled.button`
+  margin-top: 2rem;
+  height: 10rem;
+  width: 100%;
+  position: relative;
 `
