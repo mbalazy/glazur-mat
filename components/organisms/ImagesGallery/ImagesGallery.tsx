@@ -28,14 +28,13 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
         ))}
       </GridWrapper>
 
-      {isPreviewOpen && (
-        <ImagesPreview
-          allImages={images}
-          mainImageSrc={mainImageSrc}
-          setMainImageSrc={setMainImageSrc}
-          handleClosePreview={() => setIsPreviewOpen(false)}
-        />
-      )}
+      <ImagesPreview
+        isPreviewOpen={isPreviewOpen}
+        allImages={images}
+        mainImageSrc={mainImageSrc}
+        setMainImageSrc={setMainImageSrc}
+        handleClosePreview={() => setIsPreviewOpen(false)}
+      />
     </>
   )
 }

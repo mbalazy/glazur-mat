@@ -1,6 +1,6 @@
 import React from 'react'
+import ReactModal from 'react-modal'
 import Image from 'next/image'
-import ClientOnlyPortal from '../../templates/ClientOnlyPortal'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
 import { ImagesPreviewWrapper, MainImage, RestImages } from './ImagesPreview.style'
 import { ImageWrapper } from '../../molecues/RealizationThumblail/RealizationThumbnail.style'
@@ -8,8 +8,9 @@ import { ImageWrapper } from '../../molecues/RealizationThumblail/RealizationThu
 type ImagesPreviewProps = {
   mainImageSrc: string | null
   allImages?: ImagesGalleryProps['images']
-  handleClosePreview: () => void
   setMainImageSrc: (src: string) => void
+  handleClosePreview: () => void
+  isPreviewOpen: boolean
 }
 
 const ImagesPreview = ({
@@ -17,9 +18,10 @@ const ImagesPreview = ({
   allImages,
   handleClosePreview,
   setMainImageSrc,
+  isPreviewOpen,
 }: ImagesPreviewProps) => {
   return (
-    <ClientOnlyPortal>
+    <ReactModal isOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
         <button onClick={() => handleClosePreview()}>ZAMKNIJ</button>
 
@@ -35,7 +37,7 @@ const ImagesPreview = ({
           ))}
         </RestImages>
       </ImagesPreviewWrapper>
-    </ClientOnlyPortal>
+    </ReactModal>
   )
 }
 
