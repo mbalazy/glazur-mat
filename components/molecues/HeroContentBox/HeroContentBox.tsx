@@ -13,7 +13,8 @@ export type HeroContentBoxProps = {
 
 const HeroContentBox = ({
   heading = 'Glazur-Mat',
-  subheading = 'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych.',
+  subheading = `Świadczymy profesjonalne usługi z zakresu prac budowlanych
+  i wykończeniowych.`,
   isFullWidth,
 }: HeroContentBoxProps) => {
   return (

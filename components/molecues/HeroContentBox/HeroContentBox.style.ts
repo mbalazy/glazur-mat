@@ -44,6 +44,7 @@ export const Heading = styled(H1)<HeroContentBoxWrapperProps>`
 `
 export const Copy = styled(P)<HeroContentBoxWrapperProps>`
   font-size: ${({ theme }) => theme.fontSize.xxl};
+  white-space: pre-line;
 
   ${({ theme: { down, breakpoints }, isFullWidth }) => css`
     ${down(breakpoints.l)} {
