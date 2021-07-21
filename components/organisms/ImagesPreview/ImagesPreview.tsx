@@ -30,6 +30,7 @@ const ImagesPreview = ({
       contentLabel="podgląd zdjeć"
       isOpen={isPreviewOpen}
       onRequestClose={() => handleClosePreview()}
+      closeTimeoutMS={200}
     >
       <ImagesPreviewWrapper>
         <MainImage>
