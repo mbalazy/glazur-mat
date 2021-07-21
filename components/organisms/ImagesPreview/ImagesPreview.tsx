@@ -5,7 +5,7 @@ import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
 import {
   ImagesPreviewWrapper,
   MainImage,
-  RestImagesWrapper,
+  RestImages,
   SmallImageWrapper,
   CloseButton,
 } from './ImagesPreview.style'
@@ -32,19 +32,17 @@ const ImagesPreview = ({
       onRequestClose={() => handleClosePreview()}
     >
       <ImagesPreviewWrapper>
-        <CloseButton onClick={() => handleClosePreview()} />
-
         <MainImage>
           <Image src={mainImageSrc as string} layout="fill" objectFit="contain" />
         </MainImage>
-
-        <RestImagesWrapper>
+        <RestImages>
           {allImages?.map(({ src, id }) => (
             <SmallImageWrapper key={id} onClick={() => setMainImageSrc(src as string)}>
               <Image src={src as string} layout="fill" objectFit="contain" />
             </SmallImageWrapper>
           ))}
-        </RestImagesWrapper>
+        </RestImages>
+        <CloseButton onClick={() => handleClosePreview()} />
       </ImagesPreviewWrapper>
     </ReactModal>
   )

@@ -9,7 +9,7 @@ export const MainImage = styled.div`
   position: relative;
   height: 100%;
 `
-export const RestImagesWrapper = styled.div`
+export const RestImages = styled.div`
   position: relative;
   height: 14rem;
   margin-top: 2rem;
