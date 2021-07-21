@@ -31,6 +31,7 @@ const ImagesPreview = ({
       isOpen={isPreviewOpen}
       onRequestClose={() => handleClosePreview()}
       closeTimeoutMS={200}
+      appElement={document.getElementById('__next') || {}}
     >
       <ImagesPreviewWrapper>
         <MainImage>

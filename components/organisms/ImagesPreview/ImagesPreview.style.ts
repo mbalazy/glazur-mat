@@ -2,16 +2,13 @@ import styled from 'styled-components'
 
 export const ImagesPreviewWrapper = styled.div`
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 14rem;
 `
 export const MainImage = styled.div`
   position: relative;
-  height: 100%;
 `
 export const RestImages = styled.div`
-  position: relative;
-  height: 14rem;
   margin-top: 2rem;
   overflow-x: auto;
 
@@ -19,13 +16,13 @@ export const RestImages = styled.div`
   justify-content: center;
 `
 export const SmallImageWrapper = styled.button`
+  cursor: pointer;
   position: relative;
-  height: 100%;
-  width: 20rem;
-  margin: 0 0.6rem;
+  width: 12rem;
 
   border: 2px solid transparent;
   background-color: transparent;
+  transition: border 0.2s;
 
   &:hover,
   &:focus {
