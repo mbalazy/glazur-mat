@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const ImagesPreviewWrapper = styled.div`
-  width: 90vw;
-  height: 92%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 `
@@ -12,14 +11,27 @@ export const MainImage = styled.div`
 `
 export const RestImagesWrapper = styled.div`
   position: relative;
-  height: 7rem;
-  display: flex;
+  height: 14rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 2rem;
 `
 export const SmallImageWrapper = styled.button`
-  margin-top: 2rem;
-  height: 10rem;
-  width: 100%;
   position: relative;
+  height: 100%;
+  width: 20rem;
+
+  border: 2px solid transparent;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+  }
 `
 export const CloseButton = styled.button`
   cursor: pointer;
