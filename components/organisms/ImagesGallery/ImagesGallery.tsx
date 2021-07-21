@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
-import { ImageWrapper } from '../../molecues/RealizationThumblail/RealizationThumbnail.style'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import ImagesPreview from '../ImagesPreview/ImagesPreview'
+import { GalleryImageStyles } from './ImagesGallery.style'
 
 export type ImagesGalleryProps = {
   images: ReturnType<typeof validateRealizationProps>['images']
@@ -22,9 +22,9 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
     <>
       <GridWrapper>
         {images?.map(({ id, src }) => (
-          <ImageWrapper as="button" key={id} onClick={() => handleOpenPreview(src as string)}>
+          <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(src as string)}>
             <Image src={src as string} layout="fill" objectFit="cover" />
-          </ImageWrapper>
+          </GalleryImageStyles>
         ))}
       </GridWrapper>
 
