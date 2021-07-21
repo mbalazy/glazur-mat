@@ -16,7 +16,7 @@ const Realization = (props: IRealizations) => {
       subheading={description}
       imageSrc={firstImageSrc}
     >
-      <Section heading="Galeria Zdjęć">
+      <Section isFullWidth={true} heading="Galeria Zdjęć">
         <ImagesGallery images={images} />
         <BaseLink href="/realizacje">Powrót</BaseLink>
       </Section>
