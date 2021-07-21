@@ -27,7 +27,7 @@ const ImagesPreview = ({
 }: ImagesPreviewProps) => {
   return (
     <ReactModal
-      contentLabel="podgląd zdjeć"
+      contentLabel="podgląd zdjeć z tej realizacji"
       isOpen={isPreviewOpen}
       onRequestClose={() => handleClosePreview()}
       closeTimeoutMS={200}

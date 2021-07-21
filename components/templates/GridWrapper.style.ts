@@ -17,5 +17,6 @@ export const GridWrapper = styled.div<GridWrapperProps>`
     isFullWidth &&
     css`
       width: 97vw;
+      gap: 4rem;
     `}
 `

@@ -15,15 +15,14 @@ export const RestImages = styled.div`
   margin-top: 2rem;
   overflow-x: auto;
 
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   justify-content: center;
-  gap: 2rem;
 `
 export const SmallImageWrapper = styled.button`
   position: relative;
   height: 100%;
   width: 20rem;
+  margin: 0 0.6rem;
 
   border: 2px solid transparent;
   background-color: transparent;
