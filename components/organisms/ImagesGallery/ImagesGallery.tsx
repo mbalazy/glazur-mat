@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
+import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import ImagesPreview from '../ImagesPreview/ImagesPreview'
@@ -18,6 +19,8 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
     setIsPreviewOpen(true)
   }
 
+  const { isOnDesktop } = useWindowDimensions()
+
   return (
     <>
       <GridWrapper isFullWidth={true}>
@@ -28,13 +31,15 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
         ))}
       </GridWrapper>
 
-      <ImagesPreview
-        isPreviewOpen={isPreviewOpen}
-        allImages={images}
-        mainImageSrc={mainImageSrc}
-        setMainImageSrc={setMainImageSrc}
-        handleClosePreview={() => setIsPreviewOpen(false)}
-      />
+      {isOnDesktop && (
+        <ImagesPreview
+          isPreviewOpen={isPreviewOpen}
+          allImages={images}
+          mainImageSrc={mainImageSrc}
+          setMainImageSrc={setMainImageSrc}
+          handleClosePreview={() => setIsPreviewOpen(false)}
+        />
+      )}
     </>
   )
 }
