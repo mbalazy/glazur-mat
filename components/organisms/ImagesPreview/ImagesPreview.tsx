@@ -5,8 +5,9 @@ import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
 import {
   ImagesPreviewWrapper,
   MainImage,
-  AllImagesImagesWrapper,
+  RestImagesWrapper,
   SmallImageWrapper,
+  CloseButton,
 } from './ImagesPreview.style'
 
 type ImagesPreviewProps = {
@@ -31,19 +32,19 @@ const ImagesPreview = ({
       onRequestClose={() => handleClosePreview()}
     >
       <ImagesPreviewWrapper>
-        <button onClick={() => handleClosePreview()}>ZAMKNIJ</button>
+        <CloseButton onClick={() => handleClosePreview()} />
 
         <MainImage>
           <Image src={mainImageSrc as string} layout="fill" objectFit="contain" />
         </MainImage>
 
-        <AllImagesImagesWrapper>
+        <RestImagesWrapper>
           {allImages?.map(({ src, id }) => (
             <SmallImageWrapper key={id} onClick={() => setMainImageSrc(src as string)}>
               <Image src={src as string} layout="fill" objectFit="contain" />
             </SmallImageWrapper>
           ))}
-        </AllImagesImagesWrapper>
+        </RestImagesWrapper>
       </ImagesPreviewWrapper>
     </ReactModal>
   )
