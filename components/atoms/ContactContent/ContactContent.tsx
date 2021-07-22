@@ -1,11 +1,11 @@
 import React from 'react'
 import businessInfo from '../../../theme/businessInfo'
-import { ContactContentWrapper } from './ContactContent.style'
+import style from './ContactContent.module.scss'
 
 const ContactContent = () => {
   const [telephone] = businessInfo.telephones
   return (
-    <ContactContentWrapper>
+    <div className={style.contactContentWrapper}>
       <div>
         <p>Mateusz Oleksy</p>
         <p>Zasępiec 43</p>
@@ -16,7 +16,7 @@ const ContactContent = () => {
         <p>Nip: 637 217 3444</p>
         <p>Regon: 383155409</p>
       </div>
-    </ContactContentWrapper>
+    </div>
   )
 }
 
