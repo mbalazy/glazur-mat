@@ -6,9 +6,9 @@ type OfferIconProps = typeof offerContet[number]
 
 const OfferIcon = ({ icon, name }: OfferIconProps) => {
   return (
-    <div className={style.OfferIconWrapper}>
+    <div className={style.offerIconWrapper}>
       <img src={icon} alt="" />
-      <h3 className={style.OfferIconName}>{name}</h3>
+      <h3 className={style.offerIconName}>{name}</h3>
     </div>
   )
 }

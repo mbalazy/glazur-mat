@@ -1,12 +1,16 @@
 import React from 'react'
 import { MobileMenuContext } from '../../../lib/mobileMenuContext'
-import { MobileMenuIconLines, MobileMenuIconWrapper } from './MobileMenuIcon.style'
+import { MobileMenuIconLines } from './MobileMenuIcon.style'
+import style from './MobileMenuIcon.module.scss'
 
 const MobileMenuIcon = ({ isMobileMenuOpen, setOpenMobileMenu }: MobileMenuContext) => {
   return (
-    <MobileMenuIconWrapper onClick={() => setOpenMobileMenu(!isMobileMenuOpen)}>
+    <button
+      className={style.mobileMenuIconWrapper}
+      onClick={() => setOpenMobileMenu(!isMobileMenuOpen)}
+    >
       <MobileMenuIconLines isMobileMenuOpen={isMobileMenuOpen} />
-    </MobileMenuIconWrapper>
+    </button>
   )
 }
 

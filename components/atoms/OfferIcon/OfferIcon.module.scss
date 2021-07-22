@@ -1,6 +1,6 @@
 @use '../../../theme' as *;
 
-.OfferIconWrapper {
+.offerIconWrapper {
   display: flex;
   align-items: center;
 
@@ -9,7 +9,7 @@
   }
 }
 
-.OfferIconName {
+.offerIconName {
   font-size: $m;
   text-transform: uppercase;
   font-weight: 500;

@@ -5,7 +5,7 @@ type OfferDetailProps = {
 }
 
 const OfferDetail = ({ detail }: OfferDetailProps) => {
-  return <p className={style.OfferDetailStyles}>{detail}</p>
+  return <p className={style.offerDetailStyles}>{detail}</p>
 }
 
 export default OfferDetail
