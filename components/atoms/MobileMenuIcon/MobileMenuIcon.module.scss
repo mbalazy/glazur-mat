@@ -1,3 +1,5 @@
+@use '../../../theme' as *;
+
 .mobileMenuIconWrapper {
   padding: 3rem 2rem;
   border: none;
@@ -5,4 +7,47 @@
   display: inline-block;
   background-color: transparent;
   margin-left: auto;
+}
+@mixin mobileTransion {
+  transition: all 0.16s ease-in-out;
+}
+
+@mixin mobileMenuIconLinesBase {
+  width: 5rem;
+  height: 0.4rem;
+  background-color: $black;
+  position: relative;
+  @include mobileTransion();
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    @include mobileTransion();
+  }
+
+  &:before {
+    transform: translate(-50%, -1.2rem);
+  }
+  &:after {
+    transform: translate(-50%, 1.2rem);
+  }
+}
+
+.mobileMenuIconLinesClose {
+  @include mobileMenuIconLinesBase();
+}
+.mobileMenuIconLinesOpen {
+  @include mobileMenuIconLinesBase();
+
+  background-color: transparent;
+  &:before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  &:after {
+    transform: translateX(-50%) rotate(-45deg);
+  }
 }
