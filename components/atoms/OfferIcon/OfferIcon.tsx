@@ -1,14 +1,15 @@
 import React from 'react'
 import { offerContet } from '../../../theme/businessInfo'
-import { OfferIconName, OfferIconWrapper } from './OfferIcon.style'
+import style from './OfferIcon.module.scss'
+
 type OfferIconProps = typeof offerContet[number]
 
 const OfferIcon = ({ icon, name }: OfferIconProps) => {
   return (
-    <OfferIconWrapper>
+    <div className={style.OfferIconWrapper}>
       <img src={icon} alt="" />
-      <OfferIconName>{name}</OfferIconName>
-    </OfferIconWrapper>
+      <h3 className={style.OfferIconName}>{name}</h3>
+    </div>
   )
 }
 

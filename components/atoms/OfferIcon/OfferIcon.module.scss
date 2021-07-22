@@ -1,0 +1,16 @@
+@use '../../../theme' as *;
+
+.OfferIconWrapper {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 2rem;
+  }
+}
+
+.OfferIconName {
+  font-size: $m;
+  text-transform: uppercase;
+  font-weight: 500;
+}

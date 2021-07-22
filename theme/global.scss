@@ -1,4 +1,4 @@
-@use './colors' as c;
+@use './colors' as *;
 
 *,
 *::after,
@@ -18,7 +18,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
-  color: c.$primaryText;
+  color: $primaryText;
   min-height: 100vh;
 }
 
