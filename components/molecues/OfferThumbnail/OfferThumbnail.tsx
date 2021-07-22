@@ -1,21 +1,20 @@
 import React from 'react'
 import { offerContet } from '../../../theme/businessInfo'
-import { H3 } from '../../../theme/Typography'
+import style from './OfferThumbnail.module.scss'
 import OfferDetail from '../../atoms/OfferDetail/OfferDetail'
-import { OfferThumbnailWrapper } from './OfferThumbnail.style'
 type OfferThumbnailProps = typeof offerContet[number]
 
 const OfferThumbnail = ({ name, icon, details }: OfferThumbnailProps) => {
   return (
-    <OfferThumbnailWrapper>
+    <div className={style.OfferThumbnailWrapper}>
       <img src={icon} alt="" />
-      <H3>{name}</H3>
+      <h3>{name}</h3>
       <div>
         {details.map((detail) => (
           <OfferDetail key={detail} detail={detail} />
         ))}
       </div>
-    </OfferThumbnailWrapper>
+    </div>
   )
 }
 

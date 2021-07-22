@@ -1,0 +1,23 @@
+@use '../../../theme' as *;
+
+.OfferThumbnailWrapper {
+  display: grid;
+  gap: 4rem;
+  grid-template-rows: 3rem 4rem 1fr;
+  justify-items: stretch;
+  text-align: center;
+
+  padding: 5rem;
+  box-shadow: $boxShadow;
+  background-color: $white;
+
+  h3 {
+    color: $primary;
+    font-size: $xl;
+    font-weight: 500;
+  }
+
+  p {
+    text-align: left;
+  }
+}
