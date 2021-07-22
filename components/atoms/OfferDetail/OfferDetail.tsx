@@ -1,11 +1,12 @@
 import React from 'react'
-import { OfferDetailStyles } from './OfferDetail.style'
+import style from './OfferDetail.module.scss'
+
 type OfferDetailProps = {
   detail: string
 }
 
 const OfferDetail = ({ detail }: OfferDetailProps) => {
-  return <OfferDetailStyles>{detail}</OfferDetailStyles>
+  return <p className={style.OfferDetailStyles}>{detail}</p>
 }
 
 export default OfferDetail
