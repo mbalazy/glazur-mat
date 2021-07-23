@@ -1,7 +1,29 @@
+@use '../../../theme' as *;
+
 .realizationThumbnailWrapper {
   height: 43rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include hoverEffect;
+  @include boxShadow;
+}
+
+.imageWrapper {
+  height: 27rem;
+  width: 100%;
+  position: relative;
+}
+
+.decoratedLine {
+  width: 12rem;
+  height: 2px;
+  background-color: $black;
+}
+
+.realizationName {
+  margin-bottom: 5rem;
+  @include handWritten;
 }

@@ -1,6 +1,4 @@
 @forward './fontSizes.scss';
 @forward './colors.scss';
 @forward './dimensions.scss';
-
-// Other stuff
-$boxShadow: 0px 34px 53px -7px rgba(0, 0, 0, 0.11);
+@forward './mixins.scss';

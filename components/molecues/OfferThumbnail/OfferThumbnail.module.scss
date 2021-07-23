@@ -8,8 +8,8 @@
   text-align: center;
 
   padding: 5rem;
-  box-shadow: $boxShadow;
   background-color: $white;
+  @include boxShadow;
 
   h3 {
     color: $primary;
