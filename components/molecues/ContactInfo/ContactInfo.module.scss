@@ -1,0 +1,17 @@
+@use '../../../theme' as *;
+
+.contactInfoWrapper {
+  display: flex;
+  align-items: center;
+  color: $primaryText;
+}
+.contactInfoIcon {
+  margin-right: 2.5rem;
+}
+.contactInfoLabel {
+  font-size: $l;
+  color: $primary;
+
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
