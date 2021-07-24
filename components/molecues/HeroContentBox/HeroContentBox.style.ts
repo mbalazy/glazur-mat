@@ -10,8 +10,11 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
   top: 50%;
   left: 50%;
   transform: translate(-100%, -50%);
-
   width: 40vw;
+  padding: 8rem;
+  background: ${({ theme }) => theme.colors.overlay};
+  color: ${({ theme }) => theme.colors.background};
+
   ${({ isFullWidth }) =>
     isFullWidth &&
     css`
@@ -19,10 +22,6 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
       transform: translate(-50%, -40%);
       padding: 4rem;
     `}
-
-  padding: 8rem;
-  background: ${({ theme }) => theme.colors.overlay};
-  color: ${({ theme }) => theme.colors.background};
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
