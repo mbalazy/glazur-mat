@@ -1,5 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
+type SmallImageWrapperProps = {
+  isActive: boolean
+}
 export const ImagesPreviewWrapper = styled.div`
   height: 100%;
   display: grid;
@@ -15,7 +18,7 @@ export const RestImages = styled.div`
   display: flex;
   justify-content: center;
 `
-export const SmallImageWrapper = styled.button`
+export const SmallImageWrapper = styled.button<SmallImageWrapperProps>`
   cursor: pointer;
   position: relative;
   width: 12rem;
@@ -28,6 +31,11 @@ export const SmallImageWrapper = styled.button`
   &:focus {
     border: 2px solid ${({ theme }) => theme.colors.primary};
   }
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      border: 2px solid ${({ theme }) => theme.colors.primary};
+    `}
 `
 export const CloseButton = styled.button`
   cursor: pointer;

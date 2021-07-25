@@ -54,7 +54,11 @@ const ImagesPreview = ({
         </MainImage>
         <RestImages>
           {allImages?.map(({ src, id }, idx) => (
-            <SmallImageWrapper key={id} onClick={() => setMainImageIndex(idx)}>
+            <SmallImageWrapper
+              key={id}
+              isActive={idx === mainImageIndex}
+              onClick={() => setMainImageIndex(idx)}
+            >
               <Image src={src as string} layout="fill" objectFit="contain" />
             </SmallImageWrapper>
           ))}
