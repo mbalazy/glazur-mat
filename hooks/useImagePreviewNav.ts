@@ -15,29 +15,36 @@ export function useImagePreviewNav({
     allImages?.find((_, i) => mainImageIndex === i)?.src || ''
 
   const showNextImage = () => {
-    if (mainImageIndex < allImages!.length - 1) {
+    if (!allImages) return
+    if (mainImageIndex < allImages.length - 1) {
       setMainImageIndex(mainImageIndex + 1)
-    }
-  }
-  const showPrevImage = () => {
-    if (mainImageIndex > 0) {
-      setMainImageIndex(mainImageIndex - 1)
+    } else {
+      // cycle through
+      setMainImageIndex(0)
     }
   }
 
-  const handleArrowPress = () => {
+  const showPrevImage = () => {
+    if (!allImages) return
+    if (mainImageIndex > 0) {
+      setMainImageIndex(mainImageIndex - 1)
+    } else {
+      // cycle through
+      setMainImageIndex(allImages.length - 1)
+    }
+  }
+
+  const handleArrowNavigation = () => {
     useKeyPress('ArrowRight', showNextImage)
     useKeyPress('ArrowLeft', showPrevImage)
     useKeyPress('l', showNextImage)
     useKeyPress('h', showPrevImage)
   }
 
-  handleArrowPress()
-
   return {
     mainImgSrc: setMainImageSrcFromAllImages,
     showNextImage,
     showPrevImage,
-    handleArrowPress,
+    handleArrowNavigation,
   }
 }
