@@ -15,7 +15,8 @@
         "noEmit": true,
         "plugins": [
             {
-                "name": "typescript-styled-plugin"
+                "name": "typescript-styled-plugin",
+                "validate": false
             }
         ],
         "resolveJsonModule": true,

@@ -11,20 +11,35 @@ import {
 } from './ImagesPreview.style'
 
 type ImagesPreviewProps = {
-  mainImageSrc: string | null
   allImages?: ImagesGalleryProps['images']
-  setMainImageSrc: (src: string) => void
+  mainImageIndex: number
+  setMainImageIndex: (idx: number) => void
   handleClosePreview: () => void
   isPreviewOpen: boolean
 }
 
 const ImagesPreview = ({
-  mainImageSrc,
   allImages,
   handleClosePreview,
-  setMainImageSrc,
   isPreviewOpen,
+  mainImageIndex,
+  setMainImageIndex,
 }: ImagesPreviewProps) => {
+  if (!allImages) return
+
+  const setSrcByIndex = (newIndex: number) => allImages.find((_, i) => newIndex === i)?.src || ''
+
+  const nextImage = () => {
+    if (mainImageIndex < allImages.length - 1) {
+      setMainImageIndex(mainImageIndex + 1)
+    }
+  }
+  const prevImage = () => {
+    if (mainImageIndex > 0) {
+      setMainImageIndex(mainImageIndex - 1)
+    }
+  }
+
   return (
     <ReactModal
       contentLabel="podgląd zdjeć z tej realizacji"
@@ -35,15 +50,17 @@ const ImagesPreview = ({
     >
       <ImagesPreviewWrapper>
         <MainImage>
-          <Image src={mainImageSrc as string} layout="fill" objectFit="contain" />
+          <Image src={setSrcByIndex(mainImageIndex)} layout="fill" objectFit="contain" />
         </MainImage>
         <RestImages>
-          {allImages?.map(({ src, id }) => (
-            <SmallImageWrapper key={id} onClick={() => setMainImageSrc(src as string)}>
+          {allImages?.map(({ src, id }, idx) => (
+            <SmallImageWrapper key={id} onClick={() => setMainImageIndex(idx)}>
               <Image src={src as string} layout="fill" objectFit="contain" />
             </SmallImageWrapper>
           ))}
         </RestImages>
+        <button onClick={nextImage}>next</button>
+        <button onClick={prevImage}>prev</button>
         <CloseButton onClick={() => handleClosePreview()} />
       </ImagesPreviewWrapper>
     </ReactModal>

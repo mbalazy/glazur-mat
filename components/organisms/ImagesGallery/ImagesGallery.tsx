@@ -12,10 +12,10 @@ export type ImagesGalleryProps = {
 
 const ImagesGallery = ({ images }: ImagesGalleryProps) => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
-  const [mainImageSrc, setMainImageSrc] = useState<string | null>(null)
+  const [mainImageIndex, setMainImageIndex] = useState<number>(0)
 
-  const handleOpenPreview = (src: string) => {
-    setMainImageSrc(src)
+  const handleOpenPreview = (idx: number) => {
+    setMainImageIndex(idx)
     setIsPreviewOpen(true)
   }
 
@@ -24,8 +24,8 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
   return (
     <>
       <GridWrapper isFullWidth={true}>
-        {images?.map(({ id, src }) => (
-          <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(src as string)}>
+        {images?.map(({ id, src }, index) => (
+          <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
             <Image src={src as string} layout="fill" objectFit="cover" />
           </GalleryImageStyles>
         ))}
@@ -35,8 +35,8 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
         <ImagesPreview
           isPreviewOpen={isPreviewOpen}
           allImages={images}
-          mainImageSrc={mainImageSrc}
-          setMainImageSrc={setMainImageSrc}
+          mainImageIndex={mainImageIndex}
+          setMainImageIndex={setMainImageIndex}
           handleClosePreview={() => setIsPreviewOpen(false)}
         />
       )}
