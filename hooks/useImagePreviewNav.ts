@@ -42,7 +42,7 @@ export function useImagePreviewNav({
   }
 
   return {
-    mainImgSrc: setMainImageSrcFromAllImages,
+    setMainImageSrcFromAllImages,
     showNextImage,
     showPrevImage,
     handleArrowNavigation,

@@ -30,33 +30,38 @@ const ImagesPreview = ({
 }: ImagesPreviewProps) => {
   if (!allImages) return <p>Brak zdjęć</p>
 
-  const { mainImgSrc, handleArrowNavigation, showNextImage, showPrevImage } = useImagePreviewNav({
-    mainImageIndex,
-    allImages,
-    setMainImageIndex,
-  })
+  const { setMainImageSrcFromAllImages, handleArrowNavigation, showNextImage, showPrevImage } =
+    useImagePreviewNav({
+      mainImageIndex,
+      allImages,
+      setMainImageIndex,
+    })
 
+  const mainImageSrc = setMainImageSrcFromAllImages()
   handleArrowNavigation()
 
   return (
     <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
         <MainImage>
-          <Image src={mainImgSrc()} layout="fill" objectFit="contain" />
+          <Image src={mainImageSrc} layout="fill" objectFit="contain" />
         </MainImage>
         <RestImages>
-          {allImages?.map(({ src, id }, idx) => (
-            <SmallImageWrapper
-              key={id}
-              isActive={idx === mainImageIndex}
-              onClick={() => setMainImageIndex(idx)}
-            >
-              <Image src={src as string} layout="fill" objectFit="contain" />
-            </SmallImageWrapper>
-          ))}
+          {allImages.map(
+            ({ src, id }, idx) =>
+              src && (
+                <SmallImageWrapper
+                  key={id}
+                  isActive={idx === mainImageIndex}
+                  onClick={() => setMainImageIndex(idx)}
+                >
+                  <Image src={src} layout="fill" objectFit="contain" />
+                </SmallImageWrapper>
+              )
+          )}
         </RestImages>
-        <NextButton onClick={showNextImage}>next</NextButton>
-        <PrevButton onClick={showPrevImage}>prev</PrevButton>
+        <NextButton onClick={showNextImage} />
+        <PrevButton onClick={showPrevImage} />
         <CloseButton onClick={() => handleClosePreview()} />
       </ImagesPreviewWrapper>
     </ImagesPreviewModal>

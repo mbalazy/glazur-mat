@@ -11,7 +11,7 @@ export type ImagesGalleryProps = {
 }
 
 const ImagesGallery = ({ images }: ImagesGalleryProps) => {
-  if (!images) return <p>Brak zdjęć</p>
+  if (!images) return <p>Brak zdjęć :(</p>
 
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [mainImageIndex, setMainImageIndex] = useState<number>(0)

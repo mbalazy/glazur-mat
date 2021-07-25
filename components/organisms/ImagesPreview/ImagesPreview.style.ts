@@ -43,20 +43,47 @@ export const SmallImageWrapper = styled.button<SmallImageWrapperProps>`
     `}
 `
 const buttonsStyles = css`
+  cursor: pointer;
   position: absolute;
   top: 44%;
   padding: 3rem;
   background-color: transparent;
   transition: border 0.2s;
   ${elementsHover}
+  border: 2px solid ${({ theme }) => theme.colors.black};
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: ${({ theme }) => theme.colors.black};
+    width: 40%;
+    height: 3px;
+    z-index: 1;
+  }
 `
+const buttonsOffset = '5rem'
+
 export const NextButton = styled.button`
   ${buttonsStyles}
-  right: 3rem;
+  right: ${buttonsOffset};
+  &:before {
+    transform: translate(-50%, -0.8rem) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, 0.8rem) rotate(-45deg);
+  }
 `
 export const PrevButton = styled.button`
   ${buttonsStyles}
-  left: 3rem;
+  left: ${buttonsOffset};
+  &:before {
+    transform: translate(-50%, -0.8rem) rotate(-45deg);
+  }
+  &:after {
+    transform: translate(-50%, 0.8rem) rotate(45deg);
+  }
 `
 export const CloseButton = styled.button`
   cursor: pointer;
