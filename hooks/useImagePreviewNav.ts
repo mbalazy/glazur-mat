@@ -1,32 +1,43 @@
 import { ImagesGalleryProps } from '../components/organisms/ImagesGallery/ImagesGallery'
 import { useKeyPress } from './useKeyPress'
-
-export function useImagePreviewNav(
-  mainImageIndex: number,
-  allImages: ImagesGalleryProps['images'],
+type useImagePreviewNavProps = {
+  mainImageIndex: number
+  allImages: ImagesGalleryProps['images']
   setMainImageIndex: (idx: number) => void
-) {
-  const setSrcByIndex = () => allImages?.find((_, i) => mainImageIndex === i)?.src || ''
+}
 
-  const nextImage = () => {
+export function useImagePreviewNav({
+  allImages,
+  mainImageIndex,
+  setMainImageIndex,
+}: useImagePreviewNavProps) {
+  const setMainImageSrcFromAllImages = () =>
+    allImages?.find((_, i) => mainImageIndex === i)?.src || ''
+
+  const showNextImage = () => {
     if (mainImageIndex < allImages!.length - 1) {
       setMainImageIndex(mainImageIndex + 1)
     }
   }
-  const prevImage = () => {
+  const showPrevImage = () => {
     if (mainImageIndex > 0) {
       setMainImageIndex(mainImageIndex - 1)
     }
   }
 
   const handleArrowPress = () => {
-    useKeyPress('ArrowRight', nextImage)
-    useKeyPress('ArrowLeft', prevImage)
-    useKeyPress('l', nextImage)
-    useKeyPress('h', prevImage)
+    useKeyPress('ArrowRight', showNextImage)
+    useKeyPress('ArrowLeft', showPrevImage)
+    useKeyPress('l', showNextImage)
+    useKeyPress('h', showPrevImage)
   }
 
   handleArrowPress()
 
-  return { setSrcByIndex, nextImage, prevImage, handleArrowPress }
+  return {
+    mainImgSrc: setMainImageSrcFromAllImages,
+    showNextImage,
+    showPrevImage,
+    handleArrowPress,
+  }
 }

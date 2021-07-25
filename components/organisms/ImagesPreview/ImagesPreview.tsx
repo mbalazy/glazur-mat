@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactModal from 'react-modal'
 import Image from 'next/image'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
 import {
@@ -12,6 +11,7 @@ import {
   PrevButton,
 } from './ImagesPreview.style'
 import { useImagePreviewNav } from '../../../hooks/useImagePreviewNav'
+import ImagesPreviewModal from '../ImagesPreviewModal/ImagesPreviewModal'
 
 type ImagesPreviewProps = {
   allImages?: ImagesGalleryProps['images']
@@ -23,32 +23,26 @@ type ImagesPreviewProps = {
 
 const ImagesPreview = ({
   allImages,
-  handleClosePreview,
   isPreviewOpen,
   mainImageIndex,
   setMainImageIndex,
+  handleClosePreview,
 }: ImagesPreviewProps) => {
   if (!allImages) return <p>Brak zdjęć</p>
 
-  const { setSrcByIndex, handleArrowPress, nextImage, prevImage } = useImagePreviewNav(
+  const { mainImgSrc, handleArrowPress, showNextImage, showPrevImage } = useImagePreviewNav({
     mainImageIndex,
     allImages,
-    setMainImageIndex
-  )
+    setMainImageIndex,
+  })
 
   handleArrowPress()
 
   return (
-    <ReactModal
-      contentLabel="podgląd zdjeć z tej realizacji"
-      isOpen={isPreviewOpen}
-      onRequestClose={() => handleClosePreview()}
-      closeTimeoutMS={200}
-      appElement={document.getElementById('__next') || {}}
-    >
+    <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
         <MainImage>
-          <Image src={setSrcByIndex()} layout="fill" objectFit="contain" />
+          <Image src={mainImgSrc()} layout="fill" objectFit="contain" />
         </MainImage>
         <RestImages>
           {allImages?.map(({ src, id }, idx) => (
@@ -61,11 +55,11 @@ const ImagesPreview = ({
             </SmallImageWrapper>
           ))}
         </RestImages>
-        <NextButton onClick={nextImage}>next</NextButton>
-        <PrevButton onClick={prevImage}>prev</PrevButton>
+        <NextButton onClick={showNextImage}>next</NextButton>
+        <PrevButton onClick={showPrevImage}>prev</PrevButton>
         <CloseButton onClick={() => handleClosePreview()} />
       </ImagesPreviewWrapper>
-    </ReactModal>
+    </ImagesPreviewModal>
   )
 }
 

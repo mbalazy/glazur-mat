@@ -26,11 +26,14 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
   return (
     <>
       <GridWrapper isFullWidth={true}>
-        {images.map(({ id, src }, index) => (
-          <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
-            <Image src={src as string} layout="fill" objectFit="cover" />
-          </GalleryImageStyles>
-        ))}
+        {images.map(
+          ({ id, src }, index) =>
+            src && (
+              <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
+                <Image src={src} layout="fill" objectFit="cover" />
+              </GalleryImageStyles>
+            )
+        )}
       </GridWrapper>
 
       {isOnDesktop && (
