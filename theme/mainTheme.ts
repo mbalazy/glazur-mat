@@ -51,7 +51,7 @@ export type MainThemeType = typeof mainTheme
 export default mainTheme
 
 export const hoverEffect = css`
-  transition: all 0.12s;
+  transition: all 0.12s 0.1s;
   cursor: pointer;
   backface-visibility: hidden;
 
