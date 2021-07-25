@@ -11,6 +11,8 @@ export type ImagesGalleryProps = {
 }
 
 const ImagesGallery = ({ images }: ImagesGalleryProps) => {
+  if (!images) return <p>Brak zdjęć</p>
+
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [mainImageIndex, setMainImageIndex] = useState<number>(0)
 
@@ -24,7 +26,7 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
   return (
     <>
       <GridWrapper isFullWidth={true}>
-        {images?.map(({ id, src }, index) => (
+        {images.map(({ id, src }, index) => (
           <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
             <Image src={src as string} layout="fill" objectFit="cover" />
           </GalleryImageStyles>

@@ -25,9 +25,9 @@ const ImagesPreview = ({
   mainImageIndex,
   setMainImageIndex,
 }: ImagesPreviewProps) => {
-  if (!allImages) return
+  if (!allImages) return <p>Brak zdjęć</p>
 
-  const setSrcByIndex = (newIndex: number) => allImages.find((_, i) => newIndex === i)?.src || ''
+  const setSrcByIndex = () => allImages.find((_, i) => mainImageIndex === i)?.src || ''
 
   const nextImage = () => {
     if (mainImageIndex < allImages.length - 1) {
@@ -50,7 +50,7 @@ const ImagesPreview = ({
     >
       <ImagesPreviewWrapper>
         <MainImage>
-          <Image src={setSrcByIndex(mainImageIndex)} layout="fill" objectFit="contain" />
+          <Image src={setSrcByIndex()} layout="fill" objectFit="contain" />
         </MainImage>
         <RestImages>
           {allImages?.map(({ src, id }, idx) => (
