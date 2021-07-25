@@ -11,6 +11,7 @@ import {
   NextButton,
   PrevButton,
 } from './ImagesPreview.style'
+import { useImagePreviewNav } from '../../../hooks/useImagePreviewNav'
 
 type ImagesPreviewProps = {
   allImages?: ImagesGalleryProps['images']
@@ -18,42 +19,6 @@ type ImagesPreviewProps = {
   setMainImageIndex: (idx: number) => void
   handleClosePreview: () => void
   isPreviewOpen: boolean
-}
-import { useEffect, useState } from 'react'
-
-export function useKeyPress(targetKey: string, onPressDown = () => {}, onPressUp = () => {}) {
-  // State for keeping track of whether key is pressed
-  const [keyPressed, setKeyPressed] = useState(false)
-
-  useEffect(() => {
-    // If pressed key is our target key then set to true
-    function downHandler({ key }: { key: string }) {
-      if (key === targetKey) {
-        setKeyPressed(true)
-        onPressDown()
-      }
-    }
-
-    // If released key is our target key then set to false
-    const upHandler = ({ key }: { key: string }) => {
-      if (key === targetKey) {
-        setKeyPressed(false)
-        onPressUp()
-      }
-    }
-
-    // Add event listeners
-    window.addEventListener('keydown', downHandler)
-    window.addEventListener('keyup', upHandler)
-
-    // Remove event listeners on cleanup
-    return () => {
-      window.removeEventListener('keydown', downHandler)
-      window.removeEventListener('keyup', upHandler)
-    }
-  })
-
-  return keyPressed
 }
 
 const ImagesPreview = ({
@@ -65,23 +30,13 @@ const ImagesPreview = ({
 }: ImagesPreviewProps) => {
   if (!allImages) return <p>Brak zdjęć</p>
 
-  const setSrcByIndex = () => allImages.find((_, i) => mainImageIndex === i)?.src || ''
+  const { setSrcByIndex, handleArrowPress, nextImage, prevImage } = useImagePreviewNav(
+    mainImageIndex,
+    allImages,
+    setMainImageIndex
+  )
 
-  const nextImage = () => {
-    if (mainImageIndex < allImages.length - 1) {
-      setMainImageIndex(mainImageIndex + 1)
-    }
-  }
-  const prevImage = () => {
-    if (mainImageIndex > 0) {
-      setMainImageIndex(mainImageIndex - 1)
-    }
-  }
-
-  useKeyPress('ArrowRight', nextImage)
-  useKeyPress('ArrowLeft', prevImage)
-  useKeyPress('l', nextImage)
-  useKeyPress('h', prevImage)
+  handleArrowPress()
 
   return (
     <ReactModal
