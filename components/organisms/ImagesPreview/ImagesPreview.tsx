@@ -8,6 +8,8 @@ import {
   RestImages,
   SmallImageWrapper,
   CloseButton,
+  NextButton,
+  PrevButton,
 } from './ImagesPreview.style'
 
 type ImagesPreviewProps = {
@@ -63,8 +65,8 @@ const ImagesPreview = ({
             </SmallImageWrapper>
           ))}
         </RestImages>
-        <button onClick={nextImage}>next</button>
-        <button onClick={prevImage}>prev</button>
+        <NextButton onClick={nextImage}>next</NextButton>
+        <PrevButton onClick={prevImage}>prev</PrevButton>
         <CloseButton onClick={() => handleClosePreview()} />
       </ImagesPreviewWrapper>
     </ReactModal>

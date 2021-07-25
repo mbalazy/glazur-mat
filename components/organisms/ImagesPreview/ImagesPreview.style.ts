@@ -3,6 +3,15 @@ import styled, { css } from 'styled-components'
 type SmallImageWrapperProps = {
   isActive: boolean
 }
+const elementsHover = css`
+  transition: border 0.2s;
+
+  &:hover,
+  &:focus {
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+  }
+`
+
 export const ImagesPreviewWrapper = styled.div`
   height: 100%;
   display: grid;
@@ -25,17 +34,29 @@ export const SmallImageWrapper = styled.button<SmallImageWrapperProps>`
 
   border: 2px solid transparent;
   background-color: transparent;
-  transition: border 0.2s;
+  ${elementsHover}
 
-  &:hover,
-  &:focus {
-    border: 2px solid ${({ theme }) => theme.colors.primary};
-  }
   ${({ isActive }) =>
     isActive &&
     css`
       border: 2px solid ${({ theme }) => theme.colors.primary};
     `}
+`
+const buttonsStyles = css`
+  position: absolute;
+  top: 44%;
+  padding: 3rem;
+  background-color: transparent;
+  transition: border 0.2s;
+  ${elementsHover}
+`
+export const NextButton = styled.button`
+  ${buttonsStyles}
+  right: 3rem;
+`
+export const PrevButton = styled.button`
+  ${buttonsStyles}
+  left: 3rem;
 `
 export const CloseButton = styled.button`
   cursor: pointer;
@@ -45,12 +66,7 @@ export const CloseButton = styled.button`
   right: 3rem;
   padding: 3rem;
   border: 2px solid transparent;
-  transition: border 0.14s;
-
-  &:hover,
-  &:focus {
-    border: 2px solid ${({ theme }) => theme.colors.black};
-  }
+  ${elementsHover}
 
   &:before,
   &:after {
