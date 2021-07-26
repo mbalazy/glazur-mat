@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { HeroWrapper, HeroImageOverlay, HeroWrapperProps } from './Hero.style'
 import Nav from '../../molecues/Nav/Nav'
 import HeroContentBox, { HeroContentBoxProps } from '../../molecues/HeroContentBox/HeroContentBox'
+import ImageCoverFit from '../../atoms/Image/ImageCoverFit'
 
 export type HeroProps = {
   imageSrc?: string
@@ -19,7 +19,7 @@ const Hero = ({
   return (
     <HeroWrapper height={height} isOnHome={isOnHome}>
       <HeroImageOverlay>
-        <Image src={imageSrc} alt={alt} layout="fill" objectFit="cover" />
+        <ImageCoverFit src={imageSrc} alt={alt} />
       </HeroImageOverlay>
       <Nav />
       <HeroContentBox {...rest} />

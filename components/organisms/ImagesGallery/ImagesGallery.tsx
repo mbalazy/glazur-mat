@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import React, { useState } from 'react'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
+import ImageContainFit from '../../atoms/Image/ImageContainFit'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import ImagesPreview from '../ImagesPreview/ImagesPreview'
 import { GalleryImageStyles } from './ImagesGallery.style'
@@ -30,7 +30,7 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
           ({ id, src }, index) =>
             src && (
               <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
-                <Image src={src} layout="fill" objectFit="cover" />
+                <ImageContainFit src={src} />
               </GalleryImageStyles>
             )
         )}

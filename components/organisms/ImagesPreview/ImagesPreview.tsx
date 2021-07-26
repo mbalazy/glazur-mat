@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
 import {
   ImagesPreviewWrapper,
@@ -12,6 +11,7 @@ import {
 } from './ImagesPreview.style'
 import { useImagePreviewNav } from '../../../hooks/useImagePreviewNav'
 import ImagesPreviewModal from '../ImagesPreviewModal/ImagesPreviewModal'
+import ImageContainFit from '../../atoms/Image/ImageContainFit'
 
 type ImagesPreviewProps = {
   allImages?: ImagesGalleryProps['images']
@@ -31,11 +31,7 @@ const ImagesPreview = ({
   if (!allImages) return <p>Brak zdjęć</p>
 
   const { setMainImageSrcFromAllImages, handleArrowNavigation, showNextImage, showPrevImage } =
-    useImagePreviewNav({
-      mainImageIndex,
-      allImages,
-      setMainImageIndex,
-    })
+    useImagePreviewNav({ allImages, mainImageIndex, setMainImageIndex })
 
   const mainImageSrc = setMainImageSrcFromAllImages()
   handleArrowNavigation()
@@ -44,7 +40,7 @@ const ImagesPreview = ({
     <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
         <MainImage>
-          <Image src={mainImageSrc} layout="fill" objectFit="contain" />
+          <ImageContainFit src={mainImageSrc} />
         </MainImage>
         <RestImages>
           {allImages.map(
@@ -55,7 +51,7 @@ const ImagesPreview = ({
                   isActive={idx === mainImageIndex}
                   onClick={() => setMainImageIndex(idx)}
                 >
-                  <Image src={src} layout="fill" objectFit="contain" />
+                  <ImageContainFit src={src} />
                 </SmallImageWrapper>
               )
           )}
