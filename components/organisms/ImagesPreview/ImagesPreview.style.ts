@@ -7,7 +7,7 @@ const elementsHover = css`
   transition: border 0.2s;
 
   &:hover,
-  &:focus {
+  &:active {
     border: 2px solid ${({ theme }) => theme.colors.primary};
   }
 `
@@ -50,7 +50,7 @@ const buttonsStyles = css`
   background-color: transparent;
   transition: border 0.2s;
   ${elementsHover}
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  border: 2px solid transparent;
 
   &:before,
   &:after {
