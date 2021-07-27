@@ -1,16 +1,17 @@
 import React from 'react'
-import { offerContet, offerSubheading } from '../../../theme/businessInfo'
+import businessInfo, { offerContet, offerSubheading } from '../../../theme/businessInfo'
 import OfferThumbnail from '../../molecues/OfferThumbnail/OfferThumbnail'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
 
 const Offer = () => {
+  const { fullTitle } = businessInfo
   return (
     <MainTemplate
       isFullWidth={true}
       height={52}
-      heading="Oferta Glazur-Mat"
+      heading={`Oferta ${fullTitle}`}
       subheading={offerSubheading}
       imageSrc="/pages_hero.jpg"
     >
