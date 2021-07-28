@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import { IRealizations } from '../../../generated/graphql'
 import validateRealizationImage from '../../../lib/validateRealizationImage'
+import ImageCoverFit from '../../atoms/Image/ImageCoverFit'
 import {
   DecoratedLine,
   ImageWrapper,
@@ -13,10 +12,10 @@ import {
 const RealizationThumbnail = ({ name, images, slug }: IRealizations) => {
   const firstImageSrc = () => validateRealizationImage(images)
   return (
-    <Link href={`/realizacje/${slug?.current}`}>
+    <Link href={`/realizacje/${slug?.current}`} passHref>
       <RealizationThumbnailWrapper>
         <ImageWrapper>
-          <Image src={firstImageSrc()} layout="fill" objectFit="cover" alt="realizacja" />
+          <ImageCoverFit src={firstImageSrc()} alt="realizacja" />
         </ImageWrapper>
         <DecoratedLine />
         <RealizationName>{name}</RealizationName>

@@ -6,7 +6,7 @@ import { MailInfoWrapper } from './ContactInfo.style'
 const MailInfo = () => {
   const [firstEmail] = businessInfo.emails
   return (
-    <MailInfoWrapper>
+    <MailInfoWrapper href={`mailto:${firstEmail}`}>
       <ContactInfo label="Napisz do nas:" content={firstEmail} icon={mailIcon} />
     </MailInfoWrapper>
   )

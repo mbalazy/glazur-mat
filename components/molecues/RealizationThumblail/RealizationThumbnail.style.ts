@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { hoverEffect } from '../../../theme/mainTheme'
 import { HandWritten } from '../../../theme/Typography'
 
-export const RealizationThumbnailWrapper = styled.div`
+export const RealizationThumbnailWrapper = styled.a`
   box-shadow: ${({ theme }) => theme.boxShadow};
   height: 43rem;
 

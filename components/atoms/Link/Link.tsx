@@ -10,7 +10,7 @@ type LinkProps = {
 
 const BaseLink = ({ href, children, ...rest }: LinkProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <LinkStyles {...rest}>{children}</LinkStyles>
     </Link>
   )

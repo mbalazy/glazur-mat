@@ -7,6 +7,7 @@ type SectionWrapperProps = {
 }
 type ChildrenWrapperProps = {
   isEmptyHeading: boolean
+  isFullWidth: SectionProps['isFullWidth']
 }
 
 export const SectionWrapper = styled.section<SectionWrapperProps>`
@@ -51,5 +52,10 @@ export const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
     !isEmptyHeading &&
     css`
       margin-top: 8rem;
+    `}
+  ${({ isFullWidth }) =>
+    isFullWidth &&
+    css`
+      width: 100vw;
     `}
 `

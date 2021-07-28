@@ -18,7 +18,7 @@ const FooterSection = ({ heading, subheading, icon, children }: FooterSectionPro
     <FooterSectionWrapper>
       <FooterSubheading>{subheading}</FooterSubheading>
       <FooterHeading>{heading}</FooterHeading>
-      <img src={icon} alt="" width="32" />
+      <img src={icon} alt="" width="32px" height="32px" />
       <FooterSectionContent>{children}</FooterSectionContent>
     </FooterSectionWrapper>
   )

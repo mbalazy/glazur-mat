@@ -1,4 +1,5 @@
 import React from 'react'
+import businessInfo from '../../../theme/businessInfo'
 import {
   Copy,
   Heading,
@@ -11,9 +12,12 @@ export type HeroContentBoxProps = {
   subheading?: string
 } & HeroContentBoxWrapperProps
 
+const { fullTitle } = businessInfo
+
 const HeroContentBox = ({
-  heading = 'Glazur-Mat',
-  subheading = 'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych.',
+  heading = `${fullTitle}`,
+  subheading = `Świadczymy profesjonalne usługi z zakresu prac budowlanych
+  i wykończeniowych.`,
   isFullWidth,
 }: HeroContentBoxProps) => {
   return (

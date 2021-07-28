@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const GridWrapper = styled.div`
+type GridWrapperProps = {
+  isFullWidth?: boolean
+}
+
+export const GridWrapper = styled.div<GridWrapperProps>`
   width: 80vw;
   max-width: ${({ theme }) => theme.dimensions.mainContentWidth};
   margin: 0 auto;
@@ -8,4 +12,11 @@ export const GridWrapper = styled.div`
   display: grid;
   gap: 7rem;
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+
+  ${({ isFullWidth }) =>
+    isFullWidth &&
+    css`
+      width: 97vw;
+      gap: 4rem;
+    `}
 `

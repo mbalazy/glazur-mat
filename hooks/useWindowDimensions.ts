@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 type WindowDimentions = {
   width: number | undefined
   height: number | undefined
+  isOnDesktop?: boolean
 }
 
 const useWindowDimensions = (): WindowDimentions => {
@@ -22,7 +23,7 @@ const useWindowDimensions = (): WindowDimentions => {
     return (): void => window.removeEventListener('resize', handleResize)
   }, []) // Empty array ensures that effect is only run on mount
 
-  return windowDimensions
+  return { ...windowDimensions, isOnDesktop: windowDimensions!.width! >= 900 }
 }
 
 export default useWindowDimensions

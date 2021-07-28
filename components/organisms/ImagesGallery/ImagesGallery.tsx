@@ -1,25 +1,50 @@
-import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
-import BaseLink from '../../atoms/Link/Link'
-import { ImageWrapper } from '../../molecues/RealizationThumblail/RealizationThumbnail.style'
+import ImageContainFit from '../../atoms/Image/ImageContainFit'
 import { GridWrapper } from '../../templates/GridWrapper.style'
+import ImagesPreview from '../ImagesPreview/ImagesPreview'
+import { GalleryImageStyles } from './ImagesGallery.style'
 
-type ImagesGalleryProps = {
+export type ImagesGalleryProps = {
   images: ReturnType<typeof validateRealizationProps>['images']
 }
 
 const ImagesGallery = ({ images }: ImagesGalleryProps) => {
+  if (!images) return <p>Brak zdjęć :(</p>
+
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
+  const [mainImageIndex, setMainImageIndex] = useState<number>(0)
+
+  const handleOpenPreview = (idx: number) => {
+    setMainImageIndex(idx)
+    setIsPreviewOpen(true)
+  }
+
+  const { isOnDesktop } = useWindowDimensions()
+
   return (
     <>
-      <GridWrapper>
-        {images?.map(({ id, src }) => (
-          <ImageWrapper key={id}>
-            <Image src={src as string} layout="fill" objectFit="cover" />
-          </ImageWrapper>
-        ))}
+      <GridWrapper isFullWidth={true}>
+        {images.map(
+          ({ id, src }, index) =>
+            src && (
+              <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
+                <ImageContainFit src={src} />
+              </GalleryImageStyles>
+            )
+        )}
       </GridWrapper>
-      <BaseLink href="/realizacje">Powrót</BaseLink>
+
+      {isOnDesktop && (
+        <ImagesPreview
+          isPreviewOpen={isPreviewOpen}
+          allImages={images}
+          mainImageIndex={mainImageIndex}
+          setMainImageIndex={setMainImageIndex}
+          handleClosePreview={() => setIsPreviewOpen(false)}
+        />
+      )}
     </>
   )
 }

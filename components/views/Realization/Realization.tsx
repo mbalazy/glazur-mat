@@ -1,6 +1,7 @@
 import React from 'react'
 import { IRealizations } from '../../../generated/graphql'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
+import BaseLink from '../../atoms/Link/Link'
 import ImagesGallery from '../../organisms/ImagesGallery/ImagesGallery'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
@@ -15,8 +16,9 @@ const Realization = (props: IRealizations) => {
       subheading={description}
       imageSrc={firstImageSrc}
     >
-      <Section heading="Galeria Zdjęć">
+      <Section isFullWidth={true} heading="Galeria Zdjęć">
         <ImagesGallery images={images} />
+        <BaseLink href="/realizacje">Powrót</BaseLink>
       </Section>
     </MainTemplate>
   )
