@@ -10,6 +10,7 @@ type LogoProps = {
 
 const Logo = ({ height = 85, className }: LogoProps) => {
   const { setOpenMobileMenu } = useMobileMenu()
+  //TODO fix link tabbable
   return (
     <Link href="/">
       <a onClick={() => setOpenMobileMenu(false)} role="link">
