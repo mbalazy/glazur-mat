@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import { validateRealizationProps } from '../../../lib/validateRealizationProps'
-import ImageContainFit from '../../atoms/Image/ImageContainFit'
+import ImageCoverFit from '../../atoms/Image/ImageCoverFit'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import ImagesPreview from '../ImagesPreview/ImagesPreview'
 import { GalleryImageStyles } from './ImagesGallery.style'
@@ -30,7 +30,7 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
           ({ id, src }, index) =>
             src && (
               <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
-                <ImageContainFit src={src} />
+                <ImageCoverFit src={src} />
               </GalleryImageStyles>
             )
         )}
