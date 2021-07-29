@@ -1,10 +1,12 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
+import { DefaultSeo } from 'next-seo'
 import Head from 'next/head'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import { MobileMenuProvider } from '../lib/mobileMenuContext'
 import GlobalStyle from '../theme/globalStyle'
 import mainTheme from '../theme/mainTheme'
+import SEO from '../next-seo.config'
 
 import '@fontsource/im-fell-great-primer-sc'
 import '@fontsource/montserrat'
@@ -23,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </MobileMenuProvider>
     </ThemeProvider>
