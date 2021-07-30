@@ -11,7 +11,7 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
   left: 50%;
   transform: translate(-100%, -50%);
   width: 40vw;
-  padding: 8rem;
+  padding: 4rem;
   background: ${({ theme }) => theme.colors.overlay};
   color: ${({ theme }) => theme.colors.background};
 
@@ -20,7 +20,7 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
     css`
       width: 80vw;
       transform: translate(-50%, -40%);
-      padding: 4rem;
+      padding: 3rem;
     `}
 
   ${({ theme: { down, breakpoints } }) => css`
@@ -42,7 +42,7 @@ export const Heading = styled(H1)<HeroContentBoxWrapperProps>`
     `}
 `
 export const Copy = styled(P)<HeroContentBoxWrapperProps>`
-  font-size: ${({ theme }) => theme.fontSize.xxl};
+  font-size: 1.2vw;
   white-space: pre-line;
 
   ${({ theme: { down, breakpoints }, isFullWidth }) => css`
