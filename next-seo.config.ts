@@ -4,7 +4,7 @@ const { fullTitle } = businessInfo
 export default {
   title: `${fullTitle}`,
   description:
-    'Świadczyy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych. Remonty i wykończenia Wolbrom Olkusz',
+    'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych na terenie Wolbromia i okolic.',
   openGraph: {
     type: 'website',
     title: `${fullTitle}`,
