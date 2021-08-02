@@ -1,4 +1,6 @@
 import React from 'react'
+import { whyUsFeatures } from '../../../theme/businessInfo'
+import WhyUsFeature from '../../molecues/WhyUsFeature/WhyUsFeature'
 import MainTemplate from '../../templates/MainTemplate'
 import Section from '../../templates/Section'
 
@@ -12,7 +14,9 @@ const WhyUs = () => {
       imageSrc="/pages_hero.jpg"
     >
       <Section heading="">
-        <p>dlaczego my</p>
+        {whyUsFeatures.map((feature, i) => (
+          <WhyUsFeature key={feature.heading} feature={feature} index={i} />
+        ))}
       </Section>
     </MainTemplate>
   )
