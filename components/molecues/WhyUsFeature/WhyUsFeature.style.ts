@@ -1,8 +1,13 @@
 import styled, { css } from 'styled-components'
+import { HandWritten } from '../../../theme/Typography'
+
+type FeatureTextProps = {
+  isTextOnRight: boolean
+}
 
 export const FeatureWrapper = styled.div`
   display: grid;
-  gap: 4rem;
+  gap: 10rem;
   grid-template-columns: 1fr 1fr;
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
@@ -13,13 +18,30 @@ export const FeatureWrapper = styled.div`
   & > div {
     position: relative;
     height: 40rem;
-    border: 2px solid ${({ theme }) => theme.colors.primary};
+    box-shadow: ${({ theme }) => theme.boxShadow};
   }
 `
-export const FeatureText = styled.div`
-  ${({ theme: { up, breakpoints } }) => css`
+export const FeatureText = styled.div<FeatureTextProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 3rem;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+
+  h3 {
+    ${HandWritten};
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  ${({ theme: { up, breakpoints }, isTextOnRight }) => css`
     ${up(breakpoints.l)} {
-      // grid-column: 2 / span 1;
+      ${isTextOnRight &&
+      css`
+        grid-column: 2 / span 1;
+      `}
       grid-row: 1;
     }
   `}
@@ -28,7 +50,6 @@ export const FeatureImageWrapper = styled.div`
   width: 100%;
   ${({ theme: { up, breakpoints } }) => css`
     ${up(breakpoints.l)} {
-      // grid-column: 1 / span 1;
       grid-row: 1;
     }
   `}

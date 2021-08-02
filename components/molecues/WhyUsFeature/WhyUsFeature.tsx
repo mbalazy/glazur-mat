@@ -8,14 +8,16 @@ type WhyUsFeatureProps = {
   index: number
 }
 
-const WhyUsFeature = ({ feature }: WhyUsFeatureProps) => {
-  const { copy, heading, imageSrc } = feature
+const WhyUsFeature = ({ feature: { copy, heading, imageSrc }, index }: WhyUsFeatureProps) => {
+  const trueIfOdd = (i: number) => (i % 2 === 0 ? false : true)
 
   return (
     <FeatureWrapper>
-      <FeatureText>
-        <p>{heading}</p>
-        <p>{copy}</p>
+      <FeatureText isTextOnRight={trueIfOdd(index)}>
+        <div>
+          <h3>{heading}</h3>
+          <p>{copy}</p>
+        </div>
       </FeatureText>
       <FeatureImageWrapper>
         <ImageCoverFit src={imageSrc} />
