@@ -11,5 +11,6 @@ export default {
     locale: 'pl_PL',
     url: 'https://www.glazur-mat.pl/',
     site_name: 'Glazur-Mat',
+    images: [{ url: 'https://i.imgur.com/PhTrH48.png' }],
   },
 }
