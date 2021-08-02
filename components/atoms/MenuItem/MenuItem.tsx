@@ -8,7 +8,6 @@ import BaseLink from '../Link/Link'
 type MenuItemProps = typeof menuItems[number] & MenuItemsProps
 
 const MenuItem = ({ label, link, onFooter, onMobileMenu, onClick }: MenuItemProps) => {
-  //TODO move to own component
   const validateLinkVariant = (onFooter?: boolean, onMobileMenu?: boolean) => {
     if (onFooter) {
       return 'simpler'

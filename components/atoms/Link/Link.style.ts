@@ -28,6 +28,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
         return css`
           background-color: transparent;
           padding: 0.6rem 3rem;
+          border: 1px solid transparent;
           &:hover {
             border: 1px solid #fff;
           }
