@@ -12,7 +12,7 @@ const ContactContent = () => {
         <p>32-340 Wolbrom</p>
       </div>
       <div>
-        <p>Tel: {telephone}</p>
+        <a href={`tel: ${telephone}`}>Tel: {telephone}</a>
         <p>Nip: 637 217 3444</p>
         <p>Regon: 383155409</p>
       </div>
