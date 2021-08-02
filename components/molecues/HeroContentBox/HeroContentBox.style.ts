@@ -9,7 +9,7 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-100%, -50%);
+  transform: translate(-100%, -40%);
   width: 40vw;
   padding: 4rem;
   background: ${({ theme }) => theme.colors.overlay};
@@ -19,7 +19,7 @@ export const HeroContentBoxWrapper = styled.div<HeroContentBoxWrapperProps>`
     isFullWidth &&
     css`
       width: 80vw;
-      transform: translate(-50%, -40%);
+      transform: translate(-50%, -33%);
       padding: 3rem;
     `}
 
@@ -42,12 +42,6 @@ export const Heading = styled(H1)<HeroContentBoxWrapperProps>`
     `}
 `
 export const Copy = styled(P)<HeroContentBoxWrapperProps>`
-  font-size: 1.2vw;
+  font-size: clamp(1.4rem, 1.4vw, 2.5rem);
   white-space: pre-line;
-
-  ${({ theme: { down, breakpoints }, isFullWidth }) => css`
-    ${down(breakpoints.l)} {
-      font-size: ${({ theme }) => (isFullWidth ? theme.fontSize.m : theme.fontSize.l)};
-    }
-  `}
 `

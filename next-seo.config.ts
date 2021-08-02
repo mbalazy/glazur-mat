@@ -4,12 +4,13 @@ const { fullTitle } = businessInfo
 export default {
   title: `${fullTitle}`,
   description:
-    'Świadczyy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych. Remonty i wykończenia Wolbrom Olkusz',
+    'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych na terenie Wolbromia i okolic.',
   openGraph: {
     type: 'website',
     title: `${fullTitle}`,
     locale: 'pl_PL',
     url: 'https://www.glazur-mat.pl/',
     site_name: 'Glazur-Mat',
+    images: [{ url: 'https://i.imgur.com/PhTrH48.png' }],
   },
 }
