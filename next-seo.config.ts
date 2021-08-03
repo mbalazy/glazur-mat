@@ -4,7 +4,7 @@ const { fullTitle } = businessInfo
 export default {
   title: `${fullTitle}`,
   description:
-    'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych na terenie Wolbromia i okolic.',
+    'Świadczymy profesjonalne usługi z zakresu prac budowlanych i wykończeniowych na terenie Wolbromia i okolic. Remonty, wykończenia, glazura.',
   openGraph: {
     type: 'website',
     title: `${fullTitle}`,
