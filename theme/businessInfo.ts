@@ -100,7 +100,7 @@ export const testimonials = [
   {
     name: 'Anna',
     testimonial:
-      'Gorąco polecam! świetny kontakt, bardzo szybkie i profesjonalne wykonanie, nie ma żadnych problemów z ewentualnymi poprawkami, ponadto ceny nie są wygórowane.',
+      'Gorąco polecam! Świetny kontakt, bardzo szybkie i profesjonalne wykonanie, nie ma żadnych problemów z ewentualnymi poprawkami, ponadto ceny nie są wygórowane.',
     rating: 5,
   },
   {
