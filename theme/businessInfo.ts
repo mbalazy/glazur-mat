@@ -142,21 +142,21 @@ export const whyUsFeatures = [
   {
     heading: 'Bezpłatna wycena',
     copy: 'Przed rozpoczęciem prac lub projektu przygotujemy bezpłatną wstepna wycenę usług wraz z zestawieniem niezbednych materiałów.',
-    imageSrc: '/k1.jpg',
+    imageSrc: '/wycena2.jpg',
   },
   {
     heading: 'Terminowość usług',
     copy: 'Jakość i dotrzymanie terminu to dla nas niezwykle ważne cechy. Dokładamy wszelkich starań aby spełnić wysokie oczekiwania naszych klientów.',
-    imageSrc: '/k2.jpg',
+    imageSrc: '/kal1.jpg',
   },
   {
     heading: 'Gwarancja jakosci',
     copy: 'Posiadamy duże doświadczenie na rynku budowlanym gwarantując usługi w zakresie remontów, budowy i konserwacji. Jeśli szukasz profesjonalnych wykonawców to dobrze trafiłeś! Nasze największe atuty to profesjonalizm, terminowość oraz indywidualne podejście do klienta.',
-    imageSrc: '/k3.jpg',
+    imageSrc: '/gw1.jpg',
   },
   {
     heading: 'Doświadczenie',
     copy: 'Wieloletnie doświadczenie jest gwarancją solidnego i profesjonalnego wykonania zleconych usług. Glazur-Mat posiada wysokiej jakości sprzęt, umożliwiający perfekcyjną realizację prac. Natomiast wiedza na temat aktualnych trendów przy wykonywaniu prac wykończeniowych jest z pewnością bardzo dużym atutem.',
-    imageSrc: '/k4.jpg',
+    imageSrc: '/dos1.jpg',
   },
 ]

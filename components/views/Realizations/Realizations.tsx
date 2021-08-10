@@ -15,7 +15,7 @@ const Realizations = ({ allRealizations }: RealizationsProps) => {
       subheading={realizationsSubheading}
       imageSrc="/pages_hero.jpg"
     >
-      <Section heading="Przykładowe ostatnie realizacje wykonane przez nas:">
+      <Section heading="Nasze ostatnio wykonane realizacje:">
         <GridWrapper>
           {allRealizations.map((realization) => (
             <RealizationThumbnail key={realization._id} {...realization} />

@@ -5,6 +5,7 @@ import { ContactContentWrapper } from './ContactContent.style'
 const ContactContent = () => {
   const [telephone] = businessInfo.telephones
   return (
+    //TODO move address to businessInfo and import it
     <ContactContentWrapper>
       <div>
         <p>Mateusz Oleksy</p>
