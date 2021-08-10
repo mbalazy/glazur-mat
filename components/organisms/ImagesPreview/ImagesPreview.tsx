@@ -58,7 +58,7 @@ const ImagesPreview = ({
         </RestImages>
         <NextButton onClick={showNextImage} />
         <PrevButton onClick={showPrevImage} />
-        <CloseButton onClick={() => handleClosePreview()} />
+        <CloseButton onClick={handleClosePreview} />
       </ImagesPreviewWrapper>
     </ImagesPreviewModal>
   )
