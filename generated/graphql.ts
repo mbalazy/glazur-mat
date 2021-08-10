@@ -771,7 +771,7 @@ export const RealizationPartsFragmentDoc = gql`
 `
 export const AllRealizationsDocument = gql`
   query AllRealizations {
-    allRealizations {
+    allRealizations(sort: { _createdAt: DESC }) {
       ...RealizationParts
     }
   }

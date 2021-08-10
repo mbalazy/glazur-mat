@@ -1,5 +1,5 @@
 query AllRealizations {
-  allRealizations {
+  allRealizations(sort: { _createdAt: DESC }) {
     ...RealizationParts 
   }
 }
