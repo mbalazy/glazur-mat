@@ -98,21 +98,21 @@ export const offerContet = [
 
 export const testimonials = [
   {
-    name: 'Hiacynta',
+    name: 'Anna',
     testimonial:
-      'Szefa Firmy, i co dla Nas było ważne porządek w trakcie oraz po zakończeniu robót. Mierząc się z wyzwaniem budowy domu, nawet się postarał.',
+      'Gorąco polecam! świetny kontakt, bardzo szybkie i profesjonalne wykonanie, nie ma żadnych problemów z ewentualnymi poprawkami, ponadto ceny nie są wygórowane.',
     rating: 5,
   },
   {
-    name: 'Stanislaw',
+    name: 'Robert',
     testimonial:
-      'Reasumując: solidność, kreatywność, empatia do inwestora,i co dla Nas było ważne porządek w trakcie oraz po zakończeniu robót. Mierząc się z wyzwaniem budowy domu, nawet się postarał.',
+      'Serdecznie polecam! Współpracę z Panem Mateuszem doceniam przede wszystkim za fantastyczną komunikację - szybkie odpisywanie na wiadomości, możliwość wprowadzania poprawek nawet klika tygodni po wykonaniu analizy - to się ceni. Bardzo dziękuję za współpracę raz jeszcze 🙂',
     rating: 5,
   },
   {
     name: 'Jerzy',
     testimonial:
-      'Firma p. Janusza budowała dom na sąsiedniej działce. Podobał nam się sposób jej prowadzania i postępy więc poprosiliśmy o ofertę na nasz dom. Oferta okazała się do przyjęcia więc podpisaliśmy.',
+      'Firma terminowo i niemal wzorowo wykonała powierzone jej prace. Pan Mateusz działała profesjonalnie, szybko i solidnie. Można jemu powierzyć każde, nawet nietypowe zadanie, a błyskotliwa wręcz intuicja, doświadczenie i wiedza pomogą inwestorowi osiągnąć założony cel.',
     rating: 5,
   },
 ]
