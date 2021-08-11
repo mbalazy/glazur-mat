@@ -21,17 +21,17 @@ export const socials = [
   {
     name: 'facebook',
     icon: facebookIcon,
-    link: 'https://www.facebook.com',
+    link: 'https://www.facebook.com/glazur.mat/',
   },
   {
     name: 'instagram',
     icon: ingIcon,
-    link: 'https://www.instagram.com',
+    link: 'https://www.instagram.com/glazurmat/',
   },
   {
     name: 'whatsapp',
     icon: whatsappIcon,
-    link: 'https://www.whatsapp.com',
+    link: `https://api.whatsapp.com/send?phone=+48${businessInfo.telephones[0]}`,
   },
 ]
 export const offerSubheading =
@@ -115,14 +115,6 @@ export const testimonials = [
       'Firma terminowo i niemal wzorowo wykonała powierzone jej prace. Pan Mateusz działała profesjonalnie, szybko i solidnie. Można jemu powierzyć każde, nawet nietypowe zadanie, a błyskotliwa wręcz intuicja, doświadczenie i wiedza pomogą inwestorowi osiągnąć założony cel.',
     rating: 5,
   },
-]
-
-export const realizationsContent = [
-  { name: 'Lazienka w Olkuszu', image: '/lazienka1.jpg' },
-  { name: 'Kuchnia w Olkuszu', image: '/kuchnia1.jpg' },
-  { name: 'Dom w Olkuszu', image: '/lazienka1.jpg' },
-  { name: 'Salon w Olkuszu', image: '/lazienka1.jpg' },
-  { name: 'Taras w Olkuszu', image: '/lazienka1.jpg' },
 ]
 
 export const realizationsSubheading =
