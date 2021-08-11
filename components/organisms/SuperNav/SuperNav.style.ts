@@ -6,6 +6,10 @@ export const SuperNavWrapper = styled.div`
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(7px);
 
+  @supports not (backdrop-filter: blur(7px)) {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
       height: ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile};

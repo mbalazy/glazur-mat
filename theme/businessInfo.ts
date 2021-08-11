@@ -21,12 +21,12 @@ export const socials = [
   {
     name: 'facebook',
     icon: facebookIcon,
-    link: 'https://www.facebook.com',
+    link: 'https://www.facebook.com/glazur.mat/',
   },
   {
     name: 'instagram',
     icon: ingIcon,
-    link: 'https://www.instagram.com',
+    link: 'https://www.instagram.com/glazurmat/',
   },
   {
     name: 'whatsapp',
