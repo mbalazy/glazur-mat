@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 
     /* mobile viewport bug fix */
-    // height: -webkit-fill-available;
+    height: -webkit-fill-available;
   }
   
   body {
