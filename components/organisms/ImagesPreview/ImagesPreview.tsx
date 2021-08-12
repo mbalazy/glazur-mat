@@ -40,7 +40,7 @@ const ImagesPreview = ({
     <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
         <MainImage>
-          <ImageContainFit src={mainImageSrc} />
+          <ImageContainFit alt="główne zdjęcie realizacji" src={mainImageSrc} />
         </MainImage>
         <RestImages>
           {allImages.map(
@@ -51,7 +51,7 @@ const ImagesPreview = ({
                   isActive={idx === mainImageIndex}
                   onClick={() => setMainImageIndex(idx)}
                 >
-                  <ImageContainFit src={src} />
+                  <ImageContainFit alt="realizacja" src={src} />
                 </SmallImageWrapper>
               )
           )}

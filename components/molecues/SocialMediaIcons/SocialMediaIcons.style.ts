@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { SocialMediaIconsProp } from './SocialMediaIcons'
 
-export const SocialMediaIconsWrapper = styled.div<SocialMediaIconsProp>`
+export const SocialMediaIconsWrapper = styled.ul<SocialMediaIconsProp>`
   display: flex;
   align-items: center;
 

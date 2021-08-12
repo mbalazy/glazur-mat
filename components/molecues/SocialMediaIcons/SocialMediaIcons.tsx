@@ -10,7 +10,9 @@ const SocialMediaIcons = (props: SocialMediaIconsProp) => {
   return (
     <SocialMediaIconsWrapper {...props}>
       {socials.map((social) => (
-        <SocialMediaIcon key={social.name} {...social} />
+        <li key={social.name}>
+          <SocialMediaIcon {...social} />
+        </li>
       ))}
     </SocialMediaIconsWrapper>
   )
