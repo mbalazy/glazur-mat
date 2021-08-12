@@ -53,6 +53,7 @@ export const LinkStyles = styled.a<LinkStylesProp>`
         return css`
           text-align: center;
           color: ${({ theme }) => theme.colors.black};
+          width: 100%;
           text-transform: uppercase;
           background-color: transparent;
           padding: 1.8rem 0;

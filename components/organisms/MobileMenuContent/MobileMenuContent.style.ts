@@ -16,6 +16,7 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
   width: 100%;
   height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile});
   padding: 1.2rem 10% 0;
+  padding-bottom: 5vh;
 
   background-color: ${({ theme }) => theme.colors.background};
 
