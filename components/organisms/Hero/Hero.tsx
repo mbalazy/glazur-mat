@@ -19,7 +19,7 @@ const Hero = ({
   return (
     <HeroWrapper height={height} isOnHome={isOnHome}>
       <HeroImageOverlay>
-        <ImageCoverFit src={imageSrc} alt={alt} />
+        <ImageCoverFit src={imageSrc} alt={alt} priority />
       </HeroImageOverlay>
       <Nav />
       <HeroContentBox {...rest} />
