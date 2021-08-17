@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const OfferDetailStyles = styled.p`
+export const OfferDetailStyles = styled.li`
   margin-bottom: 1.4rem;
   position: relative;
+  text-align: left;
 
   &::before {
     content: '';
