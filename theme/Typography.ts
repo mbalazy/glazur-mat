@@ -21,21 +21,6 @@ export const H3 = styled.h3<Props>`
       font-size: ${({ theme }) => theme.fontSize.xl};
     `}
 `
-export const H4 = styled.h4<Props>`
-  font-size: ${({ theme }) => theme.fontSize.m};
-  line-height: 1.4;
-
-  ${({ bigger }) =>
-    bigger &&
-    css`
-      font-size: ${({ theme }) => theme.fontSize.l};
-    `}
-  ${({ smaller }) =>
-    smaller &&
-    css`
-      font-size: ${({ theme }) => theme.fontSize.s};
-    `}
-`
 export const P = styled.p`
   font-size: ${({ theme }) => theme.fontSize.m};
   line-height: 1.4;
