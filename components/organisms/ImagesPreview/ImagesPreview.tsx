@@ -56,9 +56,9 @@ const ImagesPreview = ({
               )
           )}
         </RestImages>
-        <NextButton onClick={showNextImage} />
-        <PrevButton onClick={showPrevImage} />
-        <CloseButton onClick={handleClosePreview} />
+        <NextButton onClick={showNextImage} aria-label="następne zdjęcie" />
+        <PrevButton onClick={showPrevImage} aria-label="poprzednie zdjęcie" />
+        <CloseButton onClick={handleClosePreview} aria-label="zamknij podgląd zdjęć" />
       </ImagesPreviewWrapper>
     </ImagesPreviewModal>
   )
