@@ -14,13 +14,14 @@ const MenuItems = ({ onFooter, onMobileMenu }: MenuItemsProps) => {
   return (
     <MenuItemsWrapper onFooter={onFooter} onMobileMenu={onMobileMenu}>
       {menuItems.map((menuItem) => (
-        <MenuItem
-          onClick={() => onMobileMenu && setOpenMobileMenu(false)}
-          onMobileMenu={onMobileMenu}
-          onFooter={onFooter}
-          key={menuItem.label}
-          {...menuItem}
-        />
+        <li key={menuItem.label}>
+          <MenuItem
+            onClick={() => onMobileMenu && setOpenMobileMenu(false)}
+            onMobileMenu={onMobileMenu}
+            onFooter={onFooter}
+            {...menuItem}
+          />
+        </li>
       ))}
     </MenuItemsWrapper>
   )

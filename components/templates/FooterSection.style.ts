@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { H4, HandWritten } from '../../theme/Typography'
+import { H2, HandWritten } from '../../theme/Typography'
 
-export const FooterSectionWrapper = styled.div`
+export const FooterSectionWrapper = styled.section`
   flex: 1;
 
   display: grid;
@@ -19,7 +19,7 @@ export const FooterSubheading = styled.p`
   ${HandWritten}
   font-size: ${({ theme }) => theme.fontSize.m};
 `
-export const FooterHeading = styled(H4)`
+export const FooterHeading = styled(H2)`
   font-size: ${({ theme }) => theme.fontSize.l};
   text-transform: uppercase;
 `

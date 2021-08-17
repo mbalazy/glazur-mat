@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { MenuItemsProps } from './MenuItems'
 
-export const MenuItemsWrapper = styled.div<MenuItemsProps>`
+export const MenuItemsWrapper = styled.ul<MenuItemsProps>`
   display: flex;
   ${({ onMobileMenu }) =>
     onMobileMenu &&

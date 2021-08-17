@@ -15,6 +15,11 @@ export const MobileMenuContentWrapper = styled.div<MobileMenuIconLinesProps>`
 
   width: 100%;
   height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile});
+  min-height: calc(100vh - ${({ theme }) => theme.dimensions.superNavbarHeightOnMobile});
+
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+
   padding: 1.2rem 10% 0;
   padding-bottom: 5vh;
 
