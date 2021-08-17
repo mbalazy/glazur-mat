@@ -10,11 +10,11 @@ const OfferThumbnail = ({ name, icon, details }: OfferThumbnailProps) => {
     <OfferThumbnailWrapper>
       <img src={icon} alt="" />
       <H3>{name}</H3>
-      <div>
+      <ul>
         {details.map((detail) => (
           <OfferDetail key={detail} detail={detail} />
         ))}
-      </div>
+      </ul>
     </OfferThumbnailWrapper>
   )
 }

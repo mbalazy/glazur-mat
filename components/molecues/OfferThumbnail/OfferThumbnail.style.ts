@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const OfferThumbnailWrapper = styled.div`
+export const OfferThumbnailWrapper = styled.li`
   display: grid;
   gap: 4rem;
   grid-template-rows: 3rem 4rem 1fr;
@@ -15,8 +15,5 @@ export const OfferThumbnailWrapper = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     font-size: ${({ theme }) => theme.fontSize.xl};
     font-weight: 500;
-  }
-  p {
-    text-align: left;
   }
 `

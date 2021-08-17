@@ -16,7 +16,7 @@ const Offer = () => {
       imageSrc="/pages_hero.jpg"
     >
       <Section>
-        <GridWrapper>
+        <GridWrapper as="ul">
           {offerContet.map((offer) => (
             <OfferThumbnail key={offer.name} {...offer} />
           ))}
