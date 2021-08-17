@@ -23,14 +23,18 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
 
   const { isOnDesktop } = useWindowDimensions()
 
-  //TODO add visuallyHidden div with info about images gallery
   return (
     <>
       <GridWrapper isFullWidth={true}>
         {images.map(
           ({ id, src }, index) =>
             src && (
-              <GalleryImageStyles as="button" key={id} onClick={() => handleOpenPreview(index)}>
+              <GalleryImageStyles
+                as="button"
+                aria-label="podgląd zdjęcia"
+                key={id}
+                onClick={() => handleOpenPreview(index)}
+              >
                 <ImageCoverFit alt="realizacja" src={src} />
               </GalleryImageStyles>
             )
