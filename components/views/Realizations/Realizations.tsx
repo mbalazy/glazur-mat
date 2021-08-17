@@ -11,6 +11,7 @@ const Realizations = ({ allRealizations }: RealizationsProps) => {
     <MainTemplate
       isFullWidth={true}
       height={52}
+      //TODO add heading to businessInfo
       heading="Sprawdź nasz realizacje"
       subheading={realizationsSubheading}
       imageSrc="/pages_hero.jpg"

@@ -15,7 +15,7 @@ const RealizationThumbnail = ({ name, images, slug }: IRealizations) => {
     <Link href={`/realizacje/${slug?.current}`} passHref>
       <RealizationThumbnailWrapper>
         <ImageWrapper>
-          <ImageCoverFit src={firstImageSrc()} alt="realizacja" />
+          <ImageCoverFit src={firstImageSrc()} alt={`realizacja o nazwie ${name}`} />
         </ImageWrapper>
         <DecoratedLine />
         <RealizationName>{name}</RealizationName>
