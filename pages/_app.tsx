@@ -7,7 +7,6 @@ import { MobileMenuProvider } from '../lib/mobileMenuContext'
 import GlobalStyle from '../theme/globalStyle'
 import mainTheme from '../theme/mainTheme'
 import SEO from '../next-seo.config'
-import FacebookChat from '../components/organisms/FacebookChat/FacebookChat.jsx'
 
 import '@fontsource/im-fell-great-primer-sc'
 import '@fontsource/montserrat'
@@ -18,7 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <MobileMenuProvider>
         <GlobalStyle />
         <Head>
-          <html lang="pl-PL" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -29,7 +27,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
-        <FacebookChat />
       </MobileMenuProvider>
     </ThemeProvider>
   )
