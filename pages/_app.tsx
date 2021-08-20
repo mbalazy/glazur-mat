@@ -7,6 +7,7 @@ import { MobileMenuProvider } from '../lib/mobileMenuContext'
 import GlobalStyle from '../theme/globalStyle'
 import mainTheme from '../theme/mainTheme'
 import SEO from '../next-seo.config'
+import FacebookChat from '../components/organisms/FacebookChat/FacebookChat.jsx'
 
 import '@fontsource/im-fell-great-primer-sc'
 import '@fontsource/montserrat'
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
+        <FacebookChat />
       </MobileMenuProvider>
     </ThemeProvider>
   )
