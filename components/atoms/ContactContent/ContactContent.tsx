@@ -4,13 +4,13 @@ import { ContactContentWrapper } from './ContactContent.style'
 
 const ContactContent = () => {
   const [telephone] = businessInfo.telephones
+  const address = businessInfo.address
   return (
-    //TODO move address to businessInfo and import it
     <ContactContentWrapper>
       <div>
-        <p>Mateusz Oleksy</p>
-        <p>Zasępiec 43</p>
-        <p>32-340 Wolbrom</p>
+        {address.map((field) => (
+          <p key={field}>{field}</p>
+        ))}
       </div>
       <div>
         <a href={`tel: ${telephone}`}>Tel: {telephone}</a>

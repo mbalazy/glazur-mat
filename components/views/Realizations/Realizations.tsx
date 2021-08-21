@@ -1,6 +1,6 @@
 import React from 'react'
 import { RealizationsProps } from '../../../pages/realizacje'
-import { realizationsSubheading } from '../../../theme/businessInfo'
+import { realizationHeading, realizationsSubheading } from '../../../theme/businessInfo'
 import RealizationThumbnail from '../../molecues/RealizationThumblail/RealizationThumbnail'
 import { GridWrapper } from '../../templates/GridWrapper.style'
 import MainTemplate from '../../templates/MainTemplate'
@@ -11,8 +11,7 @@ const Realizations = ({ allRealizations }: RealizationsProps) => {
     <MainTemplate
       isFullWidth={true}
       height={52}
-      //TODO add heading to businessInfo
-      heading="Sprawdź nasz realizacje"
+      heading={realizationHeading}
       subheading={realizationsSubheading}
       imageSrc="/pages_hero.jpg"
     >

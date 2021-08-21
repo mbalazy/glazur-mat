@@ -12,10 +12,18 @@ import floorIcon from '../public/floor.svg'
 const businessInfo = {
   fullTitle: 'Glazur-Mat',
   telephones: ['537 911 486'],
+  address: ['Mateusz Oleksy', 'Zasępiec 43', '32-340 Wolbrom'],
   emails: ['kontakt@glazur-mat.pl'],
 }
 
 export default businessInfo
+
+export const menuItems = [
+  { label: 'Strona główna', link: '/' },
+  { label: 'Realizacje', link: '/realizacje' },
+  { label: 'Oferta', link: '/oferta' },
+  { label: 'Dlaczego My', link: '/dlaczego-my' },
+]
 
 export const socials = [
   {
@@ -34,6 +42,28 @@ export const socials = [
     link: `https://api.whatsapp.com/send?phone=+48${businessInfo.telephones[0]}`,
   },
 ]
+
+export const testimonials = [
+  {
+    name: 'Anna',
+    testimonial:
+      'Gorąco polecam! Świetny kontakt, bardzo szybkie i profesjonalne wykonanie, nie ma żadnych problemów z ewentualnymi poprawkami, ponadto ceny nie są wygórowane.',
+    rating: 5,
+  },
+  {
+    name: 'Robert',
+    testimonial:
+      'Serdecznie polecam! Współpracę z Panem Mateuszem doceniam przede wszystkim za fantastyczną komunikację - szybkie odpisywanie na wiadomości, możliwość wprowadzania poprawek nawet klika tygodni po wykonaniu analizy - to się ceni. Bardzo dziękuję za współpracę raz jeszcze 🙂',
+    rating: 5,
+  },
+  {
+    name: 'Jerzy',
+    testimonial:
+      'Firma terminowo i niemal wzorowo wykonała powierzone jej prace. Pan Mateusz działała profesjonalnie, szybko i solidnie. Można jemu powierzyć każde, nawet nietypowe zadanie, a błyskotliwa wręcz intuicja, doświadczenie i wiedza pomogą inwestorowi osiągnąć założony cel.',
+    rating: 5,
+  },
+]
+
 export const offerSubheading =
   'Oferujemy Państwu usługi wykończeniowe i remontowo-budowlane na najwyższym poziomie. Podejmujemy się trudnych zadań, angażujemy się w każdą usługę remontową, a swoją pracę wykonujemy terminowo i solidnie. Specjalizujemy się w nowoczesnych technologiach oraz w kreowaniu estetycznej przestrzeni, w której każdy szczegół ma znaczenie. '
 
@@ -96,39 +126,13 @@ export const offerContet = [
   },
 ]
 
-export const testimonials = [
-  {
-    name: 'Anna',
-    testimonial:
-      'Gorąco polecam! Świetny kontakt, bardzo szybkie i profesjonalne wykonanie, nie ma żadnych problemów z ewentualnymi poprawkami, ponadto ceny nie są wygórowane.',
-    rating: 5,
-  },
-  {
-    name: 'Robert',
-    testimonial:
-      'Serdecznie polecam! Współpracę z Panem Mateuszem doceniam przede wszystkim za fantastyczną komunikację - szybkie odpisywanie na wiadomości, możliwość wprowadzania poprawek nawet klika tygodni po wykonaniu analizy - to się ceni. Bardzo dziękuję za współpracę raz jeszcze 🙂',
-    rating: 5,
-  },
-  {
-    name: 'Jerzy',
-    testimonial:
-      'Firma terminowo i niemal wzorowo wykonała powierzone jej prace. Pan Mateusz działała profesjonalnie, szybko i solidnie. Można jemu powierzyć każde, nawet nietypowe zadanie, a błyskotliwa wręcz intuicja, doświadczenie i wiedza pomogą inwestorowi osiągnąć założony cel.',
-    rating: 5,
-  },
-]
+export const realizationHeading = 'Sprawdź nasze realizacje'
 
 export const realizationsSubheading =
   'Przedstawiamy wybrane realizacje, które mieliśmy przyjemność wykonać dla naszych klientów. Remonty to dla nas coś co wykonujemy na co dzień, dlatego pragniemy podzielić się naszą pracą. Zapraszamy do obejrzenia galerii wykonanych przez nas prac remontowych.'
 
 export const contactSubheading =
   'Osoby zainteresowane ofertą na remonty, wykończenia wnętrz lub inne prace budowlane prosimy o kontakt.'
-
-export const menuItems = [
-  { label: 'Strona główna', link: '/' },
-  { label: 'Realizacje', link: '/realizacje' },
-  { label: 'Oferta', link: '/oferta' },
-  { label: 'Dlaczego My', link: '/dlaczego-my' },
-]
 
 export const whyUsFeatures = [
   {
