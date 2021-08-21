@@ -30,10 +30,10 @@ const ImagesPreview = ({
 }: ImagesPreviewProps) => {
   if (!allImages) return <p>Brak zdjęć</p>
 
-  const { setMainImageSrcFromAllImages, handleArrowNavigation, showNextImage, showPrevImage } =
+  const { getMainImageSrcFromAllImages, handleArrowNavigation, showNextImage, showPrevImage } =
     useImagePreviewNav({ allImages, mainImageIndex, setMainImageIndex })
 
-  const mainImageSrc = setMainImageSrcFromAllImages()
+  const mainImageSrc = getMainImageSrcFromAllImages()
   handleArrowNavigation()
 
   return (
