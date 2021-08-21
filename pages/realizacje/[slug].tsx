@@ -18,8 +18,10 @@ const RealizationPage = ({ realization }: RealizationPageProps) => {
     <>
       <NextSeo
         title={`${realization.name} | ${fullTitle}`}
-        // TODO change hard coded string to realization.description
-        description="Przedstawiamy wybrane realizacje, które mieliśmy przyjemność wykonać dla naszych klientów."
+        description={
+          realization.description ||
+          'Przedstawiamy wybraną realizację, która mieliśmy przyjemność wykonać dla tego klienta.'
+        }
       />
       <Realization {...realization} />
     </>

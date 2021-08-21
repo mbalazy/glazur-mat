@@ -1,6 +1,14 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document'
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document'
 import React from 'react'
 import { ServerStyleSheet } from 'styled-components'
+import FacebookChat from '../components/organisms/FacebookChat/FacebookChat.jsx'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -26,5 +34,18 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render() {
+    return (
+      <Html lang="pl-PL">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+          <FacebookChat />
+        </body>
+      </Html>
+    )
   }
 }

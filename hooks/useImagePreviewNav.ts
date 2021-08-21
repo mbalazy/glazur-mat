@@ -11,7 +11,7 @@ export function useImagePreviewNav({
   mainImageIndex,
   setMainImageIndex,
 }: useImagePreviewNavProps) {
-  const setMainImageSrcFromAllImages = () =>
+  const getMainImageSrcFromAllImages = () =>
     allImages?.find((_, i) => mainImageIndex === i)?.src || ''
 
   const showNextImage = () => {
@@ -34,7 +34,7 @@ export function useImagePreviewNav({
     }
   }
 
-  const handleArrowNavigation = () => {
+  const handleKeysNavigation = () => {
     useKeyPress('ArrowRight', showNextImage)
     useKeyPress('ArrowLeft', showPrevImage)
     useKeyPress('l', showNextImage)
@@ -42,9 +42,9 @@ export function useImagePreviewNav({
   }
 
   return {
-    setMainImageSrcFromAllImages,
+    getMainImageSrcFromAllImages,
     showNextImage,
     showPrevImage,
-    handleArrowNavigation,
+    handleKeysNavigation,
   }
 }
