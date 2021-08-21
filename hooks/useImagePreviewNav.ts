@@ -34,7 +34,7 @@ export function useImagePreviewNav({
     }
   }
 
-  const handleArrowNavigation = () => {
+  const handleKeysNavigation = () => {
     useKeyPress('ArrowRight', showNextImage)
     useKeyPress('ArrowLeft', showPrevImage)
     useKeyPress('l', showNextImage)
@@ -45,6 +45,6 @@ export function useImagePreviewNav({
     getMainImageSrcFromAllImages,
     showNextImage,
     showPrevImage,
-    handleArrowNavigation,
+    handleKeysNavigation,
   }
 }
