@@ -62,14 +62,12 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperProps>`
   // or add gap on -900px window width
   ${({ position }) => {
     const { width } = useWindowDimensions()
-    if (width !== undefined && width > 900) {
-      return apllyPositionStyles(position)
-    } else {
-      return css`
-        & :not(:last-child) {
-          margin-bottom: 4rem;
-        }
-      `
-    }
+    return width !== undefined && width > 900
+      ? apllyPositionStyles(position)
+      : css`
+          & :not(:last-child) {
+            margin-bottom: 4rem;
+          }
+        `
   }}
 `
