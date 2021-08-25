@@ -2,8 +2,17 @@ import styled, { css } from 'styled-components'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
 export type TestimonialWrapperStyledProps = {
-  position: number
+  position: 0 | 1 | 2
 }
+
+export const TestimonialContent = styled.span`
+  text-align: center;
+`
+
+export const TestimonialName = styled.p`
+  font-style: italic;
+  font-weight: 700;
+`
 
 // additional position styles for testimonials
 const offset = '-3rem'
@@ -63,12 +72,4 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
       `
     }
   }}
-`
-export const TestimonialContent = styled.span`
-  text-align: center;
-`
-
-export const TestimonialName = styled.p`
-  font-style: italic;
-  font-weight: 700;
 `

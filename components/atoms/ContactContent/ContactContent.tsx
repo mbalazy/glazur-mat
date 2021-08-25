@@ -5,6 +5,7 @@ import { ContactContentWrapper } from './ContactContent.style'
 const ContactContent = () => {
   const [telephone] = businessInfo.telephones
   const address = businessInfo.address
+  //TODO move nip and regon to businessInfo
   return (
     <ContactContentWrapper>
       <div>
