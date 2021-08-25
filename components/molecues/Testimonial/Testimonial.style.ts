@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
-export type TestimonialWrapperStyledProps = {
+export type TestimonialWrapperProps = {
   position: 0 | 1 | 2
 }
 
@@ -46,7 +46,7 @@ const apllyPositionStyles = (position: number) => {
   }
 }
 
-export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
+export const TestimonialWrapper = styled.div<TestimonialWrapperProps>`
   flex: 1;
   padding: 3rem 5rem;
   background-color: ${({ theme }) => theme.colors.background};

@@ -2,7 +2,7 @@ import React from 'react'
 import { testimonials } from '../../../theme/businessInfo'
 import BaseLink from '../../atoms/Link/Link'
 import Testimonial from '../../molecues/Testimonial/Testimonial'
-import { TestimonialWrapperStyledProps } from '../../molecues/Testimonial/Testimonial.style'
+import { TestimonialWrapperProps } from '../../molecues/Testimonial/Testimonial.style'
 import Section from '../../templates/Section'
 import { TestimonialsWrapper } from './Testimonials.style'
 
@@ -19,7 +19,7 @@ const Testimonials = () => {
         }
         {testimonials.slice(0, 3).map((testimonial, i) => (
           <Testimonial
-            position={i as TestimonialWrapperStyledProps['position']}
+            position={i as TestimonialWrapperProps['position']}
             key={testimonial.name}
             {...testimonial}
           />
