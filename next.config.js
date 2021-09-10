@@ -1,4 +1,11 @@
 const withImages = require('next-images')
+const securityHeaders = [
+  {
+    key: 'X-Frame-Options',
+    value: 'SAMEORIGIN',
+  },
+]
+
 module.exports = withImages({
   eslint: {
     // Warning: Dangerously allow production builds to successfully complete even if
@@ -10,5 +17,13 @@ module.exports = withImages({
   },
   images: {
     domains: ['cdn.sanity.io'],
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ]
   },
 })
