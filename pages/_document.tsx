@@ -8,7 +8,6 @@ import Document, {
 } from 'next/document'
 import React from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import FacebookChat from '../components/organisms/FacebookChat/FacebookChat.jsx'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -43,7 +42,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <FacebookChat />
         </body>
       </Html>
     )

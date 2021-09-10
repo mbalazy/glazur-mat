@@ -1,7 +1,6 @@
 // https://github.com/nghiaht/examples/tree/develop/with-fb
 
 export function init() {
-  // TODO update this to real one
   const pageId = '1331177793687182'
 
   var chatbox = document.getElementById('fb-customer-chat')

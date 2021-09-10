@@ -137,7 +137,7 @@ export const contactSubheading =
 export const whyUsFeatures = [
   {
     heading: 'Bezpłatna wycena',
-    copy: 'Przed rozpoczęciem prac lub projektu przygotujemy bezpłatną wstepna wycenę usług wraz z zestawieniem niezbednych materiałów.',
+    copy: 'Przed rozpoczęciem prac lub projektu przygotujemy bezpłatną wstepną wycenę usług wraz z zestawieniem niezbędnych materiałów.',
     imageSrc: '/wycena2.jpg',
   },
   {
