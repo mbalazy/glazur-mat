@@ -1,9 +1,18 @@
 import styled, { css } from 'styled-components'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
-export type TestimonialWrapperStyledProps = {
-  position: number
+export type TestimonialWrapperProps = {
+  position: 0 | 1 | 2
 }
+
+export const TestimonialContent = styled.span`
+  text-align: center;
+`
+
+export const TestimonialName = styled.p`
+  font-style: italic;
+  font-weight: 700;
+`
 
 // additional position styles for testimonials
 const offset = '-3rem'
@@ -37,7 +46,7 @@ const apllyPositionStyles = (position: number) => {
   }
 }
 
-export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
+export const TestimonialWrapper = styled.div<TestimonialWrapperProps>`
   flex: 1;
   padding: 3rem 5rem;
   background-color: ${({ theme }) => theme.colors.background};
@@ -53,22 +62,12 @@ export const TestimonialWrapper = styled.div<TestimonialWrapperStyledProps>`
   // or add gap on -900px window width
   ${({ position }) => {
     const { width } = useWindowDimensions()
-    if (width !== undefined && width > 900) {
-      return apllyPositionStyles(position)
-    } else {
-      return css`
-        & :not(:last-child) {
-          margin-bottom: 4rem;
-        }
-      `
-    }
+    return width !== undefined && width > 900
+      ? apllyPositionStyles(position)
+      : css`
+          & :not(:last-child) {
+            margin-bottom: 4rem;
+          }
+        `
   }}
-`
-export const TestimonialContent = styled.span`
-  text-align: center;
-`
-
-export const TestimonialName = styled.p`
-  font-style: italic;
-  font-weight: 700;
 `

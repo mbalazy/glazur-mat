@@ -2,9 +2,9 @@ import React from 'react'
 import { testimonials } from '../../../theme/businessInfo'
 import Stars from '../../atoms/Stars/Stars'
 import { TestimonialContent, TestimonialName, TestimonialWrapper } from './Testimonial.style'
-import { TestimonialWrapperStyledProps } from './Testimonial.style'
+import { TestimonialWrapperProps } from './Testimonial.style'
 
-type TestimonialProps = typeof testimonials[number] & TestimonialWrapperStyledProps
+type TestimonialProps = typeof testimonials[number] & TestimonialWrapperProps
 
 const Testimonial = ({ name, rating, testimonial, position }: TestimonialProps) => {
   return (

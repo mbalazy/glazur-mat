@@ -2,7 +2,7 @@
 
 export function init() {
   // TODO update this to real one
-  const pageId = '1011747472244365'
+  const pageId = '1331177793687182'
 
   var chatbox = document.getElementById('fb-customer-chat')
   chatbox.setAttribute('page_id', pageId)
