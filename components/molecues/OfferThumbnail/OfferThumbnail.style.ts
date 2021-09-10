@@ -11,6 +11,10 @@ export const OfferThumbnailWrapper = styled.li`
   box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme }) => theme.colors.white};
 
+  img {
+    justify-self: center;
+  }
+
   h3 {
     color: ${({ theme }) => theme.colors.primary};
     font-size: ${({ theme }) => theme.fontSize.xl};

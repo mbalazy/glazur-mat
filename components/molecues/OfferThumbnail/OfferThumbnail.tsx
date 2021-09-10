@@ -8,7 +8,7 @@ type OfferThumbnailProps = typeof offerContet[number]
 const OfferThumbnail = ({ name, icon, details }: OfferThumbnailProps) => {
   return (
     <OfferThumbnailWrapper>
-      <img src={icon} alt="" />
+      <img src={icon} alt="" width={32} />
       <H3>{name}</H3>
       <ul>
         {details.map((detail) => (
