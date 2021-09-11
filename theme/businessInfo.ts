@@ -14,7 +14,7 @@ const businessInfo = {
   telephones: ['537 911 486'],
   address: ['Mateusz Oleksy', 'Zasępiec 43', '32-340 Wolbrom'],
   emails: ['kontakt@glazur-mat.pl'],
-}
+} as const
 
 export default businessInfo
 
@@ -23,7 +23,7 @@ export const menuItems = [
   { label: 'Realizacje', link: '/realizacje' },
   { label: 'Oferta', link: '/oferta' },
   { label: 'Dlaczego My', link: '/dlaczego-my' },
-]
+] as const
 
 export const socials = [
   {
@@ -41,7 +41,7 @@ export const socials = [
     icon: whatsappIcon,
     link: `https://api.whatsapp.com/send?phone=+48${businessInfo.telephones[0]}`,
   },
-]
+] as const
 
 export const testimonials = [
   {
@@ -62,7 +62,7 @@ export const testimonials = [
       'Firma terminowo i niemal wzorowo wykonała powierzone jej prace. Pan Mateusz działała profesjonalnie, szybko i solidnie. Można jemu powierzyć każde, nawet nietypowe zadanie, a błyskotliwa wręcz intuicja, doświadczenie i wiedza pomogą inwestorowi osiągnąć założony cel.',
     rating: 5,
   },
-]
+] as const
 
 export const offerSubheading =
   'Oferujemy Państwu usługi wykończeniowe i remontowo-budowlane na najwyższym poziomie. Podejmujemy się trudnych zadań, angażujemy się w każdą usługę remontową, a swoją pracę wykonujemy terminowo i solidnie. Specjalizujemy się w nowoczesnych technologiach oraz w kreowaniu estetycznej przestrzeni, w której każdy szczegół ma znaczenie. '
@@ -124,7 +124,7 @@ export const offerContet = [
       'Montaż cokołów i listew przypodłogowych',
     ],
   },
-]
+] as const
 
 export const realizationHeading = 'Sprawdź nasze realizacje'
 
@@ -155,4 +155,4 @@ export const whyUsFeatures = [
     copy: 'Wieloletnie doświadczenie jest gwarancją solidnego i profesjonalnego wykonania zleconych usług. Glazur-Mat posiada wysokiej jakości sprzęt, umożliwiający perfekcyjną realizację prac. Natomiast wiedza na temat aktualnych trendów przy wykonywaniu prac wykończeniowych jest z pewnością bardzo dużym atutem.',
     imageSrc: '/dos1.jpg',
   },
-]
+] as const
