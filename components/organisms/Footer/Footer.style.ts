@@ -28,9 +28,8 @@ export const FooterContentWrapper = styled.div`
 
 export const FooterContent = styled.div`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  margin-top: 9rem;
+  margin-top: 4rem;
 
   ${({ theme: { down, breakpoints } }) => css`
     ${down(breakpoints.l)} {
