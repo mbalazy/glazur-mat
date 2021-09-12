@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { H2, HandWritten } from '../../theme/Typography'
 
 export const FooterSectionWrapper = styled.section`
-  margin-top: 4rem;
+  margin-top: 3rem;
   flex: 1;
 
   display: grid;
