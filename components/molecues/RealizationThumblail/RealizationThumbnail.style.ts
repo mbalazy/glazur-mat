@@ -25,5 +25,5 @@ export const DecoratedLine = styled.div`
 `
 export const RealizationName = styled.span`
   ${HandWritten}
-  margin-bottom: 5rem;
+  margin: 0 3rem 5rem;
 `
