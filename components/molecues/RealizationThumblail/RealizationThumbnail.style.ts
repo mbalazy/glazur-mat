@@ -8,7 +8,6 @@ export const RealizationThumbnailWrapper = styled.a`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 
   ${hoverEffect}
@@ -21,9 +20,11 @@ export const ImageWrapper = styled.div`
 export const DecoratedLine = styled.div`
   width: 12rem;
   height: 2px;
+  margin: 3.4rem 0 3rem;
   background-color: ${({ theme }) => theme.colors.black};
 `
 export const RealizationName = styled.span`
   ${HandWritten}
-  margin: 0 3rem 5rem;
+  margin: 0 3rem;
+  text-align: center;
 `
