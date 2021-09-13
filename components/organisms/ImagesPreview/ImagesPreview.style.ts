@@ -33,7 +33,7 @@ export const SmallImageWrapper = styled.button<SmallImageWrapperProps>`
 
   border: 2px solid transparent;
   background-color: transparent;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 3px;
   ${elementsHover}
 
   ${({ isActive }) =>
