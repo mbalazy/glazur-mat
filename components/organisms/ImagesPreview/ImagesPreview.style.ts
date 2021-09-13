@@ -25,15 +25,15 @@ export const RestImages = styled.div`
   overflow-x: auto;
 
   display: flex;
-  justify-content: center;
 `
 export const SmallImageWrapper = styled.button<SmallImageWrapperProps>`
   cursor: pointer;
   position: relative;
-  width: 12rem;
+  flex: 1 0 11rem;
 
   border: 2px solid transparent;
   background-color: transparent;
+  margin-bottom: 1rem;
   ${elementsHover}
 
   ${({ isActive }) =>
