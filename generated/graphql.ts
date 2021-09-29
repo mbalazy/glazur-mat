@@ -719,7 +719,7 @@ export type IStringFilter = {
 
 export type IRealizationPartsFragment = { __typename?: 'Realizations' } & Pick<
   IRealizations,
-  '_id' | 'name' | 'description'
+  '_id' | 'name' | 'description' | '_createdAt' | '_updatedAt'
 > & {
     slug?: Maybe<{ __typename?: 'Slug' } & Pick<ISlug, 'current'>>
     images?: Maybe<
@@ -757,6 +757,8 @@ export const RealizationPartsFragmentDoc = gql`
     _id
     name
     description
+    _createdAt
+    _updatedAt
     slug {
       current
     }
@@ -771,7 +773,7 @@ export const RealizationPartsFragmentDoc = gql`
 `
 export const AllRealizationsDocument = gql`
   query AllRealizations {
-    allRealizations(sort: { _createdAt: DESC }) {
+    allRealizations(sort: { _updatedAt: DESC }) {
       ...RealizationParts
     }
   }
