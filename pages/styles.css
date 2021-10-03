@@ -1,4 +1,10 @@
 .image-gallery-slide img {
   width: 100%;
   height: 70vh;
+  margin-bottom: 1rem;
+}
+
+.image-gallery-thumbnails img {
+  height: 8vh;
+  object-fit: cover;
 }

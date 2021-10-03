@@ -56,6 +56,6 @@ export const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   ${({ isFullWidth }) =>
     isFullWidth &&
     css`
-      width: 100vw;
+      width: 97vw;
     `}
 `
