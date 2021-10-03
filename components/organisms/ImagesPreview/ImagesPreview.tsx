@@ -1,6 +1,5 @@
 import React from 'react'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
-import { ImagesPreviewWrapper } from './ImagesPreview.style'
 import ImagesPreviewModal from '../ImagesPreviewModal/ImagesPreviewModal'
 import ImageGallery from 'react-image-gallery'
 
@@ -16,13 +15,12 @@ const ImagesPreview = ({ allImages, isPreviewOpen, handleClosePreview }: ImagesP
   const images = allImages.map((image) => ({
     original: image.src as string,
     thumbnail: image.src as string,
+    originalHeight: 600,
   }))
 
   return (
     <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
-      <ImagesPreviewWrapper>
-        <ImageGallery items={images} />
-      </ImagesPreviewWrapper>
+      <ImageGallery showPlayButton={false} showFullscreenButton={false} items={images} />
     </ImagesPreviewModal>
   )
 }
