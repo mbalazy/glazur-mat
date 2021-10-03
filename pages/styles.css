@@ -16,6 +16,11 @@
   border: 3px solid #d6a81a !important;
 }
 
+.image-gallery-icon:focus,
 .image-gallery-icon:hover {
   color: #d6a81a !important;
+}
+
+.image-gallery-icon:focus {
+  outline: 2px solid #d6a81a !important;
 }
