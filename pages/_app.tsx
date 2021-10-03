@@ -11,6 +11,7 @@ import FacebookChat from '../components/organisms/FacebookChat/FacebookChat'
 
 import '@fontsource/im-fell-great-primer-sc'
 import '@fontsource/montserrat'
+import 'react-image-gallery/styles/css/image-gallery.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -14,10 +14,8 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
   if (!images) return <p>Brak zdjęć :(</p>
 
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
-  const [mainImageIndex, setMainImageIndex] = useState<number>(0)
 
-  const handleOpenPreview = (idx: number) => {
-    setMainImageIndex(idx)
+  const handleOpenPreview = () => {
     setIsPreviewOpen(true)
   }
 
@@ -27,13 +25,13 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
     <>
       <GridWrapper isFullWidth={true}>
         {images.map(
-          ({ id, src }, index) =>
+          ({ id, src }) =>
             src && (
               <GalleryImageStyles
                 as="button"
                 aria-label="podgląd zdjęcia"
                 key={id}
-                onClick={() => handleOpenPreview(index)}
+                onClick={() => handleOpenPreview()}
               >
                 <ImageCoverFit alt="realizacja" src={src} />
               </GalleryImageStyles>
@@ -45,8 +43,6 @@ const ImagesGallery = ({ images }: ImagesGalleryProps) => {
         <ImagesPreview
           isPreviewOpen={isPreviewOpen}
           allImages={images}
-          mainImageIndex={mainImageIndex}
-          setMainImageIndex={setMainImageIndex}
           handleClosePreview={() => setIsPreviewOpen(false)}
         />
       )}

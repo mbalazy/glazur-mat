@@ -1,64 +1,27 @@
 import React from 'react'
 import { ImagesGalleryProps } from '../ImagesGallery/ImagesGallery'
-import {
-  ImagesPreviewWrapper,
-  MainImage,
-  RestImages,
-  SmallImageWrapper,
-  CloseButton,
-  NextButton,
-  PrevButton,
-} from './ImagesPreview.style'
-import { useImagePreviewNav } from '../../../hooks/useImagePreviewNav'
+import { ImagesPreviewWrapper } from './ImagesPreview.style'
 import ImagesPreviewModal from '../ImagesPreviewModal/ImagesPreviewModal'
-import ImageContainFit from '../../atoms/Image/ImageContainFit'
+import ImageGallery from 'react-image-gallery'
 
 type ImagesPreviewProps = {
   allImages?: ImagesGalleryProps['images']
-  mainImageIndex: number
-  setMainImageIndex: (idx: number) => void
   handleClosePreview: () => void
   isPreviewOpen: boolean
 }
 
-const ImagesPreview = ({
-  allImages,
-  isPreviewOpen,
-  mainImageIndex,
-  setMainImageIndex,
-  handleClosePreview,
-}: ImagesPreviewProps) => {
+const ImagesPreview = ({ allImages, isPreviewOpen, handleClosePreview }: ImagesPreviewProps) => {
   if (!allImages) return <p>Brak zdjęć</p>
 
-  const { getMainImageSrcFromAllImages, handleKeysNavigation, showNextImage, showPrevImage } =
-    useImagePreviewNav({ allImages, mainImageIndex, setMainImageIndex })
-
-  const mainImageSrc = getMainImageSrcFromAllImages()
-  handleKeysNavigation()
+  const images = allImages.map((image) => ({
+    original: image.src as string,
+    thumbnail: image.src as string,
+  }))
 
   return (
     <ImagesPreviewModal handleClosePreview={handleClosePreview} isPreviewOpen={isPreviewOpen}>
       <ImagesPreviewWrapper>
-        <MainImage>
-          <ImageContainFit alt="główne zdjęcie realizacji" src={mainImageSrc} />
-        </MainImage>
-        <RestImages>
-          {allImages.map(
-            ({ src, id }, idx) =>
-              src && (
-                <SmallImageWrapper
-                  key={id}
-                  isActive={idx === mainImageIndex}
-                  onClick={() => setMainImageIndex(idx)}
-                >
-                  <ImageContainFit alt="realizacja" src={src} />
-                </SmallImageWrapper>
-              )
-          )}
-        </RestImages>
-        <NextButton onClick={showNextImage} aria-label="następne zdjęcie" />
-        <PrevButton onClick={showPrevImage} aria-label="poprzednie zdjęcie" />
-        <CloseButton onClick={handleClosePreview} aria-label="zamknij podgląd zdjęć" />
+        <ImageGallery items={images} />
       </ImagesPreviewWrapper>
     </ImagesPreviewModal>
   )
