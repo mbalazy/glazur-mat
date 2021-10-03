@@ -15,7 +15,6 @@ const ImagesPreview = ({ allImages, isPreviewOpen, handleClosePreview }: ImagesP
   const images = allImages.map((image) => ({
     original: image.src as string,
     thumbnail: image.src as string,
-    originalHeight: 600,
   }))
 
   return (

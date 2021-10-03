@@ -8,6 +8,7 @@ import GlobalStyle from '../theme/globalStyle'
 import mainTheme from '../theme/mainTheme'
 import SEO from '../next-seo.config'
 import FacebookChat from '../components/organisms/FacebookChat/FacebookChat'
+import './styles.css'
 
 import '@fontsource/im-fell-great-primer-sc'
 import '@fontsource/montserrat'
