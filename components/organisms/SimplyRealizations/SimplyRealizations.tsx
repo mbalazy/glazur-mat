@@ -9,7 +9,7 @@ const SimplyRealizations = ({ allRealizations }: RealizationsProps) => {
   return (
     <Section
       heading="Nasze Realizacje"
-      subheading="Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów, a oto nasze ostatio wykonane realizacje:"
+      subheading="Mamy na swoim koncie już wiele udanych realizacji i jeszcze więcej szczęśliwych Klientów, a oto nasze ostatnio wykonane realizacje:"
     >
       <GridWrapper>
         {firstThreeRealizations.map((realization) => (
